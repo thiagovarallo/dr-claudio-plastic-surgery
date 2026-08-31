@@ -15,6 +15,10 @@
   --warm: #fe824c;
   --warm-soft: #fff0e8;
   --aqua: #8fd4df;
+  --brand: #08bfc4;
+  --brand-deep: #047f92;
+  --ink: #202832;
+  --ink-soft: #303944;
 }
 
 @theme inline {
@@ -31,6 +35,10 @@
   --color-warm: var(--warm);
   --color-warm-soft: var(--warm-soft);
   --color-aqua: var(--aqua);
+  --color-brand: var(--brand);
+  --color-brand-deep: var(--brand-deep);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
   --font-sans: var(--font-manrope);
   --font-display: var(--font-cormorant), Georgia, "Times New Roman", serif;
 }
@@ -163,4 +171,54 @@ body {
 
 .brand-orb {
   animation: brand-orb-drift 12s ease-in-out infinite;
+}
+
+@keyframes aurora {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(5%, -8%, 0) scale(1.12);
+  }
+}
+
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-2%, -3%);
+  }
+  30% {
+    transform: translate(3%, -1%);
+  }
+  50% {
+    transform: translate(-1%, 2%);
+  }
+  70% {
+    transform: translate(2%, 1%);
+  }
+  90% {
+    transform: translate(-3%, 0);
+  }
+}
+
+.hero-aurora {
+  animation: aurora 18s ease-in-out infinite;
+}
+
+.hero-grain {
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+  opacity: 0.22;
+  animation: grain 8s steps(10) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-aurora,
+  .hero-grain {
+    animation: none;
+  }
 }
