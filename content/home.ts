@@ -1,12 +1,12 @@
 import { WHATSAPP_HREF } from "./site";
 
 export const navigation = [
-  { label: "Home", href: "#inicio" },
-  { label: "Sobre", href: "#sobre" },
-  { label: "Cirurgias", href: "#cirurgias" },
-  { label: "Unidades", href: "#consultorio" },
-  { label: "Hospitais", href: "#hospitais" },
-  { label: "Contato", href: "#contato" },
+  { label: "Home", href: "/#inicio" },
+  { label: "Sobre", href: "/claudio-eduardo-cirurgiao-plastico" },
+  { label: "Cirurgias", href: "/#cirurgias" },
+  { label: "Unidades", href: "/#consultorio" },
+  { label: "Hospitais", href: "/#hospitais" },
+  { label: "Contato", href: "/#contato" },
 ] as const;
 
 export const locales = [

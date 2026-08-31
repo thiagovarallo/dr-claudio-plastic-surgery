@@ -14,7 +14,6 @@ import {
 } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { history } from "@/content/home";
-import { WHATSAPP_HREF } from "@/content/site";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
 type Node = (typeof history.nodes)[number];
@@ -170,10 +169,10 @@ function MobileHistory() {
         </div>
 
         <Link
-          href={WHATSAPP_HREF}
+          href="/claudio-eduardo-cirurgiao-plastico"
           className="mt-10 inline-flex h-11 items-center gap-3 rounded-full bg-brand px-6 text-xs font-bold text-white transition hover:bg-brand-deep"
         >
-          Conhecer o trabalho
+          Conhecer a trajetória
           <ArrowRight className="size-4" />
         </Link>
       </div>
@@ -256,10 +255,10 @@ export function Historia() {
                 <p className="mt-3 text-[13px] font-bold leading-5 text-ink xl:text-[14px] xl:leading-6">{history.lead}</p>
                 <p className="mt-2 text-[11px] leading-5 text-slate-600 xl:text-xs">{history.text}</p>
                 <Link
-                  href={WHATSAPP_HREF}
+                  href="/claudio-eduardo-cirurgiao-plastico"
                   className="mt-5 inline-flex h-10 items-center gap-3 rounded-full bg-brand px-6 text-[11px] font-bold text-white transition hover:bg-brand-deep"
                 >
-                  Conhecer o trabalho
+                  Conhecer a trajetória
                   <ArrowRight className="size-4" />
                 </Link>
               </div>

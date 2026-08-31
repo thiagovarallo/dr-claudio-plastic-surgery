@@ -102,7 +102,7 @@ export function Footer() {
 
         <div className="mx-auto mt-11 flex max-w-6xl flex-col gap-3 border-t border-white/20 px-5 pt-5 text-[10px] text-white/70 sm:flex-row sm:items-center sm:justify-between sm:px-8">
           <span>© 2026 Claudio Eduardo Cirurgião Plástico · Todos os direitos reservados</span>
-          <Link href="#inicio" className="relative h-6 w-32 shrink-0" aria-label="Ir para o início">
+          <Link href="/#inicio" className="relative h-6 w-32 shrink-0" aria-label="Ir para o início">
             <Image
               src="/brand/logo-footer.png"
               alt="Dr. Claudio Eduardo"

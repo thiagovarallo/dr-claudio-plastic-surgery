@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { AnimatePresence, motion, useMotionValueEvent, useReducedMotion, useScroll } from "motion/react";
 import { useState } from "react";
 import { ChevronDown, Languages, Menu, X } from "lucide-react";
@@ -9,11 +10,14 @@ import { locales, navigation, type LocaleCode } from "@/content/home";
 import { WHATSAPP_HREF } from "@/content/site";
 
 export function Header() {
+  const pathname = usePathname();
   const { scrollY } = useScroll();
   const reduced = useReducedMotion();
   const [scrolled, setScrolled] = useState(false);
-  const [active, setActive] = useState<(typeof navigation)[number]["href"]>(
-    navigation[0].href,
+  const [active, setActive] = useState<(typeof navigation)[number]["href"]>(() =>
+    pathname === "/claudio-eduardo-cirurgiao-plastico"
+      ? "/claudio-eduardo-cirurgiao-plastico"
+      : navigation[0].href,
   );
   const [locale, setLocale] = useState<LocaleCode>("pt");
   const [langOpen, setLangOpen] = useState(false);
@@ -34,7 +38,7 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex h-[76px] max-w-6xl items-center gap-6 px-5 sm:px-8">
-        <Link href="#inicio" aria-label="Ir para o início" className="relative h-8 w-[148px] shrink-0">
+        <Link href="/#inicio" aria-label="Ir para o início" className="relative h-8 w-[148px] shrink-0">
           <Image
             src="/brand/logo.png"
             alt="Dr. Claudio Eduardo"

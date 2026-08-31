@@ -8,6 +8,7 @@ type Props = {
   className?: string;
   as?: ElementType;
   delay?: number;
+  id?: string;
 };
 
 export function AnimatedText({
@@ -15,16 +16,21 @@ export function AnimatedText({
   className,
   as: Tag = "span",
   delay = 0,
+  id,
 }: Props) {
   const reduced = useReducedMotion();
   const words = text.split(" ");
 
   if (reduced) {
-    return <Tag className={className}>{text}</Tag>;
+    return (
+      <Tag id={id} className={className}>
+        {text}
+      </Tag>
+    );
   }
 
   return (
-    <Tag className={className}>
+    <Tag id={id} className={className}>
       {words.map((word, index) => (
         <span
           key={`${word}-${index}`}
