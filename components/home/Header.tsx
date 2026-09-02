@@ -14,11 +14,7 @@ export function Header() {
   const { scrollY } = useScroll();
   const reduced = useReducedMotion();
   const [scrolled, setScrolled] = useState(false);
-  const [active, setActive] = useState<(typeof navigation)[number]["href"]>(() =>
-    pathname === "/claudio-eduardo-cirurgiao-plastico"
-      ? "/claudio-eduardo-cirurgiao-plastico"
-      : navigation[0].href,
-  );
+  const [homeActive, setHomeActive] = useState<(typeof navigation)[number]["href"]>(navigation[0].href);
   const [locale, setLocale] = useState<LocaleCode>("pt");
   const [langOpen, setLangOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -28,6 +24,11 @@ export function Header() {
   });
 
   const currentLocale = locales.find((item) => item.code === locale) ?? locales[0];
+  const active = pathname.startsWith("/cirurgias")
+    ? "/cirurgias"
+    : pathname === "/claudio-eduardo-cirurgiao-plastico"
+      ? "/claudio-eduardo-cirurgiao-plastico"
+      : homeActive;
 
   return (
     <motion.header
@@ -61,7 +62,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                onClick={() => setActive(item.href)}
+                onClick={() => setHomeActive(item.href)}
                 className={`relative px-3 py-2 text-[13px] font-semibold tracking-wide transition-colors ${
                   scrolled
                     ? isActive
@@ -182,7 +183,7 @@ export function Header() {
                   <Link
                     href={item.href}
                     onClick={() => {
-                      setActive(item.href);
+                      setHomeActive(item.href);
                       setMenuOpen(false);
                     }}
                     className="block border-b border-white/10 py-4 text-2xl font-semibold"

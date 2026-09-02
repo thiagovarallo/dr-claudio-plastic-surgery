@@ -23,6 +23,7 @@ export type CirurgiaContent = {
   category: string;
   title: string;
   subtitle: string;
+  heroImage?: CirurgiaGalleryItem;
   benefits: string[];
   overview: {
     heading: string;

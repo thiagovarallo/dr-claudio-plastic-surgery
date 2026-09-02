@@ -1,46 +1,52 @@
-"use client";
-
 import Image from "next/image";
 import type { CirurgiaGalleryItem } from "@/content/cirurgias/types";
+import { ScrollReveal } from "./ScrollReveal";
 
-type Props = {
-  items: CirurgiaGalleryItem[];
-};
+type Props = { items: CirurgiaGalleryItem[] };
 
 export function CirurgiaGallery({ items }: Props) {
-  const loopItems = [...items, ...items];
-
   return (
-    <section className="overflow-hidden bg-navy text-white" aria-labelledby="gallery-heading">
-      <div className="mx-auto grid max-w-6xl gap-6 px-6 pt-14 md:grid-cols-[0.82fr_1.18fr] md:px-10 md:pt-20">
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-aqua">Ambiente de cuidado</p>
-          <h2 id="gallery-heading" className="mt-3 max-w-xl font-display text-4xl font-medium leading-tight md:text-5xl">
-            Consulta, orientação e detalhes clínicos
-          </h2>
+    <section className="overflow-hidden bg-navy-deep py-20 text-white sm:py-28" aria-labelledby="gallery-heading">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+        <div className="grid gap-7 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+          <ScrollReveal>
+            <p className="text-[11px] font-bold uppercase tracking-[0.36em] text-brand">
+              Ambiente de cuidado
+            </p>
+            <h2 id="gallery-heading" className="mt-4 max-w-xl font-display text-5xl font-medium leading-[0.95] sm:text-6xl">
+              Informação, acolhimento e discrição
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={80} className="lg:justify-self-end">
+            <p className="max-w-lg text-sm leading-7 text-white/62">
+              A consulta é um espaço reservado para esclarecer dúvidas, alinhar expectativas e compreender cada etapa com tranquilidade.
+            </p>
+          </ScrollReveal>
         </div>
-        <p className="max-w-xl self-end leading-relaxed text-white/70">
-          Imagens editoriais para contextualizar o atendimento, sem exposição anatômica e sem aparência de galeria de
-          resultado.
-        </p>
-      </div>
 
-      <div className="marquee mt-9 pb-14 md:pb-20" aria-label="Imagens do ambiente de cuidado">
-        <div className="marquee-track flex w-max gap-5 px-6 md:gap-7 md:px-10">
-          {loopItems.map((item, index) => (
-            <figure
-              key={`${item.src}-${index}`}
-              aria-hidden={index >= items.length}
-              className="relative aspect-square w-[min(68vw,320px)] shrink-0 overflow-hidden rounded-2xl bg-accent-soft"
+        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-12 lg:grid-rows-2">
+          {items.map((item, index) => (
+            <ScrollReveal
+              key={item.src}
+              delay={index * 70}
+              className={index === 0 ? "lg:col-span-7 lg:row-span-2" : "lg:col-span-5"}
             >
-              <Image
-                src={item.src}
-                alt={index < items.length ? item.alt : ""}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 68vw, 320px"
-              />
-            </figure>
+              <figure
+                className={`group relative overflow-hidden rounded-[28px] bg-navy ${index === 0 ? "aspect-[4/5] h-full min-h-[520px]" : "aspect-[16/10] min-h-[250px]"}`}
+              >
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  sizes={index === 0 ? "(min-width: 1024px) 650px, 100vw" : "(min-width: 1024px) 450px, 100vw"}
+                  className="object-cover transition duration-700 ease-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_60%,rgba(8,31,48,0.72)_100%)]" />
+                <figcaption className="absolute bottom-5 left-5 right-5 text-xs leading-5 text-white/78">
+                  {item.alt}
+                </figcaption>
+              </figure>
+            </ScrollReveal>
           ))}
         </div>
       </div>

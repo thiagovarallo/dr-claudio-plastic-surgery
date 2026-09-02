@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Check } from "lucide-react";
 import type { CirurgiaSection } from "@/content/cirurgias/types";
 import { ScrollReveal } from "./ScrollReveal";
 
@@ -15,32 +16,43 @@ export function CirurgiaContent({ overview, sections }: Props) {
   const [lead, ...rest] = overview.paragraphs;
 
   return (
-    <div className="overflow-hidden">
-      <section aria-labelledby="overview-heading" className="relative">
-        <div className="pointer-events-none absolute inset-0" aria-hidden>
-          <div className="brand-orb absolute -left-24 top-10 h-72 w-72 rounded-full bg-accent/10 blur-2xl md:h-[28rem] md:w-[28rem]" />
-          <div className="brand-orb absolute -right-16 bottom-0 h-64 w-64 rounded-full bg-aqua/25 blur-3xl md:h-96 md:w-96" />
-          <div className="absolute right-[8%] top-16 hidden h-40 w-40 rounded-full border border-accent/20 md:block" />
-          <div className="absolute right-[12%] top-28 hidden h-24 w-24 rounded-full border border-warm/30 md:block" />
-        </div>
+    <div className="overflow-hidden bg-[#f4f8fa]">
+      <section
+        id="sobre-a-cirurgia"
+        aria-labelledby="overview-heading"
+        className="scroll-mt-20 py-20 sm:py-28"
+      >
+        <div className="mx-auto grid max-w-6xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-16">
+          <ScrollReveal className="relative">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[36px] bg-navy-deep shadow-[0_24px_70px_rgba(8,31,48,0.14)]">
+              {overview.image ? (
+                <Image
+                  src={overview.image.src}
+                  alt={overview.image.alt}
+                  fill
+                  sizes="(min-width: 1024px) 480px, 100vw"
+                  className="object-cover"
+                />
+              ) : null}
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(8,31,48,0.7)_100%)]" />
+              <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between rounded-2xl border border-white/15 bg-navy-deep/60 px-5 py-4 text-white backdrop-blur-xl">
+                <span className="text-[10px] font-bold uppercase tracking-[0.24em] text-brand">
+                  Atendimento reservado
+                </span>
+                <span className="font-display text-lg text-white/70">01</span>
+              </div>
+            </div>
+            <div className="absolute -bottom-6 -right-6 hidden size-32 rounded-full border border-brand/25 lg:block" />
+          </ScrollReveal>
 
-        <div className="relative mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-[minmax(0,1.15fr)_minmax(220px,0.85fr)] md:items-end md:gap-16 md:px-10 md:py-24">
           <div>
             <ScrollReveal>
-              <div className="flex items-center gap-4">
-                <Image
-                  src="/brand/logo.png"
-                  alt="Claudio Eduardo Cirurgião Plástico"
-                  width={200}
-                  height={25}
-                  className="h-auto w-44 opacity-90 md:w-52"
-                />
-                <span className="hidden h-px flex-1 bg-gradient-to-r from-border to-transparent sm:block" aria-hidden />
-              </div>
-              <p className="mt-8 text-xs font-semibold uppercase tracking-[0.22em] text-accent">Sobre a cirurgia</p>
+              <p className="text-[11px] font-bold uppercase tracking-[0.36em] text-brand-deep">
+                Sobre a cirurgia
+              </p>
               <h2
                 id="overview-heading"
-                className="mt-3 max-w-2xl font-display text-4xl font-medium leading-[1.05] text-navy md:text-6xl"
+                className="mt-4 max-w-xl font-display text-5xl font-medium leading-[0.94] text-navy sm:text-6xl"
               >
                 {overview.heading}
               </h2>
@@ -48,155 +60,106 @@ export function CirurgiaContent({ overview, sections }: Props) {
 
             {lead ? (
               <ScrollReveal delay={80}>
-                <p className="mt-8 max-w-2xl font-display text-2xl font-medium leading-snug text-navy/80 md:text-3xl">
+                <p className="mt-7 max-w-xl font-display text-2xl font-medium leading-snug text-navy/82 sm:text-3xl">
                   {lead}
                 </p>
               </ScrollReveal>
             ) : null}
 
-            {rest.length ? (
-              <div className="mt-7 max-w-xl space-y-5 text-lg leading-relaxed text-muted">
-                {rest.map((paragraph, index) => (
-                  <ScrollReveal key={paragraph.slice(0, 40)} delay={120 + index * 80}>
-                    <p>{paragraph}</p>
-                  </ScrollReveal>
-                ))}
-              </div>
-            ) : null}
-          </div>
-
-          <ScrollReveal delay={160} className="relative hidden justify-self-end md:block">
-            <div className="relative aspect-square w-full max-w-[320px]">
-              <div className="absolute inset-[8%] rounded-full border border-accent/25" />
-              <div className="absolute inset-[22%] rounded-full border border-aqua/40" />
-              <div className="absolute inset-[36%] rounded-full bg-gradient-to-br from-accent-soft via-white to-warm-soft" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Image
-                  src="/brand/logo.png"
-                  alt=""
-                  width={160}
-                  height={20}
-                  className="w-36 opacity-80"
-                  aria-hidden
-                />
-              </div>
-              <div className="absolute -left-3 top-1/4 h-3 w-3 rounded-full bg-warm" />
-              <div className="absolute bottom-1/4 -right-2 h-2.5 w-2.5 rounded-full bg-accent" />
+            <div className="mt-7 max-w-xl space-y-5 text-sm leading-7 text-ink-soft/68 sm:text-base">
+              {rest.map((paragraph, index) => (
+                <ScrollReveal key={paragraph.slice(0, 40)} delay={120 + index * 70}>
+                  <p>{paragraph}</p>
+                </ScrollReveal>
+              ))}
             </div>
-          </ScrollReveal>
+
+            <ScrollReveal delay={220}>
+              <div className="mt-9 flex flex-wrap gap-3">
+                <span className="rounded-full bg-white px-4 py-2 text-[11px] font-bold text-navy shadow-sm ring-1 ring-ink/6">
+                  CRM 14.706-SC
+                </span>
+                <span className="rounded-full bg-white px-4 py-2 text-[11px] font-bold text-navy shadow-sm ring-1 ring-ink/6">
+                  RQE 23.737
+                </span>
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 
-      {sections.map((section, index) => {
-        const reversed = index % 2 === 1;
-        const [sectionLead, ...sectionRest] = section.paragraphs ?? [];
+      <section className="pb-20 sm:pb-28" aria-label="Etapas e orientações da cirurgia">
+        <div className="mx-auto max-w-6xl space-y-6 px-5 sm:px-8">
+          {sections.map((section, index) => {
+            const reversed = index % 2 === 1;
+            const [sectionLead, ...sectionRest] = section.paragraphs ?? [];
+            const number = String(index + 2).padStart(2, "0");
 
-        return (
-          <section
-            key={section.id}
-            id={section.id}
-            className="scroll-mt-8"
-            aria-labelledby={`${section.id}-heading`}
-          >
-            <div className={`relative overflow-hidden ${reversed ? "bg-navy text-white" : "section-paper"}`}>
-              <div className="pointer-events-none absolute inset-0" aria-hidden>
-                {reversed ? (
-                  <>
-                    <div className="absolute -right-20 top-10 h-72 w-72 rounded-full bg-accent/20 blur-3xl" />
-                    <div className="absolute -left-16 bottom-0 h-56 w-56 rounded-full bg-aqua/15 blur-2xl" />
-                    <div className="absolute right-[12%] top-[18%] h-28 w-28 rounded-full border border-white/12" />
-                  </>
-                ) : (
-                  <>
-                    <div className="absolute -left-20 top-0 h-64 w-64 rounded-full bg-accent/8 blur-2xl" />
-                    <div className="absolute right-0 top-1/3 h-40 w-40 rounded-full border border-accent/15" />
-                  </>
-                )}
-              </div>
-
-              <div
-                className={`relative mx-auto grid max-w-6xl gap-10 px-6 py-16 md:px-10 md:py-24 lg:grid-cols-[minmax(260px,0.78fr)_minmax(0,1.22fr)] lg:gap-16 ${reversed ? "lg:[&>*:first-child]:order-2" : ""}`}
-              >
-                <ScrollReveal className="lg:sticky lg:top-10 lg:self-start">
-                  <div className="relative inline-block">
-                    <span
-                      className={`absolute -left-4 -top-6 font-display text-8xl font-medium leading-none md:text-9xl ${reversed ? "text-white/10" : "text-accent/15"}`}
-                      aria-hidden
-                    >
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <p
-                      className={`relative text-xs font-semibold uppercase tracking-[0.22em] ${reversed ? "text-aqua" : "text-accent"}`}
-                    >
-                      Etapa {String(index + 1).padStart(2, "0")}
-                    </p>
-                    <h2
-                      id={`${section.id}-heading`}
-                      className={`relative mt-3 max-w-sm font-display text-4xl font-medium leading-tight md:text-5xl ${reversed ? "text-white" : "text-navy"}`}
-                    >
-                      {section.heading}
-                    </h2>
-                  </div>
-
-                  <div className="mt-8 flex items-center gap-3">
-                    <span className={`h-px w-10 ${reversed ? "bg-aqua/50" : "bg-accent/50"}`} aria-hidden />
-                    <Image
-                      src="/brand/logo-footer.png"
-                      alt=""
-                      width={140}
-                      height={17}
-                      className={`h-auto w-28 opacity-70 ${reversed ? "brightness-0 invert" : ""}`}
-                      aria-hidden
-                    />
-                  </div>
-                </ScrollReveal>
-
-                <div>
-                  {sectionLead ? (
-                    <ScrollReveal>
-                      <p
-                        className={`font-display text-2xl font-medium leading-snug md:text-[1.7rem] ${reversed ? "text-white/92" : "text-navy/85"}`}
+            return (
+              <ScrollReveal key={section.id}>
+                <article
+                  id={section.id}
+                  aria-labelledby={`${section.id}-heading`}
+                  className="scroll-mt-24 overflow-hidden rounded-[32px] border border-ink/6 bg-white shadow-[0_18px_60px_rgba(8,31,48,0.06)]"
+                >
+                  <div className={`grid lg:grid-cols-2 ${reversed ? "lg:[&>*:first-child]:order-2" : ""}`}>
+                    <div className="flex min-h-[440px] flex-col justify-center p-7 sm:p-10 lg:p-14">
+                      <div className="flex items-center gap-4">
+                        <span className="font-display text-2xl text-brand-deep">{number}</span>
+                        <span className="h-px w-10 bg-brand/35" />
+                        <span className="text-[10px] font-bold uppercase tracking-[0.26em] text-ink/40">
+                          Informação e cuidado
+                        </span>
+                      </div>
+                      <h2
+                        id={`${section.id}-heading`}
+                        className="mt-6 max-w-md font-display text-4xl font-medium leading-[0.98] text-navy sm:text-5xl"
                       >
-                        {sectionLead}
-                      </p>
-                    </ScrollReveal>
-                  ) : null}
-
-                  {sectionRest.length ? (
-                    <div className={`mt-6 space-y-5 text-lg leading-relaxed ${reversed ? "text-white/70" : "text-muted"}`}>
-                      {sectionRest.map((paragraph, paragraphIndex) => (
-                        <ScrollReveal key={paragraph.slice(0, 40)} delay={paragraphIndex * 80}>
-                          <p>{paragraph}</p>
-                        </ScrollReveal>
+                        {section.heading}
+                      </h2>
+                      {sectionLead ? (
+                        <p className="mt-6 max-w-xl text-sm leading-7 text-ink-soft/72 sm:text-base">{sectionLead}</p>
+                      ) : null}
+                      {sectionRest.map((paragraph) => (
+                        <p key={paragraph.slice(0, 40)} className="mt-4 max-w-xl text-sm leading-7 text-ink-soft/62">
+                          {paragraph}
+                        </p>
                       ))}
+
+                      {section.bullets?.length ? (
+                        <ul className="mt-7 grid gap-3">
+                          {section.bullets.map((bullet) => (
+                            <li key={bullet} className="flex items-start gap-3 text-xs leading-6 text-ink sm:text-sm">
+                              <span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-brand/12 text-brand-deep">
+                                <Check className="size-3" strokeWidth={2.5} />
+                              </span>
+                              <span>{bullet}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : null}
                     </div>
-                  ) : null}
 
-                  {section.bullets?.length ? (
-                    <ul className="mt-10 space-y-4">
-                      {section.bullets.map((bullet, bulletIndex) => (
-                        <ScrollReveal key={bullet} delay={bulletIndex * 70}>
-                          <li className="flex gap-4">
-                            <span
-                              className={`mt-1.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border ${reversed ? "border-aqua/40 text-aqua" : "border-accent/35 text-accent"}`}
-                              aria-hidden
-                            >
-                              <span className={`h-2 w-2 rounded-full ${reversed ? "bg-aqua" : "bg-accent"}`} />
-                            </span>
-                            <span className={`text-base leading-relaxed md:text-lg ${reversed ? "text-white/82" : "text-foreground"}`}>
-                              {bullet}
-                            </span>
-                          </li>
-                        </ScrollReveal>
-                      ))}
-                    </ul>
-                  ) : null}
-                </div>
-              </div>
-            </div>
-          </section>
-        );
-      })}
+                    <div className="relative min-h-[360px] bg-navy-deep lg:min-h-full">
+                      {section.image ? (
+                        <Image
+                          src={section.image.src}
+                          alt={section.image.alt}
+                          fill
+                          sizes="(min-width: 1024px) 560px, 100vw"
+                          className="object-cover transition duration-700 hover:scale-[1.03]"
+                        />
+                      ) : null}
+                      <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(8,31,48,0.5)_100%)]" />
+                      <span className="absolute bottom-6 right-7 font-display text-6xl text-white/55">{number}</span>
+                    </div>
+                  </div>
+                </article>
+              </ScrollReveal>
+            );
+          })}
+        </div>
+      </section>
     </div>
   );
 }

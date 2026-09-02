@@ -78,7 +78,7 @@ export function Hero() {
             <ArrowRight className="size-4" />
           </Link>
           <Link
-            href="#cirurgias"
+            href="/cirurgias"
             className="inline-flex h-12 items-center rounded-full border border-white/25 px-6 text-sm font-semibold text-white/88 transition hover:border-white/60"
           >
             Ver cirurgias

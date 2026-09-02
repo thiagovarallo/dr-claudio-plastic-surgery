@@ -2,9 +2,15 @@ import type { CirurgiaContent } from "./types";
 
 export const cirurgiaIntimaFeminina: CirurgiaContent = {
   slug: "cirurgia-intima-feminina",
-  category: "Cirurgias",
+  category: "Hipertrofia de clitóris",
   title: "Cirurgia Íntima Feminina",
-  subtitle: "Informações claras sobre hipertrofia de clitóris, indicação cirúrgica, procedimento e recuperação.",
+  subtitle: "Informação médica, avaliação individual e cuidado reservado para tratar alterações que podem causar desconforto funcional, estético ou emocional.",
+  heroImage: {
+    src: "/cirurgias/cirurgia-intima-feminina/gallery-4.jpg",
+    alt: "Modelo anatômico tridimensional da região íntima feminina",
+    width: 718,
+    height: 624,
+  },
   benefits: [
     "Avaliação individual e indicação segura",
     "Mais conforto em roupas íntimas e moda praia",
@@ -15,6 +21,7 @@ export const cirurgiaIntimaFeminina: CirurgiaContent = {
     paragraphs: [
       "A hipertrofia do clitóris pode aparecer isoladamente ou junto de alterações nos pequenos lábios. Para algumas mulheres, o volume causa desconforto com roupas íntimas, moda praia, exercícios ou durante a relação sexual.",
       "A origem pode ser genética ou estar relacionada ao uso de hormônios derivados da testosterona. Por isso, a consulta precisa avaliar sintomas, histórico de saúde, anatomia e expectativas antes de qualquer indicação.",
+      "Além do incômodo físico, a alteração também pode gerar constrangimento e impacto emocional. A conversa em consulta acontece com privacidade, acolhimento e informação clara.",
       "Quando a cirurgia é indicada, o objetivo é reduzir o excesso de tecido com planejamento proporcional, preservando a sensibilidade e respeitando a anatomia individual.",
     ],
     image: { src: "/cirurgias/cirurgia-intima-feminina/mockups/consulta-editorial.png", alt: "Consulta médica em ambiente reservado", width: 1448, height: 1086 },
@@ -68,8 +75,8 @@ export const cirurgiaIntimaFeminina: CirurgiaContent = {
       id: "pos-operatorio",
       heading: "Pós-operatório e recuperação",
       paragraphs: [
-        "A recuperação exige cuidados simples, mas consistentes: higiene local, uso correto das medicações e repouso relativo nos primeiros dias.",
-        "A abstinência sexual costuma ser recomendada por cerca de um mês, ou até liberação médica. Os retornos permitem acompanhar a cicatrização e orientar a retomada gradual das atividades.",
+        "O pós-operatório normalmente é tranquilo, mas exige cuidados consistentes: higiene local, uso correto das medicações e repouso relativo por cerca de sete dias.",
+        "A abstinência sexual é recomendada pelo prazo de um mês, ou até liberação médica. Os retornos permitem acompanhar a cicatrização e orientar a retomada gradual das atividades.",
       ],
       bullets: [
         "Higiene local cuidadosa nos primeiros dias",
