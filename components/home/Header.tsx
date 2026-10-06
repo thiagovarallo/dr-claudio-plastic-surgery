@@ -26,8 +26,10 @@ export function Header() {
   const currentLocale = locales.find((item) => item.code === locale) ?? locales[0];
   const active = pathname.startsWith("/cirurgias")
     ? "/cirurgias"
-    : pathname === "/claudio-eduardo-cirurgiao-plastico"
-      ? "/claudio-eduardo-cirurgiao-plastico"
+      : pathname === "/claudio-eduardo-cirurgiao-plastico"
+        ? "/claudio-eduardo-cirurgiao-plastico"
+        : pathname === "/contato"
+          ? "/contato"
       : homeActive;
 
   return (

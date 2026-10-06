@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import { credibility } from "@/content/home";
 import { WHATSAPP_HREF } from "@/content/site";
 import { AnimatedText } from "@/components/ui/AnimatedText";
@@ -27,14 +27,17 @@ export function Hero() {
       className="relative isolate flex min-h-svh flex-col overflow-hidden bg-navy-deep text-white"
     >
       <motion.div style={{ y: imageY, scale: imageScale }} className="absolute inset-0 -z-20">
-        <Image
-          src="/brand/hero-clinic.jpg"
-          alt="Dr. Claudio Eduardo em seu consultório"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-[68%_center]"
-        />
+        <picture className="block size-full">
+          <source media="(max-width: 639px)" srcSet="/brand/hero-home-mobile.png" />
+          <Image
+            src="/brand/hero-home-desktop.png"
+            alt="Dr. Claudio Eduardo em seu consultório"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[68%_center] sm:object-[68%_18%] lg:object-[68%_14%]"
+          />
+        </picture>
       </motion.div>
 
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(8,31,48,0.95)_0%,rgba(8,31,48,0.82)_38%,rgba(8,31,48,0.35)_72%,rgba(8,31,48,0.12)_100%)]" />
@@ -85,6 +88,19 @@ export function Hero() {
           </Link>
         </motion.div>
       </motion.div>
+
+      <motion.a
+        href="#sobre"
+        aria-label="Rolar para conhecer a história"
+        animate={reduced ? undefined : { y: [0, 7, 0] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute bottom-[6.75rem] left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-[10px] font-bold uppercase tracking-[0.28em] text-white/65 transition hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand sm:bottom-28"
+      >
+        <span>Role para explorar</span>
+        <span className="grid size-8 place-items-center rounded-full border border-white/25 bg-navy-deep/25 backdrop-blur-sm">
+          <ChevronDown className="size-4" />
+        </span>
+      </motion.a>
 
       <div className="relative border-t border-white/10 bg-navy-deep/35 backdrop-blur-md">
         <div className="mx-auto grid max-w-6xl grid-cols-2 sm:grid-cols-4">

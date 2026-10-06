@@ -6,7 +6,7 @@ export const navigation = [
   { label: "Cirurgias", href: "/cirurgias" },
   { label: "Unidades", href: "/#consultorio" },
   { label: "Hospitais", href: "/#hospitais" },
-  { label: "Contato", href: "/#contato" },
+  { label: "Contato", href: "/contato" },
 ] as const;
 
 export const locales = [
