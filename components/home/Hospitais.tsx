@@ -4,15 +4,18 @@ import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import { Building2, Mail, MapPin, Phone } from "lucide-react";
 import { useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { hospitals } from "@/content/home";
 
 function HospitalPhoto({
   hospital,
+  displayName,
   className,
   depth,
   sizes,
 }: {
   hospital: (typeof hospitals)[number];
+  displayName: string;
   className: string;
   depth: number;
   sizes: string;
@@ -51,7 +54,7 @@ function HospitalPhoto({
             />
             <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-navy-deep/75 to-transparent" />
             <p className="absolute inset-x-6 bottom-6 text-xs font-bold uppercase tracking-[0.16em] text-white">
-              {hospital.name} · {hospital.city}
+              {displayName} · {hospital.city}
             </p>
           </motion.div>
         </motion.div>
@@ -61,6 +64,7 @@ function HospitalPhoto({
 }
 
 export function Hospitais() {
+  const t = useTranslations("home.hospitals");
   const sectionRef = useRef<HTMLElement>(null);
   const reduced = useReducedMotion();
   const [hospitalIndex, setHospitalIndex] = useState(0);
@@ -84,19 +88,19 @@ export function Hospitais() {
         style={{ x: titleX }}
         className="pointer-events-none absolute right-[26%] top-0 whitespace-nowrap text-[clamp(4rem,8vw,8.8rem)] font-extrabold uppercase leading-none tracking-[-0.055em] text-white"
       >
-        Nossos hospitais
+        {t("title")}
       </motion.h2>
 
       <div className="relative z-10 mx-auto grid max-w-[1905px] gap-4 px-5 pt-20 sm:px-8 sm:pt-24 lg:h-full lg:grid-cols-[30%_41%_29%] lg:gap-0 lg:px-0 lg:pt-18.5">
         <div className="self-center pb-7 sm:pb-9 lg:px-10 lg:pb-0 xl:px-12">
           <div className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.42em] text-brand-deep">
             <Building2 className="size-4" />
-            Estrutura hospitalar
+            {t("eyebrow")}
           </div>
 
           <div
             role="tablist"
-            aria-label="Escolha um hospital"
+            aria-label={t("choose")}
             className="mt-5 grid max-w-md grid-cols-2 gap-2"
           >
             {hospitals.map((hospital, index) => (
@@ -118,7 +122,7 @@ export function Hospitais() {
                   0{index + 1}
                 </span>
                 <span className="mt-1 block text-[11px] font-extrabold leading-4">
-                  {hospital.name.replace("Hospital ", "")}
+                  {t(`items.${index}`).replace("Hospital ", "")}
                 </span>
               </button>
             ))}
@@ -136,7 +140,7 @@ export function Hospitais() {
               transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
             >
               <h3 className="mt-6 text-[clamp(2.35rem,3.4vw,3.9rem)] font-extrabold uppercase leading-[0.86] tracking-[-0.06em] text-ink">
-                {activeHospital.name}
+                {t(`items.${hospitalIndex}`)}
               </h3>
 
               <address className="mt-6 space-y-2.5 not-italic text-sm font-semibold leading-5 text-slate-600">
@@ -163,6 +167,7 @@ export function Hospitais() {
 
         <HospitalPhoto
           hospital={activeHospital}
+          displayName={t(`items.${hospitalIndex}`)}
           depth={10}
           sizes="(max-width: 1023px) 100vw, 41vw"
           className="h-77.5 rounded-[26px] sm:h-105 lg:mx-5 lg:h-125 lg:rounded-[30px] xl:h-132.5"
@@ -171,11 +176,12 @@ export function Hospitais() {
         <button
           type="button"
           onClick={() => setHospitalIndex((hospitalIndex + 1) % hospitals.length)}
-          aria-label={`Ver informações de ${secondaryHospital.name}`}
+          aria-label={`${t("next")} ${t(`items.${(hospitalIndex + 1) % hospitals.length}`)}`}
           className="text-left"
         >
           <HospitalPhoto
             hospital={secondaryHospital}
+            displayName={t(`items.${(hospitalIndex + 1) % hospitals.length}`)}
             depth={6}
             sizes="(max-width: 1023px) 100vw, 29vw"
             className="h-65 rounded-[26px] sm:h-90 lg:h-125 lg:rounded-l-[30px] lg:rounded-r-none xl:h-132.5"

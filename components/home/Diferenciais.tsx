@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ClipboardList, HeartPulse } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { diferenciais } from "@/content/home";
 import { WHATSAPP_HREF } from "@/content/site";
 import { Reveal } from "@/components/ui/Reveal";
@@ -10,6 +11,8 @@ import { Reveal } from "@/components/ui/Reveal";
 const icons = [HeartPulse, ClipboardList];
 
 export function Diferenciais() {
+  const t = useTranslations("home.differentials");
+
   return (
     <section className="relative isolate overflow-hidden bg-brand pb-28 text-white lg:pb-36">
       <Image
@@ -32,21 +35,19 @@ export function Diferenciais() {
                 }`}
               >
                 <Icon className="size-10" strokeWidth={1.4} />
-                <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.5em] text-white/85">
-                  {item.eyebrow}
-                </p>
+                <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.5em] text-white/85">{t(`items.${index}.eyebrow`)}</p>
                 <h2 className="mt-0.5 text-[28px] font-extrabold uppercase leading-none tracking-tight sm:text-[30px]">
-                  {item.title}
+                  {t(`items.${index}.title`)}
                 </h2>
                 <div className="mt-3 flex items-end justify-between gap-4">
                   <p className="max-w-78.75 text-xs font-medium leading-5 text-white/90">
-                    {item.text}
+                    {t(`items.${index}.text`)}
                   </p>
                   <Link
                     href={WHATSAPP_HREF}
                     className="inline-flex h-8 shrink-0 items-center rounded-full border border-white/80 px-4 text-[11px] font-bold transition hover:bg-white hover:text-brand-deep"
                   >
-                    Saiba +
+                    {t("more")}
                   </Link>
                 </div>
               </article>

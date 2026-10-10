@@ -1,19 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { surgeries } from "@/content/home";
 import { Reveal } from "@/components/ui/Reveal";
 
-const categories = {
-  "Aumento peniano": "Íntima",
-  "Cirurgia íntima feminina": "Íntima",
-  "Redesignação sexual": "Afirmação de gênero",
-  "Mastectomia masculinizadora": "Afirmação de gênero",
-  "Prótese de mama": "Estética",
-  Gluteoplastia: "Estética",
-} as const;
-
 export function Cirurgias() {
+  const t = useTranslations("home.surgeries");
+
   return (
     <section
       id="cirurgias"
@@ -33,19 +27,18 @@ export function Cirurgias() {
         <div className="grid gap-7 md:grid-cols-[1fr_0.85fr] md:items-end lg:gap-12">
           <Reveal className="max-w-xl">
             <p className="text-[11px] font-bold uppercase tracking-[0.48em] text-brand-deep">
-              Nossas
+              {t("eyebrow")}
             </p>
             <h2
               id="cirurgias-title"
               className="mt-3 font-display text-6xl font-medium leading-[0.84] tracking-[-0.055em] text-ink sm:text-7xl lg:text-[6.5rem]"
             >
-              Cirurgias
+              {t("title")}
             </h2>
           </Reveal>
           <Reveal delay={0.08} className="max-w-lg md:justify-self-end">
             <p className="text-sm leading-7 text-ink-soft/72 sm:text-base">
-              Procedimentos estéticos, reparadores e de afirmação de gênero. Toda indicação parte de
-              uma avaliação individual em consulta.
+              {t("description")}
             </p>
           </Reveal>
         </div>
@@ -65,7 +58,7 @@ export function Cirurgias() {
                 : "(min-width: 1024px) 42vw, 100vw";
 
             return (
-              <li key={surgery.title} className={`h-full ${layout}`}>
+              <li key={`${surgery.href}-${index}`} className={`h-full ${layout}`}>
                 <Reveal delay={(index % 3) * 0.06} className="h-full">
                   <Link
                     href={surgery.href}
@@ -75,7 +68,7 @@ export function Cirurgias() {
                   >
                     <Image
                       src={surgery.image}
-                      alt={`Imagem ilustrativa de ${surgery.title.toLowerCase()}`}
+                      alt={`${t("alt")} ${t(`items.${index}`).toLowerCase()}`}
                       fill
                       sizes={imageSizes}
                       className="object-cover transition duration-700 ease-out group-hover:scale-105"
@@ -84,7 +77,7 @@ export function Cirurgias() {
 
                     <div className="absolute inset-x-5 top-5 flex items-start justify-between gap-4 sm:inset-x-7 sm:top-7">
                       <span className="rounded-full border border-white/25 bg-navy-deep/25 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.2em] text-white/90 backdrop-blur-md">
-                        {categories[surgery.title]}
+                        {t(`categories.${index}`)}
                       </span>
                       <span className="font-display text-2xl leading-none text-white/65">
                         {String(index + 1).padStart(2, "0")}
@@ -92,12 +85,9 @@ export function Cirurgias() {
                     </div>
 
                     <div className="absolute inset-x-5 bottom-5 sm:inset-x-7 sm:bottom-7">
-                      <p className="max-w-xl text-xs leading-5 text-white/75 sm:text-[13px]">
-                        {surgery.text}
-                      </p>
                       <div className="mt-4 flex items-end justify-between gap-4">
                         <h3 className="max-w-[85%] text-2xl font-extrabold uppercase leading-[0.94] tracking-[-0.035em] text-white sm:text-3xl">
-                          {surgery.title}
+                          {t(`items.${index}`)}
                         </h3>
                         <span className="grid size-10 shrink-0 place-items-center rounded-full bg-brand text-white transition duration-300 group-hover:bg-white group-hover:text-navy-deep">
                           <ArrowUpRight className="size-4" />

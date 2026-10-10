@@ -10,10 +10,7 @@ export function CirurgiaGallery({ items }: Props) {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="grid gap-7 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <ScrollReveal>
-            <p className="text-[11px] font-bold uppercase tracking-[0.36em] text-brand">
-              Ambiente de cuidado
-            </p>
-            <h2 id="gallery-heading" className="mt-4 max-w-xl font-display text-5xl font-medium leading-[0.95] sm:text-6xl">
+            <h2 id="gallery-heading" className="max-w-xl font-display text-5xl font-medium leading-[0.95] sm:text-6xl">
               Informação, acolhimento e discrição
             </h2>
           </ScrollReveal>

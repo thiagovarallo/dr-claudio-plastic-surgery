@@ -1,0 +1,110 @@
+{
+  "header": {
+    "navigation": ["Home", "About", "Surgeries", "Locations", "Hospitals", "Contact"],
+    "schedule": "Book an evaluation",
+    "language": "Language",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "homeAria": "Go to homepage",
+    "primaryNav": "Main navigation",
+    "mobileNav": "Mobile menu"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Plastic surgery · Blumenau",
+      "title": "Surgical care with precision and discretion",
+      "description": "Dr. Claudio Eduardo, CRM 14.706-SC and RQE 23.737. Focused on aesthetic, reconstructive and gender-affirming procedures.",
+      "schedule": "Book an evaluation",
+      "surgeries": "View surgeries",
+      "scroll": "Scroll to explore"
+    },
+    "credibility": [
+      { "value": "CRM 14.706-SC", "hint": "Regional Council of Medicine" },
+      { "value": "RQE 23.737", "hint": "Specialist in Plastic Surgery" },
+      { "value": "SBCP", "hint": "Brazilian Society of Plastic Surgery" },
+      { "value": "12 years", "hint": "Of medical training and postgraduate study" }
+    ],
+    "differentials": {
+      "items": [
+      { "eyebrow": "Consultations", "title": "Medical assessment", "text": "Attentive listening, individual examination and responsible surgical guidance for every case." },
+      { "eyebrow": "Surgeries", "title": "Safe planning", "text": "Every procedure is planned around anatomy, goals and medical history." }
+      ],
+      "more": "Learn more"
+    },
+    "history": {
+      "eyebrow": "Discover",
+      "title": "Our story",
+      "lead": "A journey built on solid training and surgical specialization.",
+      "text": "After graduating in Medicine in 1996, he specialized in General Surgery, Plastic Surgery and Cranio-Maxillofacial Surgery at Hospital das Clínicas, University of São Paulo, completing 12 years of undergraduate and postgraduate training.",
+      "cta": "Explore the journey",
+      "marco": "Milestone",
+      "scrollHint": "Scroll to follow the journey",
+      "nodes": [
+        { "year": "1996", "label": "Medical degree", "place": "Universidade Severino Sombra · Vassouras/RJ", "text": "The beginning of a 12-year journey through medical school and surgical specialization." },
+        { "year": "1998", "label": "General Surgery residency", "place": "Hospital-based training", "text": "A strong surgical foundation before specializing in plastic surgery." },
+        { "year": "2001", "label": "Plastic Surgery residency", "place": "Hospital do Estado de São Paulo Brigadeiro", "text": "Three years of focused training, including representation of the residents in 2000 and 2001." },
+        { "year": "2004", "label": "Cranio-Maxillofacial Surgery", "place": "Hospital das Clínicas · USP", "text": "Specialization in cranio-maxillofacial surgery at one of Brazil's leading training centers." },
+        { "year": "Today", "label": "Practice in Blumenau", "place": "Private practice and regional hospitals", "text": "Aesthetic, reconstructive and gender-affirming surgery in Santa Catarina." }
+      ]
+    },
+    "units": {
+      "title": "Our locations",
+      "choose": "Choose a location",
+      "next": "Next environments",
+      "previous": "Previous environments",
+      "items": [
+        { "city": "Blumenau", "eyebrow": "In-person location", "address": "Stein Tower Building · 222 Floriano Peixoto St.", "complement": "8th floor, Room 801 · Centro, Blumenau/SC", "contact": "Contact the clinic" },
+        { "city": "Telemedicine", "eyebrow": "Digital location", "address": "Online consultation with individual care", "complement": "Available to patients in Brazil and abroad", "contact": "Book telemedicine" }
+      ]
+    },
+    "hospitals": {
+      "title": "Our hospitals",
+      "eyebrow": "Hospital network",
+      "choose": "Choose a hospital",
+      "next": "View information for",
+      "items": ["Hospital Unimed", "Hospital Santo Antônio"]
+    },
+    "surgeries": {
+      "eyebrow": "Our",
+      "title": "Surgeries",
+      "description": "Aesthetic, reconstructive and gender-affirming procedures. Every recommendation begins with an individual medical assessment.",
+      "categories": ["Intimate", "Intimate", "Gender affirmation", "Gender affirmation", "Aesthetic", "Aesthetic"],
+      "alt": "Illustrative image of",
+      "items": ["Penile enhancement", "Female intimate surgery", "Gender confirmation surgery", "Masculinizing mastectomy", "Breast implants", "Gluteoplasty"]
+    },
+    "footer": {
+      "siteMap": "Site map",
+      "certifications": "Credentials",
+      "surgeries": "Surgeries",
+      "care": "Care",
+      "about": "About",
+      "contact": "Contact us",
+      "careItems": ["Specialist consultation", "Surgical planning", "Follow-up care", "Aesthetic and reconstructive surgery"],
+      "aboutText": "Aesthetic, reconstructive and gender-affirming plastic surgery in Blumenau, Santa Catarina.",
+      "weekdays": "Monday to Friday",
+      "copyright": "© 2026 Claudio Eduardo Plastic Surgeon · All rights reserved"
+    }
+  },
+  "contact": {
+    "hero": { "eyebrow": "Contact · Blumenau/SC", "title": "Let's talk about your next step.", "text": "Ask your questions, share what you are looking for and find the best path to an individual assessment.", "send": "Send a message", "whatsapp": "Talk on WhatsApp", "email": "Email", "office": "Office", "center": "Centro · Blumenau/SC" },
+    "formSection": { "eyebrow": "Talk to the clinic", "title": "Find a clear path forward." },
+    "offices": { "eyebrow": "Where to find us", "title": "Our offices", "map": "View on map" },
+    "map": { "eyebrow": "Location", "title": "Easy to find. Made to welcome you.", "text": "Appointments take place at Stein Tower Building, in downtown Blumenau. Check the best route before your visit.", "hours": "Open Monday to Friday, from 8:00 am to 6:00 pm.", "open": "Open in Google Maps", "talk": "Talk to the clinic" },
+    "payments": { "eyebrow": "Transparency", "title": "Prices and payments", "legal": "We do not publish surgery prices or average fees on the website. After the consultation and procedure recommendation, the team presents costs and payment options according to medical ethics guidelines." },
+    "locations": [
+      { "eyebrow": "Main care location", "name": "Dr. Claudio Eduardo Clinic" },
+      { "eyebrow": "Office", "name": "Centro Clínico Santa Catarina" }
+    ],
+    "form": { "introEyebrow": "Individual care", "introTitle": "A conversation can clarify the next step.", "introText": "Send your details and tell us what you would like to understand. The team will reply through the clinic's WhatsApp.", "name": "Full name", "namePlaceholder": "Enter your name", "phone": "Phone / WhatsApp", "email": "Email", "emailPlaceholder": "you@example.com", "city": "City / State", "cityPlaceholder": "Blumenau / SC", "comment": "Comment", "commentPlaceholder": "Briefly tell us how we can help.", "attachments": "Attachments", "accepted": "Accepted formats: DOC, DOCX, PDF and JPG. The file can be sent in the WhatsApp conversation.", "consent": "I authorize the clinic to contact me using the information provided for this request.", "privacy": "Your data will be used exclusively to respond to your request.", "submit": "Send via WhatsApp", "sent": "Your message was prepared in WhatsApp", "none": "None" }
+  },
+  "surgeryIndex": {
+    "badge": "Care at every step", "headlineA": "Surgeries with", "headlineB": "precision and care.", "description": "Aesthetic, intimate and gender-affirming procedures planned around your anatomy, your moment and your goals.", "explore": "Explore surgeries", "schedule": "Book an evaluation", "specialties": "Specialties", "procedures": "Procedures", "possibilities": "Possibilities for every journey", "procedureText": "Every surgery begins with a conversation. The medical assessment considers your history, anatomy, expectations and safety to build a truly individual recommendation.", "talk": "Talk to the team", "learn": "Learn about the surgery", "safetyEyebrow": "Safety and clarity", "safetyTitle": "The right surgery starts with the right indication.", "safetyText": "The decision is built in consultation, with clear information about possibilities, limits, preparation and recovery.", "careEyebrow": "How we care for you", "careSteps": ["Individual consultation and listening", "Responsible medical indication", "Preoperative planning", "Recovery follow-up"], "scheduleFull": "Book an evaluation", "procedureDescriptions": ["Procedures for increasing penile length and girth, recommended only after individual assessment.", "Treatment for excess tissue of the labia and other intimate changes, with technique and discretion.", "Gender-affirming surgery with responsible indication and specialized follow-up.", "Surgery for people in transition, with proportional planning and individual care.", "Aesthetic or reconstructive breast augmentation defined after assessing anatomy and expectations.", "Silicone implants placed in the gluteus maximus muscle with individualized indication and technique."]
+  },
+  "surgeryDetail": {
+    "back": "Surgeries",
+    "request": "Request an evaluation",
+    "understand": "Understand the surgery",
+    "confidential": "Confidential care · CRM 14.706-SC · RQE 23.737",
+    "credentials": "Credentials"
+  }
+}

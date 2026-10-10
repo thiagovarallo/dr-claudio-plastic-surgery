@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { useLocale, useTranslations } from "next-intl";
 import { AnimatePresence, motion, useMotionValueEvent, useReducedMotion, useScroll } from "motion/react";
 import { useState } from "react";
 import { ChevronDown, Languages, Menu, X } from "lucide-react";
@@ -15,9 +16,15 @@ export function Header() {
   const reduced = useReducedMotion();
   const [scrolled, setScrolled] = useState(false);
   const [homeActive, setHomeActive] = useState<(typeof navigation)[number]["href"]>(navigation[0].href);
-  const [locale, setLocale] = useState<LocaleCode>("pt");
   const [langOpen, setLangOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const locale = useLocale() as LocaleCode;
+  const router = useRouter();
+  const t = useTranslations("header");
+  const translatedNavigation = navigation.map((item, index) => ({
+    ...item,
+    label: t(`navigation.${index}`),
+  }));
 
   useMotionValueEvent(scrollY, "change", (value) => {
     setScrolled(value > 28);
@@ -41,7 +48,7 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex h-[76px] max-w-6xl items-center gap-6 px-5 sm:px-8">
-        <Link href="/#inicio" aria-label="Ir para o início" className="relative h-8 w-[148px] shrink-0">
+        <Link href="/#inicio" aria-label={t("homeAria")} className="relative h-8 w-[148px] shrink-0">
           <Image
             src="/brand/logo.png"
             alt="Dr. Claudio Eduardo"
@@ -57,8 +64,8 @@ export function Header() {
           />
         </Link>
 
-        <nav aria-label="Principal" className="relative hidden items-center gap-1 lg:flex">
-          {navigation.map((item) => {
+        <nav aria-label={t("primaryNav")} className="relative hidden items-center gap-1 lg:flex">
+          {translatedNavigation.map((item) => {
             const isActive = active === item.href;
             return (
               <Link
@@ -126,8 +133,9 @@ export function Header() {
                         role="option"
                         aria-selected={locale === item.code}
                         onClick={() => {
-                          setLocale(item.code);
+                          document.cookie = `NEXT_LOCALE=${item.code}; path=/; max-age=31536000; samesite=lax`;
                           setLangOpen(false);
+                          router.refresh();
                         }}
                         className={`flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-sm font-semibold ${
                           locale === item.code
@@ -149,7 +157,7 @@ export function Header() {
             href={WHATSAPP_HREF}
             className="hidden h-10 items-center rounded-full bg-brand px-5 text-xs font-bold text-white transition hover:bg-brand-deep sm:inline-flex"
           >
-            Agendar avaliação
+            {t("schedule")}
           </Link>
 
           <button
@@ -158,7 +166,7 @@ export function Header() {
               scrolled ? "border-ink/12 text-ink" : "border-white/30 text-white"
             }`}
             aria-expanded={menuOpen}
-            aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
+            aria-label={menuOpen ? t("closeMenu") : t("openMenu")}
             onClick={() => setMenuOpen((open) => !open)}
           >
             {menuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
@@ -174,8 +182,8 @@ export function Header() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 top-[76px] z-40 bg-navy-deep/96 px-6 py-10 text-white backdrop-blur-xl lg:hidden"
           >
-            <nav aria-label="Menu móvel" className="flex flex-col gap-2">
-              {navigation.map((item, index) => (
+            <nav aria-label={t("mobileNav")} className="flex flex-col gap-2">
+              {translatedNavigation.map((item, index) => (
                 <motion.div
                   key={item.href}
                   initial={reduced ? false : { opacity: 0, y: 16 }}
@@ -199,7 +207,7 @@ export function Header() {
               href={WHATSAPP_HREF}
               className="mt-8 inline-flex h-12 items-center rounded-full bg-brand px-6 text-sm font-bold"
             >
-              Agendar avaliação
+              {t("schedule")}
             </Link>
           </motion.div>
         ) : null}

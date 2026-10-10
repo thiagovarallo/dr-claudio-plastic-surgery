@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
+import { useTranslations } from "next-intl";
 import { useRef } from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { credibility } from "@/content/home";
@@ -10,6 +11,8 @@ import { WHATSAPP_HREF } from "@/content/site";
 import { AnimatedText } from "@/components/ui/AnimatedText";
 
 export function Hero() {
+  const t = useTranslations("home.hero");
+  const credibilityText = useTranslations("home.credibility");
   const ref = useRef<HTMLElement>(null);
   const reduced = useReducedMotion();
   const { scrollYProgress } = useScroll({
@@ -49,14 +52,12 @@ export function Hero() {
         style={{ y: contentY }}
         className="relative mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-5 pb-16 pt-32 sm:px-8"
       >
-        <p className="text-[11px] font-semibold uppercase tracking-[0.46em] text-brand">
-          Cirurgia plástica · Blumenau
-        </p>
+        <p className="text-[11px] font-semibold uppercase tracking-[0.46em] text-brand">{t("eyebrow")}</p>
         <AnimatedText
           as="h1"
           delay={0.08}
           className="mt-5 max-w-3xl font-display text-[54px] font-medium leading-[0.94] text-white sm:text-7xl lg:text-[86px]"
-          text="Cuidado cirúrgico com precisão e discrição"
+          text={t("title")}
         />
         <motion.p
           initial={reduced ? false : { opacity: 0, y: 16 }}
@@ -64,8 +65,7 @@ export function Hero() {
           transition={{ delay: 0.55, duration: 0.6 }}
           className="mt-7 max-w-lg text-sm leading-7 text-white/76 sm:text-base"
         >
-          Dr. Claudio Eduardo, CRM 14.706-SC e RQE 23.737. Atuação em procedimentos estéticos,
-          reparadores e cirurgias de afirmação de gênero.
+          {t("description")}
         </motion.p>
         <motion.div
           initial={reduced ? false : { opacity: 0, y: 16 }}
@@ -77,26 +77,26 @@ export function Hero() {
             href={WHATSAPP_HREF}
             className="inline-flex h-12 items-center gap-2 rounded-full bg-brand px-6 text-sm font-bold text-white transition hover:bg-brand-deep"
           >
-            Agendar avaliação
+            {t("schedule")}
             <ArrowRight className="size-4" />
           </Link>
           <Link
             href="/cirurgias"
             className="inline-flex h-12 items-center rounded-full border border-white/25 px-6 text-sm font-semibold text-white/88 transition hover:border-white/60"
           >
-            Ver cirurgias
+            {t("surgeries")}
           </Link>
         </motion.div>
       </motion.div>
 
       <motion.a
         href="#sobre"
-        aria-label="Rolar para conhecer a história"
+        aria-label={t("scroll")}
         animate={reduced ? undefined : { y: [0, 7, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         className="absolute bottom-[6.75rem] left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-[10px] font-bold uppercase tracking-[0.28em] text-white/65 transition hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand sm:bottom-28"
       >
-        <span>Role para explorar</span>
+        <span>{t("scroll")}</span>
         <span className="grid size-8 place-items-center rounded-full border border-white/25 bg-navy-deep/25 backdrop-blur-sm">
           <ChevronDown className="size-4" />
         </span>
@@ -112,8 +112,8 @@ export function Hero() {
               transition={{ delay: 0.8 + index * 0.08, duration: 0.45 }}
               className={`px-5 py-5 sm:px-6 ${index > 0 ? "sm:border-l sm:border-white/10" : ""}`}
             >
-              <p className="text-sm font-bold text-white">{item.value}</p>
-              <p className="mt-1 text-[11px] leading-4 text-white/55">{item.hint}</p>
+              <p className="text-sm font-bold text-white">{credibilityText(`${index}.value`)}</p>
+              <p className="mt-1 text-[11px] leading-4 text-white/55">{credibilityText(`${index}.hint`)}</p>
             </motion.div>
           ))}
         </div>

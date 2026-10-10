@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion, useScroll, useTransform } from "motion/react";
+import { useTranslations } from "next-intl";
 import { useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, Mail, MapPin, Phone, Video } from "lucide-react";
 import { clinicGallery, units } from "@/content/home";
@@ -60,6 +61,7 @@ function ClinicPhoto({
 }
 
 export function Unidades() {
+  const t = useTranslations("home.units");
   const sectionRef = useRef<HTMLElement>(null);
   const reduced = useReducedMotion();
   const [start, setStart] = useState(0);
@@ -90,7 +92,7 @@ export function Unidades() {
         style={{ x: titleX }}
         className="pointer-events-none absolute left-[31%] top-0 whitespace-nowrap text-[clamp(4.4rem,8vw,8.8rem)] font-extrabold uppercase leading-none tracking-[-0.055em] text-slate-100"
       >
-        Nossas unidades
+        {t("title")}
       </motion.h2>
 
       <div className="relative mx-auto grid max-w-[1905px] gap-4 px-5 pt-20 sm:px-8 sm:pt-24 lg:h-full lg:grid-cols-[29%_41%_30%] lg:gap-0 lg:px-0 lg:pt-18.5 z-50">
@@ -113,7 +115,7 @@ export function Unidades() {
         <div className="self-center px-1 pt-7 sm:col-span-2 lg:col-span-1 lg:px-8 lg:pt-0 xl:px-12">
           <div
             role="tablist"
-            aria-label="Escolha uma unidade"
+            aria-label={t("choose")}
             className="mb-7 grid max-w-sm grid-cols-2 rounded-full bg-slate-100 p-1"
           >
             {units.map((item, index) => (
@@ -131,7 +133,7 @@ export function Unidades() {
                     : "text-slate-500 hover:text-ink"
                 }`}
               >
-                {item.city}
+                {t(`items.${index}.city`)}
               </button>
             ))}
           </div>
@@ -148,10 +150,10 @@ export function Unidades() {
               transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
             >
               <p className="text-[10px] font-semibold uppercase tracking-[0.48em] text-slate-500">
-                {activeUnit.eyebrow}
+                {t(`items.${unitIndex}.eyebrow`)}
               </p>
               <h3 className="mt-2 text-[clamp(2.7rem,4vw,4.7rem)] font-extrabold uppercase leading-[0.82] tracking-[-0.065em] text-ink">
-                {activeUnit.city}
+                {t(`items.${unitIndex}.city`)}
               </h3>
 
               <address className="mt-8 space-y-2.5 not-italic text-sm font-semibold leading-5 text-slate-600">
@@ -162,9 +164,9 @@ export function Unidades() {
                     <MapPin className="mt-0.5 size-5 shrink-0 text-brand" />
                   )}
                   <span>
-                    {activeUnit.address}
+                    {t(`items.${unitIndex}.address`)}
                     <br />
-                    {activeUnit.complement}
+                    {t(`items.${unitIndex}.complement`)}
                   </span>
                 </p>
                 <a href={activeUnit.emailHref} className="flex gap-3 transition hover:text-ink">
@@ -181,7 +183,7 @@ export function Unidades() {
                 href={WHATSAPP_HREF}
                 className="mt-8 inline-flex h-12 items-center gap-4 rounded-full bg-linear-to-r from-brand to-[#08a9cf] px-8 text-sm font-bold text-white shadow-[0_10px_24px_rgba(8,191,196,0.2)] transition hover:-translate-y-0.5"
               >
-                {activeUnit.contactLabel}
+                {t(`items.${unitIndex}.contact`)}
                 <ArrowRight className="size-4" />
               </Link>
             </motion.div>
@@ -192,7 +194,7 @@ export function Unidades() {
           <button
             type="button"
             onClick={() => go(1)}
-            aria-label="Próximos ambientes"
+            aria-label={t("next")}
             className="grid size-14 place-items-center rounded-full bg-brand text-white shadow-lg transition hover:-translate-y-0.5 lg:size-16"
           >
             <ArrowRight className="size-4" />
@@ -200,7 +202,7 @@ export function Unidades() {
           <button
             type="button"
             onClick={() => go(-1)}
-            aria-label="Ambientes anteriores"
+            aria-label={t("previous")}
             className="grid size-14 place-items-center rounded-full bg-brand-deep text-white shadow-lg transition hover:-translate-y-0.5 lg:size-16"
           >
             <ArrowLeft className="size-4" />

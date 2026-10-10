@@ -13,21 +13,32 @@ import {
   type MotionValue,
 } from "motion/react";
 import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { history } from "@/content/home";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
-type Node = (typeof history.nodes)[number];
+type Node = {
+  year: string;
+  label: string;
+  place: string;
+  text: string;
+  tone: (typeof history.nodes)[number]["tone"];
+};
 
 const NODES = history.nodes;
 const SCROLL_STEP_VH = 92;
 
 const POINTS: { left: string; top: string }[] = [
-  { left: "42%", top: "75%" },
-  { left: "52%", top: "58%" },
-  { left: "64%", top: "39%" },
-  { left: "77%", top: "23%" },
-  { left: "91%", top: "26%" },
+  { left: "40%", top: "81%" },
+  { left: "50%", top: "58%" },
+  { left: "63%", top: "39%" },
+  { left: "76%", top: "23%" },
+  { left: "89%", top: "26%" },
 ];
+
+const CARD_SIDES = ["above", "below", "above", "below", "below"] as const;
+const HISTORY_PATH =
+  "M 576 688 C 640 660 660 535 720 493 C 785 405 850 337 907 332 C 1000 300 1028 170 1094 196 C 1170 215 1220 195 1282 221";
 
 function MedicalIcon({ className }: { className?: string }) {
   return (
@@ -72,22 +83,31 @@ function TimelinePoint({
     >
       <div className="relative text-center">
         <span
-          className={`mx-auto grid size-12 place-items-center rounded-full border-2 bg-white shadow-[0_8px_22px_rgba(32,40,50,0.10)] transition-[transform,box-shadow,border-color] duration-500 xl:size-14 ${
+          className={`relative mx-auto grid size-14 place-items-center transition-transform duration-500 xl:size-16 ${
+            isActive ? "scale-110" : ""
+          }`}
+        >
+          <span
+            className={`absolute inset-[7px] rotate-45 rounded-[13px] border-2 bg-white shadow-[0_8px_22px_rgba(32,40,50,0.10)] transition-[box-shadow,border-color,background-color] duration-500 ${
             isActive
               ? isBrand
-                ? "scale-110 border-brand shadow-[0_0_0_9px_rgba(8,191,196,0.15)]"
-                : "scale-110 border-ink shadow-[0_0_0_9px_rgba(32,40,50,0.10)]"
+                ? "border-brand shadow-[0_0_0_8px_rgba(8,191,196,0.14)]"
+                : "border-ink shadow-[0_0_0_8px_rgba(32,40,50,0.10)]"
               : isBrand
                 ? "border-brand"
                 : "border-slate-300"
-          }`}
-        >
-          <span className={`size-6 rounded-full xl:size-7 ${isBrand ? "bg-brand" : "bg-ink"}`} />
+            }`}
+          />
+          <span
+            className={`relative z-10 size-5 rounded-full border-[3px] border-white shadow-[0_2px_8px_rgba(32,40,50,0.18)] transition-[background-color,transform] duration-500 xl:size-6 ${
+              isBrand ? "bg-brand" : "bg-ink"
+            }`}
+          />
         </span>
         <strong
-          className={`mt-2 block text-[25px] font-extrabold leading-none tracking-[-0.05em] xl:text-[30px] ${
+          className={`mt-1 inline-flex rounded-full border bg-white px-3 py-1 text-[17px] font-extrabold leading-none tracking-[-0.05em] shadow-[0_5px_14px_rgba(32,40,50,0.06)] transition-[border-color,color] duration-500 xl:text-[20px] ${
             isBrand ? "text-brand" : "text-ink"
-          }`}
+          } ${isActive ? (isBrand ? "border-brand/45" : "border-ink/35") : "border-slate-200"}`}
         >
           {node.year}
         </strong>
@@ -96,52 +116,71 @@ function TimelinePoint({
   );
 }
 
-function ActiveStory({ node, index }: { node: Node; index: number }) {
+function ActiveStory({ node, index, marco }: { node: Node; index: number; marco: string }) {
+  const point = POINTS[index] ?? POINTS[POINTS.length - 1];
+  const side = CARD_SIDES[index] ?? "below";
+  const isAbove = side === "above";
+
   return (
     <AnimatePresence mode="wait" initial={false}>
-      <motion.article
+      <motion.div
         key={node.year}
-        initial={{ opacity: 0, x: 110 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: -24 }}
+        initial={{ opacity: 0, x: isAbove ? -36 : 36, y: isAbove ? 12 : -12 }}
+        animate={{ opacity: 1, x: 0, y: 0 }}
+        exit={{ opacity: 0, x: isAbove ? 18 : -18 }}
         transition={{ duration: 0.58, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute bottom-[5%] left-[56%] z-20 w-64 overflow-hidden rounded-[10px] bg-brand p-2.5 text-white shadow-[0_22px_55px_rgba(8,191,196,0.24)] xl:w-70"
+        className="absolute z-30"
+        style={{ left: point.left, top: point.top }}
       >
-        <div className="relative min-h-62 rounded-[7px] border border-white/60 px-6 py-6 xl:min-h-66 xl:px-7">
-          <div className="absolute -bottom-10 -right-8 size-36 rounded-full bg-white/8" />
-          <div className="relative flex items-start justify-between gap-4">
-            <div>
-              <p className="text-[9px] font-bold uppercase tracking-[0.34em] text-white/70">
-                Marco {String(index + 1).padStart(2, "0")}
-              </p>
-              <p className="mt-1 text-[32px] font-extrabold leading-none tracking-[-0.05em]">
-                {node.year}
-              </p>
+        <div className="relative w-[clamp(13.5rem,17vw,16rem)] -translate-x-1/2">
+          <span
+            aria-hidden
+            className={`absolute left-1/2 z-0 w-[2px] -translate-x-1/2 bg-gradient-to-b from-brand/25 via-brand to-brand/25 ${
+              isAbove ? "top-[-4.5rem] h-[4.5rem]" : "top-0 h-24"
+            }`}
+          />
+          <article
+            className={`absolute left-0 z-10 w-full overflow-hidden rounded-[10px] bg-brand p-2.5 text-white shadow-[0_22px_55px_rgba(8,191,196,0.24)] ${
+              isAbove ? "bottom-[4.5rem]" : "top-24"
+            }`}
+          >
+            <div className="relative min-h-52 rounded-[7px] border border-white/60 px-5 py-5 xl:min-h-56 xl:px-6">
+              <div className="absolute -bottom-10 -right-8 size-36 rounded-full bg-white/8" />
+              <div className="relative flex items-start justify-between gap-3">
+                <div>
+                  <p className="text-[9px] font-bold uppercase tracking-[0.34em] text-white/70">
+                    {marco} {String(index + 1).padStart(2, "0")}
+                  </p>
+                  <p className="mt-1 text-[30px] font-extrabold leading-none tracking-[-0.05em]">
+                    {node.year}
+                  </p>
+                </div>
+                <MedicalIcon className="size-9 text-white/90" />
+              </div>
+              <h3 className="relative mt-3 text-[12px] font-extrabold uppercase leading-4 tracking-tight">
+                {node.label}
+              </h3>
+              <p className="relative mt-2 text-[10px] font-semibold leading-4 text-white/75">{node.place}</p>
+              <p className="relative mt-3 text-[10px] leading-[1.5] text-white/90">{node.text}</p>
             </div>
-            <MedicalIcon className="size-10 text-white/90" />
-          </div>
-          <h3 className="relative mt-4 text-[13px] font-extrabold uppercase leading-4 tracking-tight">
-            {node.label}
-          </h3>
-          <p className="relative mt-2 text-[10px] font-semibold leading-4 text-white/75">{node.place}</p>
-          <p className="relative mt-3 text-[11px] leading-[1.55] text-white/90">{node.text}</p>
+          </article>
         </div>
-      </motion.article>
+      </motion.div>
     </AnimatePresence>
   );
 }
 
-function MobileHistory() {
+function MobileHistory({ nodes, eyebrow, title, lead, text, cta }: { nodes: Node[]; eyebrow: string; title: string; lead: string; text: string; cta: string }) {
   return (
     <div className="relative overflow-hidden px-5 pb-20 pt-24 sm:px-8">
       <div className="pointer-events-none absolute -right-28 top-24 size-72 rounded-full bg-brand/8 blur-3xl" />
       <div className="mx-auto max-w-xl">
-        <SectionTitle eyebrow="Conheça" title="Nossa história" size="lg" />
-        <p className="mt-4 max-w-lg text-[15px] font-bold leading-6 text-ink">{history.lead}</p>
-        <p className="mt-3 max-w-lg text-[13px] leading-6 text-slate-600">{history.text}</p>
+        <SectionTitle eyebrow={eyebrow} title={title} size="lg" />
+        <p className="mt-4 max-w-lg text-[15px] font-bold leading-6 text-ink">{lead}</p>
+        <p className="mt-3 max-w-lg text-[13px] leading-6 text-slate-600">{text}</p>
 
         <div className="relative mt-12 ml-3 border-l border-dashed border-slate-300 pl-8">
-          {NODES.map((node) => {
+          {nodes.map((node) => {
             const isBrand = node.tone === "brand";
             return (
               <motion.article
@@ -172,7 +211,7 @@ function MobileHistory() {
           href="/claudio-eduardo-cirurgiao-plastico"
           className="mt-10 inline-flex h-11 items-center gap-3 rounded-full bg-brand px-6 text-xs font-bold text-white transition hover:bg-brand-deep"
         >
-          Conhecer a trajetória
+          {cta}
           <ArrowRight className="size-4" />
         </Link>
       </div>
@@ -181,10 +220,18 @@ function MobileHistory() {
 }
 
 export function Historia() {
+  const t = useTranslations("home.history");
   const scrollRef = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
   const [activeIndex, setActiveIndex] = useState(0);
   const scrollProgress = useMotionValue(0);
+  const localizedNodes = NODES.map((node, index) => ({
+    ...node,
+    year: t(`nodes.${index}.year`),
+    label: t(`nodes.${index}.label`),
+    place: t(`nodes.${index}.place`),
+    text: t(`nodes.${index}.text`),
+  }));
   const smoothProgress = useSpring(scrollProgress, {
     stiffness: 115,
     damping: 30,
@@ -226,7 +273,7 @@ export function Historia() {
   }, [reduced, scrollProgress]);
 
   const scrollHeight = `${100 + NODES.length * SCROLL_STEP_VH}vh`;
-  const activeNode = NODES[activeIndex];
+  const activeNode = localizedNodes[activeIndex];
 
   return (
     <section id="sobre" aria-labelledby="historia-title" className="relative scroll-mt-19 bg-white">
@@ -251,26 +298,67 @@ export function Historia() {
               </motion.div>
 
               <div className="absolute left-[23%] top-[10%] z-30 w-[27%] max-w-100">
-                <SectionTitle id="historia-title" eyebrow="Conheça" title="Nossa história" />
-                <p className="mt-3 text-[13px] font-bold leading-5 text-ink xl:text-[14px] xl:leading-6">{history.lead}</p>
-                <p className="mt-2 text-[11px] leading-5 text-slate-600 xl:text-xs">{history.text}</p>
+                <SectionTitle id="historia-title" eyebrow={t("eyebrow")} title={t("title")} />
+                <p className="mt-3 text-[13px] font-bold leading-5 text-ink xl:text-[14px] xl:leading-6">{t("lead")}</p>
+                <p className="mt-2 text-[11px] leading-5 text-slate-600 xl:text-xs">{t("text")}</p>
                 <Link
                   href="/claudio-eduardo-cirurgiao-plastico"
                   className="mt-5 inline-flex h-10 items-center gap-3 rounded-full bg-brand px-6 text-[11px] font-bold text-white transition hover:bg-brand-deep"
                 >
-                  Conhecer a trajetória
+                  {t("cta")}
                   <ArrowRight className="size-4" />
                 </Link>
               </div>
 
-              <motion.div aria-hidden style={reduced ? undefined : { clipPath: lineClip }} className="absolute inset-0">
+              <svg
+                aria-hidden
+                viewBox="0 0 1440 850"
+                preserveAspectRatio="none"
+                className="pointer-events-none absolute inset-0 h-full w-full"
+                fill="none"
+              >
+                <path
+                  d={HISTORY_PATH}
+                  stroke="#dce7ea"
+                  strokeWidth="8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d={HISTORY_PATH}
+                  stroke="#ffffff"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+
+              <motion.div
+                aria-hidden
+                style={reduced ? undefined : { clipPath: lineClip }}
+                className="pointer-events-none absolute inset-0"
+              >
                 <svg viewBox="0 0 1440 850" preserveAspectRatio="none" className="absolute inset-0 h-full w-full" fill="none">
+                  <defs>
+                    <linearGradient id="history-line-gradient" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0" stopColor="#047f92" />
+                      <stop offset="0.55" stopColor="#08bfc4" />
+                      <stop offset="1" stopColor="#8fd4df" />
+                    </linearGradient>
+                  </defs>
                   <path
-                    d="M470 720C570 720 640 660 700 560C780 430 850 360 920 320C1050 240 1110 180 1220 190C1320 196 1380 240 1460 245"
-                    stroke="#65717c"
-                    strokeWidth="2.2"
-                    strokeDasharray="2 9"
+                    d={HISTORY_PATH}
+                    stroke="rgba(8,191,196,0.16)"
+                    strokeWidth="13"
                     strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d={HISTORY_PATH}
+                    stroke="url(#history-line-gradient)"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </motion.div>
@@ -286,10 +374,10 @@ export function Historia() {
                 />
               ))}
 
-              <ActiveStory node={activeNode} index={activeIndex} />
+              <ActiveStory node={activeNode} index={activeIndex} marco={t("marco")} />
 
               <p className="absolute bottom-[3.5%] right-[4%] z-20 text-[8px] font-bold uppercase tracking-[0.32em] text-slate-400">
-                Role para percorrer a trajetória
+                {t("scrollHint")}
               </p>
             </div>
           </div>
@@ -297,7 +385,14 @@ export function Historia() {
       </div>
 
       <div className="lg:hidden">
-        <MobileHistory />
+        <MobileHistory
+          nodes={localizedNodes}
+          eyebrow={t("eyebrow")}
+          title={t("title")}
+          lead={t("lead")}
+          text={t("text")}
+          cta={t("cta")}
+        />
       </div>
     </section>
   );

@@ -4,7 +4,6 @@ import { Header } from "@/components/home/Header";
 import { CirurgiaContactForm } from "./CirurgiaContactForm";
 import { CirurgiaContent as CirurgiaContentBlocks } from "./CirurgiaContent";
 import { CirurgiaFAQ } from "./CirurgiaFAQ";
-import { CirurgiaGallery } from "./CirurgiaGallery";
 import { CirurgiaHero } from "./CirurgiaHero";
 
 type Props = {
@@ -21,11 +20,8 @@ export function CirurgiaPage({ cirurgia }: Props) {
             category={cirurgia.category}
             title={cirurgia.title}
             subtitle={cirurgia.subtitle}
-            heroImage={cirurgia.heroImage}
-            benefits={cirurgia.benefits}
           />
           <CirurgiaContentBlocks overview={cirurgia.overview} sections={cirurgia.sections} />
-          <CirurgiaGallery items={cirurgia.gallery} />
           <CirurgiaFAQ items={cirurgia.faq} />
           <CirurgiaContactForm surgeryTitle={cirurgia.title} />
         </article>

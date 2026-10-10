@@ -1,0 +1,110 @@
+{
+  "header": {
+    "navigation": ["Home", "Sobre", "Cirurgias", "Unidades", "Hospitais", "Contato"],
+    "schedule": "Agendar avaliação",
+    "language": "Idioma",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "homeAria": "Ir para o início",
+    "primaryNav": "Principal",
+    "mobileNav": "Menu móvel"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Cirurgia plástica · Blumenau",
+      "title": "Cuidado cirúrgico com precisão e discrição",
+      "description": "Dr. Claudio Eduardo, CRM 14.706-SC e RQE 23.737. Atuação em procedimentos estéticos, reparadores e cirurgias de afirmação de gênero.",
+      "schedule": "Agendar avaliação",
+      "surgeries": "Ver cirurgias",
+      "scroll": "Role para explorar"
+    },
+    "credibility": [
+      { "value": "CRM 14.706-SC", "hint": "Conselho Regional de Medicina" },
+      { "value": "RQE 23.737", "hint": "Especialista em Cirurgia Plástica" },
+      { "value": "SBCP", "hint": "Sociedade Brasileira de Cirurgia Plástica" },
+      { "value": "12 anos", "hint": "De formação e pós-graduações" }
+    ],
+    "differentials": {
+      "items": [
+      { "eyebrow": "Consultas", "title": "Avaliação médica", "text": "Escuta atenta, exame individual e indicação cirúrgica responsável para cada caso." },
+      { "eyebrow": "Cirurgias", "title": "Planejamento seguro", "text": "Cada procedimento é planejado conforme anatomia, objetivos e histórico de saúde." }
+      ],
+      "more": "Saiba +"
+    },
+    "history": {
+      "eyebrow": "Conheça",
+      "title": "Nossa história",
+      "lead": "Uma trajetória construída com formação sólida e especialização cirúrgica.",
+      "text": "Formado em Medicina em 1996, especializou-se em Cirurgia Geral, Cirurgia Plástica e Cirurgia Crânio-Maxilo-Facial no Hospital das Clínicas da USP, somando 12 anos entre graduação e pós-graduações.",
+      "cta": "Conhecer a trajetória",
+      "marco": "Marco",
+      "scrollHint": "Role para percorrer a trajetória",
+      "nodes": [
+        { "year": "1996", "label": "Graduação em Medicina", "place": "Universidade Severino Sombra · Vassouras/RJ", "text": "Início de uma trajetória de 12 anos entre graduação e especializações." },
+        { "year": "1998", "label": "Residência em Cirurgia Geral", "place": "Formação hospitalar", "text": "Consolidação da base cirúrgica antes da especialização em cirurgia plástica." },
+        { "year": "2001", "label": "Residência em Cirurgia Plástica", "place": "Hospital do Estado de São Paulo Brigadeiro", "text": "Três anos de formação específica, com representação dos residentes em 2000 e 2001." },
+        { "year": "2004", "label": "Crânio-Maxilo-Facial", "place": "Hospital das Clínicas · USP", "text": "Especialização em cirurgia crânio-maxilo-facial no principal centro de formação do país." },
+        { "year": "Hoje", "label": "Atendimento em Blumenau", "place": "Consultório privado e hospitais da região", "text": "Cirurgia estética, reparadora e de afirmação de gênero em Santa Catarina." }
+      ]
+    },
+    "units": {
+      "title": "Nossas unidades",
+      "choose": "Escolha uma unidade",
+      "next": "Próximos ambientes",
+      "previous": "Ambientes anteriores",
+      "items": [
+        { "city": "Blumenau", "eyebrow": "Unidade presencial", "address": "Edifício Stein Tower · R. Floriano Peixoto, 222", "complement": "8º andar, Sala 801 · Centro, Blumenau/SC", "contact": "Entrar em contato" },
+        { "city": "Telemedicina", "eyebrow": "Unidade digital", "address": "Consulta online com atendimento individualizado", "complement": "Disponível para pacientes do Brasil e exterior", "contact": "Agendar teleconsulta" }
+      ]
+    },
+    "hospitals": {
+      "title": "Nossos hospitais",
+      "eyebrow": "Estrutura hospitalar",
+      "choose": "Escolha um hospital",
+      "next": "Ver informações de",
+      "items": ["Hospital Unimed", "Hospital Santo Antônio"]
+    },
+    "surgeries": {
+      "eyebrow": "Nossas",
+      "title": "Cirurgias",
+      "description": "Procedimentos estéticos, reparadores e de afirmação de gênero. Toda indicação parte de uma avaliação individual em consulta.",
+      "categories": ["Íntima", "Íntima", "Afirmação de gênero", "Afirmação de gênero", "Estética", "Estética"],
+      "alt": "Imagem ilustrativa de",
+      "items": ["Aumento peniano", "Cirurgia íntima feminina", "Redesignação sexual", "Mastectomia masculinizadora", "Prótese de mama", "Gluteoplastia"]
+    },
+    "footer": {
+      "siteMap": "Mapa do site",
+      "certifications": "Certificações",
+      "surgeries": "Cirurgias",
+      "care": "Atendimento",
+      "about": "Sobre",
+      "contact": "Entre em contato",
+      "careItems": ["Consulta especializada", "Planejamento cirúrgico", "Retornos e acompanhamento", "Cirurgia estética e reparadora"],
+      "aboutText": "Cirurgia plástica estética, reparadora e de afirmação de gênero em Blumenau, Santa Catarina.",
+      "weekdays": "De segunda a sexta",
+      "copyright": "© 2026 Claudio Eduardo Cirurgião Plástico · Todos os direitos reservados"
+    }
+  },
+  "contact": {
+    "hero": { "eyebrow": "Contato · Blumenau/SC", "title": "Vamos conversar sobre o seu próximo passo.", "text": "Tire suas dúvidas, compartilhe o que você busca e encontre o melhor caminho para uma avaliação individual.", "send": "Enviar uma mensagem", "whatsapp": "Falar pelo WhatsApp", "email": "E-mail", "office": "Consultório", "center": "Centro · Blumenau/SC" },
+    "formSection": { "eyebrow": "Fale com a clínica", "title": "Encontre um caminho com clareza." },
+    "offices": { "eyebrow": "Onde encontrar", "title": "Nossos consultórios", "map": "Ver no mapa" },
+    "map": { "eyebrow": "Localização", "title": "Fácil de encontrar. Feito para receber você.", "text": "O atendimento acontece no Edifício Stein Tower, no Centro de Blumenau. Consulte a melhor rota antes da sua visita.", "hours": "Atendimento de segunda a sexta, das 08h00 às 18h00.", "open": "Abrir no Google Maps", "talk": "Falar com a clínica" },
+    "payments": { "eyebrow": "Transparência", "title": "Preços e pagamentos", "legal": "Não divulgamos preços de cirurgias ou médias de valores no site. Após a consulta e a indicação do procedimento específico, a equipe apresenta os custos e as formas de pagamento, conforme as orientações do Código de Ética Médica." },
+    "locations": [
+      { "eyebrow": "Atendimento principal", "name": "Clínica Dr. Claudio Eduardo" },
+      { "eyebrow": "Consultório", "name": "Centro Clínico Santa Catarina" }
+    ],
+    "form": { "introEyebrow": "Atendimento individual", "introTitle": "Uma conversa pode esclarecer o próximo passo.", "introText": "Envie seus dados e conte o que você gostaria de entender. A equipe retornará pelo WhatsApp da clínica.", "name": "Nome completo", "namePlaceholder": "Informe seu nome", "phone": "Telefone / WhatsApp", "email": "E-mail", "emailPlaceholder": "seuemail@exemplo.com", "city": "Cidade / UF", "cityPlaceholder": "Blumenau / SC", "comment": "Comentário", "commentPlaceholder": "Conte brevemente como podemos ajudar.", "attachments": "Anexos", "accepted": "Formatos aceitos: DOC, DOCX, PDF e JPG. O arquivo poderá ser enviado na conversa do WhatsApp.", "consent": "Autorizo o contato da clínica pelos dados informados para atendimento desta solicitação.", "privacy": "Seus dados serão usados exclusivamente para responder à solicitação.", "submit": "Enviar pelo WhatsApp", "sent": "Sua mensagem foi preparada no WhatsApp", "none": "Nenhum" }
+  },
+  "surgeryIndex": {
+    "badge": "Cuidado em cada etapa", "headlineA": "Cirurgias com", "headlineB": "precisão e cuidado.", "description": "Procedimentos estéticos, íntimos e de afirmação de gênero planejados a partir da sua anatomia, do seu momento e dos seus objetivos.", "explore": "Explorar cirurgias", "schedule": "Agendar avaliação", "specialties": "Especialidades", "procedures": "Procedimentos", "possibilities": "Possibilidades para cada jornada", "procedureText": "Cada cirurgia começa com uma conversa. A avaliação médica considera histórico de saúde, anatomia, expectativas e segurança para construir uma indicação realmente individual.", "talk": "Conversar com a equipe", "learn": "Conhecer a cirurgia", "safetyEyebrow": "Segurança e clareza", "safetyTitle": "A cirurgia certa começa pela indicação certa.", "safetyText": "A decisão é construída em consulta, com informação clara sobre possibilidades, limites, preparo e recuperação.", "careEyebrow": "Como cuidamos de você", "careSteps": ["Consulta e escuta individual", "Indicação médica responsável", "Planejamento pré-operatório", "Acompanhamento na recuperação"], "scheduleFull": "Agendar uma avaliação", "procedureDescriptions": ["Procedimentos voltados ao aumento do comprimento e da espessura peniana, indicados somente após avaliação individual.", "Tratamento do excesso dos pequenos lábios e de outras alterações da região íntima, com técnica e discrição.", "Cirurgia de afirmação de gênero com indicação responsável e acompanhamento especializado.", "Cirurgia indicada para pessoas em transição, com planejamento proporcional e cuidado individual.", "Aumento mamário estético ou reparador, definido após avaliação de anatomia e expectativas.", "Introdução de próteses de silicone no músculo glúteo maior, com indicação e técnica individualizadas."]
+  },
+  "surgeryDetail": {
+    "back": "Cirurgias",
+    "request": "Solicitar avaliação",
+    "understand": "Entender a cirurgia",
+    "confidential": "Atendimento confidencial · CRM 14.706-SC · RQE 23.737",
+    "credentials": "Credenciais"
+  }
+}

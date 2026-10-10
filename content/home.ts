@@ -1,5 +1,3 @@
-import { WHATSAPP_HREF } from "./site";
-
 export const navigation = [
   { label: "Home", href: "/#inicio" },
   { label: "Sobre", href: "/claudio-eduardo-cirurgiao-plastico" },
@@ -184,44 +182,38 @@ export const clinicGallery = [
 export const surgeries = [
   {
     title: "Aumento peniano",
-    text: "Procedimentos voltados ao aumento do comprimento e da espessura peniana, indicados somente após avaliação individual.",
     image: "/procedimentos/_destaque_penis.jpg",
-    href: WHATSAPP_HREF,
+    href: "/cirurgias/aumento-peniano-faloplastia",
     featured: true,
   },
   {
     title: "Cirurgia íntima feminina",
-    text: "Tratamento do excesso dos pequenos lábios e de outras alterações da região íntima, com técnica e discrição.",
     image: "/procedimentos/_destaque_clitoris.jpg",
     href: "/cirurgias/cirurgia-intima-feminina",
     featured: true,
   },
   {
     title: "Redesignação sexual",
-    text: "Cirurgia de afirmação de gênero com indicação responsável e acompanhamento especializado.",
     image: "/procedimentos/_destaque_cirurgia_de_mudanca_de_sexo.jpg",
-    href: WHATSAPP_HREF,
+    href: "/cirurgias/redesignacao-sexual",
     featured: false,
   },
   {
     title: "Mastectomia masculinizadora",
-    text: "Cirurgia indicada para pessoas em transição, com planejamento proporcional e cuidado individual.",
     image: "/procedimentos/_destaque_mastectomia_masculinizadora.v2.jpg",
-    href: WHATSAPP_HREF,
+    href: "/cirurgias/mastectomia-masculinizadora",
     featured: false,
   },
   {
     title: "Prótese de mama",
-    text: "Aumento mamário estético ou reparador, definido após avaliação de anatomia e expectativas.",
     image: "/procedimentos/_destaque_protese_de_mama.jpg",
-    href: WHATSAPP_HREF,
+    href: "/cirurgias/protese-de-mama",
     featured: false,
   },
   {
     title: "Gluteoplastia",
-    text: "Introdução de próteses de silicone no músculo glúteo maior, com indicação e técnica individualizadas.",
     image: "/procedimentos/_destaque_gluteoplastia.jpg",
-    href: WHATSAPP_HREF,
+    href: "/cirurgias/gluteoplastia",
     featured: false,
   },
 ] as const;
