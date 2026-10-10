@@ -1,5 +1,6 @@
 import { Cirurgias } from "@/components/home/Cirurgias";
 import { Diferenciais } from "@/components/home/Diferenciais";
+import { DrNaMidia } from "@/components/home/DrNaMidia";
 import { Footer } from "@/components/home/Footer";
 import { Header } from "@/components/home/Header";
 import { Hero } from "@/components/home/Hero";
@@ -14,10 +15,11 @@ export default function Home() {
       <main>
         <Hero />
         <Diferenciais />
+        <Cirurgias />
         <Historia />
         <Unidades />
         <Hospitais />
-        <Cirurgias />
+        <DrNaMidia />
       </main>
       <Footer />
     </div>

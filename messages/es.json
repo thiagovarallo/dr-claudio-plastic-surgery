@@ -72,6 +72,33 @@
       "alt": "Imagen ilustrativa de",
       "items": ["Aumento de pene", "Cirugía íntima femenina", "Cirugía de afirmación de género", "Mastectomía masculinizadora", "Implantes mamarios", "Gluteoplastia"]
     },
+    "media": {
+      "eyebrow": "El Dr. en los medios",
+      "title": "Información que llega más lejos.",
+      "description": "Entrevistas, debates y participaciones en importantes medios de comunicación para aclarar temas de salud íntima y cirugía plástica con responsabilidad y transparencia.",
+      "featuredLabel": "Entrevistas y participaciones",
+      "watchNow": "Ver entrevista",
+      "nowPlaying": "En reproducción",
+      "playlistTitle": "Todas las entrevistas",
+      "playlistSubtitle": "Selecciona para ver",
+      "videos": [
+        { "title": "El Dr. Claudio Eduardo explica la faloplastia" },
+        { "title": "El Dr. Claudio Eduardo en The Noite con Danilo Gentili" },
+        { "title": "El Dr. Claudio Eduardo en Pânico Jovem Pan" },
+        { "title": "El paciente y cantante Tiago habla sobre el procedimiento en The Noite" },
+        { "title": "El Dr. Claudio Eduardo en el programa A Tarde é Sua" }
+      ],
+      "pressEyebrow": "Reportajes y entrevistas",
+      "pressTitle": "Presente en diferentes conversaciones.",
+      "pressDescription": "Coberturas periodísticas en los principales portales de noticias.",
+      "allPress": "Ver todas las referencias",
+      "readArticle": "Leer artículo completo",
+      "press": [
+        { "type": "Reportaje", "title": "La cirugía de aumento de pene entra en el debate sobre salud", "text": "Reportaje de G1 sobre la búsqueda de evaluación e información médica." },
+        { "type": "Televisión", "title": "Salud íntima explicada con claridad y responsabilidad", "text": "Participación y contenidos presentados en el portal de referencia del doctor." },
+        { "type": "Entrevista", "title": "La importancia de alinear expectativas y cuidado médico", "text": "Entrevista para Jornal Opção sobre cirugía íntima y seguimiento." }
+      ]
+    },
     "footer": {
       "siteMap": "Mapa del sitio",
       "certifications": "Certificaciones",

@@ -72,6 +72,33 @@
       "alt": "Imagem ilustrativa de",
       "items": ["Aumento peniano", "Cirurgia íntima feminina", "Redesignação sexual", "Mastectomia masculinizadora", "Prótese de mama", "Gluteoplastia"]
     },
+    "media": {
+      "eyebrow": "Dr. na mídia",
+      "title": "Informação que chega mais longe.",
+      "description": "Entrevistas, debates e participações em grandes veículos de comunicação para esclarecer temas de saúde íntima e cirurgia plástica com responsabilidade e transparência.",
+      "featuredLabel": "Entrevistas e participações",
+      "watchNow": "Assistir entrevista",
+      "nowPlaying": "Em reprodução",
+      "playlistTitle": "Todas as entrevistas",
+      "playlistSubtitle": "Selecione para assistir",
+      "videos": [
+        { "title": "Dr. Claudio Eduardo explica tudo sobre faloplastia" },
+        { "title": "Dr. Claudio Eduardo no The Noite com Danilo Gentili" },
+        { "title": "Dr. Claudio Eduardo no Pânico Jovem Pan" },
+        { "title": "Paciente e cantor Tiago fala sobre o procedimento no The Noite" },
+        { "title": "Dr. Claudio Eduardo no programa A Tarde é Sua" }
+      ],
+      "pressEyebrow": "Matérias e entrevistas",
+      "pressTitle": "Presença em diferentes conversas.",
+      "pressDescription": "Reportagens e coberturas jornalísticas nos principais veículos e portais do país.",
+      "allPress": "Ver todas as referências",
+      "readArticle": "Ler matéria completa",
+      "press": [
+        { "type": "Reportagem", "title": "Cirurgia de aumento peniano ganha espaço no debate sobre saúde", "text": "Reportagem do G1 sobre a procura por avaliação e informação médica." },
+        { "type": "Televisão", "title": "Saúde íntima explicada com clareza e responsabilidade", "text": "Participação e conteúdos apresentados no portal de referência do doutor." },
+        { "type": "Entrevista", "title": "A importância de alinhar expectativas e cuidado médico", "text": "Entrevista ao Jornal Opção sobre cirurgia íntima e acompanhamento." }
+      ]
+    },
     "footer": {
       "siteMap": "Mapa do site",
       "certifications": "Certificações",

@@ -72,6 +72,33 @@
       "alt": "Illustrative image of",
       "items": ["Penile enhancement", "Female intimate surgery", "Gender confirmation surgery", "Masculinizing mastectomy", "Breast implants", "Gluteoplasty"]
     },
+    "media": {
+      "eyebrow": "Dr. in the media",
+      "title": "Information that reaches further.",
+      "description": "Interviews, debates and appearances in major media outlets to clarify intimate health and plastic surgery topics with responsibility and transparency.",
+      "featuredLabel": "Interviews and appearances",
+      "watchNow": "Watch interview",
+      "nowPlaying": "Now playing",
+      "playlistTitle": "All interviews",
+      "playlistSubtitle": "Select to watch",
+      "videos": [
+        { "title": "Dr. Claudio Eduardo explains phalloplasty" },
+        { "title": "Dr. Claudio Eduardo on The Noite with Danilo Gentili" },
+        { "title": "Dr. Claudio Eduardo on Pânico Jovem Pan" },
+        { "title": "Patient and singer Tiago talks about the procedure on The Noite" },
+        { "title": "Dr. Claudio Eduardo on A Tarde é Sua" }
+      ],
+      "pressEyebrow": "Features and interviews",
+      "pressTitle": "Present in different conversations.",
+      "pressDescription": "Journalistic coverage and reporting across major news portals.",
+      "allPress": "View all references",
+      "readArticle": "Read full article",
+      "press": [
+        { "type": "Feature", "title": "Penile enhancement surgery enters the health conversation", "text": "G1 feature about the search for medical assessment and information." },
+        { "type": "Television", "title": "Intimate health explained with clarity and responsibility", "text": "Participation and content presented on the doctor's reference portal." },
+        { "type": "Interview", "title": "The importance of aligning expectations with medical care", "text": "Jornal Opção interview about intimate surgery and follow-up care." }
+      ]
+    },
     "footer": {
       "siteMap": "Site map",
       "certifications": "Credentials",

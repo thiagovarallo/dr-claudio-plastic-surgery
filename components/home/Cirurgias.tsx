@@ -58,7 +58,7 @@ export function Cirurgias() {
                 : "(min-width: 1024px) 42vw, 100vw";
 
             return (
-              <li key={`${surgery.href}-${index}`} className={`h-full ${layout}`}>
+              <li key={surgery.title} className={`h-full ${layout}`}>
                 <Reveal delay={(index % 3) * 0.06} className="h-full">
                   <Link
                     href={surgery.href}

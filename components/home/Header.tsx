@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { AnimatePresence, motion, useMotionValueEvent, useReducedMotion, useScroll } from "motion/react";
 import { useState } from "react";
@@ -19,7 +19,6 @@ export function Header() {
   const [langOpen, setLangOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const locale = useLocale() as LocaleCode;
-  const router = useRouter();
   const t = useTranslations("header");
   const translatedNavigation = navigation.map((item, index) => ({
     ...item,
@@ -135,7 +134,7 @@ export function Header() {
                         onClick={() => {
                           document.cookie = `NEXT_LOCALE=${item.code}; path=/; max-age=31536000; samesite=lax`;
                           setLangOpen(false);
-                          router.refresh();
+                          window.location.reload();
                         }}
                         className={`flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-sm font-semibold ${
                           locale === item.code
