@@ -181,7 +181,7 @@ export function Unidades() {
 
               <Link
                 href={WHATSAPP_HREF}
-                className="mt-8 inline-flex h-12 items-center gap-4 rounded-full bg-linear-to-r from-brand to-[#08a9cf] px-8 text-sm font-bold text-white shadow-[0_10px_24px_rgba(8,191,196,0.2)] transition hover:-translate-y-0.5"
+                className="mt-8 inline-flex h-12 items-center gap-4 rounded-full bg-brand px-8 text-sm font-bold text-white shadow-[0_10px_24px_color-mix(in_srgb,var(--green)_24%,transparent)] transition hover:-translate-y-0.5 hover:bg-brand-deep"
               >
                 {t(`items.${unitIndex}.contact`)}
                 <ArrowRight className="size-4" />
@@ -195,7 +195,7 @@ export function Unidades() {
             type="button"
             onClick={() => go(1)}
             aria-label={t("next")}
-            className="grid size-14 place-items-center rounded-full bg-brand text-white shadow-lg transition hover:-translate-y-0.5 lg:size-16"
+            className="grid size-14 place-items-center rounded-full bg-brand text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-brand-deep lg:size-16"
           >
             <ArrowRight className="size-4" />
           </button>
@@ -203,7 +203,7 @@ export function Unidades() {
             type="button"
             onClick={() => go(-1)}
             aria-label={t("previous")}
-            className="grid size-14 place-items-center rounded-full bg-brand-deep text-white shadow-lg transition hover:-translate-y-0.5 lg:size-16"
+            className="grid size-14 place-items-center rounded-full bg-blue-dark text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-blue lg:size-16"
           >
             <ArrowLeft className="size-4" />
           </button>

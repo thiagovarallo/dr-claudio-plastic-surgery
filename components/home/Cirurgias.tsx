@@ -12,11 +12,11 @@ export function Cirurgias() {
     <section
       id="cirurgias"
       aria-labelledby="cirurgias-title"
-      className="relative isolate overflow-hidden bg-[#f4f8fa] py-20 sm:py-28 lg:py-32"
+      className="relative isolate overflow-hidden bg-surface-soft py-20 sm:py-28 lg:py-32"
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-40 top-0 -z-10 size-[520px] rounded-full bg-brand/8 blur-3xl"
+        className="pointer-events-none absolute -right-40 top-0 -z-10 size-[520px] rounded-full bg-blue-light/8 blur-3xl"
       />
       <div
         aria-hidden
@@ -64,7 +64,7 @@ export function Cirurgias() {
                     href={surgery.href}
                     target={external ? "_blank" : undefined}
                     rel={external ? "noopener noreferrer" : undefined}
-                    className="group relative block h-full min-h-80 overflow-hidden rounded-[28px] bg-navy-deep shadow-[0_18px_48px_rgba(8,31,48,0.12)] outline-none transition duration-500 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(8,31,48,0.2)] focus-visible:ring-4 focus-visible:ring-brand/30 lg:min-h-0"
+                    className="group relative block h-full min-h-80 overflow-hidden rounded-[28px] bg-navy-deep shadow-[0_18px_48px_color-mix(in_srgb,var(--blue-dark)_16%,transparent)] outline-none transition duration-500 hover:-translate-y-1 hover:shadow-[0_24px_60px_color-mix(in_srgb,var(--blue-dark)_26%,transparent)] focus-visible:ring-4 focus-visible:ring-brand/30 lg:min-h-0"
                   >
                     <Image
                       src={surgery.image}
@@ -73,7 +73,7 @@ export function Cirurgias() {
                       sizes={imageSizes}
                       className="object-cover transition duration-700 ease-out group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-linear-to-t from-navy-deep via-navy-deep/35 to-navy-deep/5" />
+                    <div className="absolute inset-0 bg-[linear-gradient(0deg,color-mix(in_srgb,var(--blue-dark)_92%,transparent)_0%,color-mix(in_srgb,var(--blue-dark)_25%,transparent)_40%,transparent_68%)]" />
 
                     <div className="absolute inset-x-5 top-5 flex items-start justify-between gap-4 sm:inset-x-7 sm:top-7">
                       <span className="rounded-full border border-white/25 bg-navy-deep/25 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.2em] text-white/90 backdrop-blur-md">

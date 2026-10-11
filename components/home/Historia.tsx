@@ -88,26 +88,26 @@ function TimelinePoint({
           }`}
         >
           <span
-            className={`absolute inset-[7px] rotate-45 rounded-[13px] border-2 bg-white shadow-[0_8px_22px_rgba(32,40,50,0.10)] transition-[box-shadow,border-color,background-color] duration-500 ${
+            className={`absolute inset-[7px] rotate-45 rounded-[13px] border-2 bg-white shadow-[0_8px_22px_color-mix(in_srgb,var(--blue-dark)_10%,transparent)] transition-[box-shadow,border-color,background-color] duration-500 ${
             isActive
               ? isBrand
-                ? "border-brand shadow-[0_0_0_8px_rgba(8,191,196,0.14)]"
-                : "border-ink shadow-[0_0_0_8px_rgba(32,40,50,0.10)]"
+                ? "border-brand shadow-[0_0_0_8px_color-mix(in_srgb,var(--green)_16%,transparent)]"
+                : "border-blue shadow-[0_0_0_8px_color-mix(in_srgb,var(--blue)_14%,transparent)]"
               : isBrand
                 ? "border-brand"
-                : "border-slate-300"
+                : "border-border"
             }`}
           />
           <span
-            className={`relative z-10 size-5 rounded-full border-[3px] border-white shadow-[0_2px_8px_rgba(32,40,50,0.18)] transition-[background-color,transform] duration-500 xl:size-6 ${
-              isBrand ? "bg-brand" : "bg-ink"
+            className={`relative z-10 size-5 rounded-full border-[3px] border-white shadow-[0_2px_8px_color-mix(in_srgb,var(--blue-dark)_18%,transparent)] transition-[background-color,transform] duration-500 xl:size-6 ${
+              isBrand ? "bg-brand" : "bg-blue-dark"
             }`}
           />
         </span>
         <strong
-          className={`mt-1 inline-flex rounded-full border bg-white px-3 py-1 text-[17px] font-extrabold leading-none tracking-[-0.05em] shadow-[0_5px_14px_rgba(32,40,50,0.06)] transition-[border-color,color] duration-500 xl:text-[20px] ${
-            isBrand ? "text-brand" : "text-ink"
-          } ${isActive ? (isBrand ? "border-brand/45" : "border-ink/35") : "border-slate-200"}`}
+          className={`mt-1 inline-flex rounded-full border bg-white px-3 py-1 text-[17px] font-extrabold leading-none tracking-[-0.05em] shadow-[0_5px_14px_color-mix(in_srgb,var(--blue-dark)_8%,transparent)] transition-[border-color,color] duration-500 xl:text-[20px] ${
+            isBrand ? "text-brand" : "text-blue-dark"
+          } ${isActive ? (isBrand ? "border-brand/45" : "border-blue/40") : "border-border"}`}
         >
           {node.year}
         </strong>
@@ -135,12 +135,12 @@ function ActiveStory({ node, index, marco }: { node: Node; index: number; marco:
         <div className="relative w-[clamp(13.5rem,17vw,16rem)] -translate-x-1/2">
           <span
             aria-hidden
-            className={`absolute left-1/2 z-0 w-[2px] -translate-x-1/2 bg-gradient-to-b from-brand/25 via-brand to-brand/25 ${
+            className={`absolute left-1/2 z-0 w-[2px] -translate-x-1/2 bg-gradient-to-b from-blue-light/25 via-brand to-blue/25 ${
               isAbove ? "top-[-4.5rem] h-[4.5rem]" : "top-0 h-24"
             }`}
           />
           <article
-            className={`absolute left-0 z-10 w-full overflow-hidden rounded-[10px] bg-brand p-2.5 text-white shadow-[0_22px_55px_rgba(8,191,196,0.24)] ${
+            className={`absolute left-0 z-10 w-full overflow-hidden rounded-[10px] bg-linear-to-br from-blue-light to-blue p-2.5 text-white shadow-[0_22px_55px_color-mix(in_srgb,var(--blue)_26%,transparent)] ${
               isAbove ? "bottom-[4.5rem]" : "top-24"
             }`}
           >
@@ -319,14 +319,14 @@ export function Historia() {
               >
                 <path
                   d={HISTORY_PATH}
-                  stroke="#dce7ea"
+                  stroke="var(--border)"
                   strokeWidth="8"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
                 <path
                   d={HISTORY_PATH}
-                  stroke="#ffffff"
+                  stroke="var(--surface)"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -341,14 +341,14 @@ export function Historia() {
                 <svg viewBox="0 0 1440 850" preserveAspectRatio="none" className="absolute inset-0 h-full w-full" fill="none">
                   <defs>
                     <linearGradient id="history-line-gradient" x1="0" y1="0" x2="1" y2="0">
-                      <stop offset="0" stopColor="#047f92" />
-                      <stop offset="0.55" stopColor="#08bfc4" />
-                      <stop offset="1" stopColor="#8fd4df" />
+                      <stop offset="0" stopColor="var(--blue-dark)" />
+                      <stop offset="0.55" stopColor="var(--blue-light)" />
+                      <stop offset="1" stopColor="var(--green)" />
                     </linearGradient>
                   </defs>
                   <path
                     d={HISTORY_PATH}
-                    stroke="rgba(8,191,196,0.16)"
+                    stroke="color-mix(in srgb, var(--blue-light) 16%, transparent)"
                     strokeWidth="13"
                     strokeLinecap="round"
                     strokeLinejoin="round"

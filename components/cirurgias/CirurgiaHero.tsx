@@ -9,8 +9,8 @@ export function CirurgiaHero({ category, title, subtitle }: Props) {
   const t = useTranslations("surgeryDetail");
 
   return (
-    <section className="relative isolate overflow-hidden bg-navy-deep text-white" aria-labelledby="cirurgia-hero-title">
-      <div className="pointer-events-none absolute inset-0 -z-20 bg-[radial-gradient(70%_90%_at_12%_42%,rgba(8,191,196,0.2),transparent_62%)]" />
+    <section className="relative isolate overflow-hidden bg-[linear-gradient(135deg,var(--blue-dark)_0%,var(--blue)_100%)] text-white" aria-labelledby="cirurgia-hero-title">
+      <div className="pointer-events-none absolute inset-0 -z-20 bg-[radial-gradient(70%_90%_at_12%_42%,color-mix(in_srgb,var(--green)_20%,transparent),transparent_62%)]" />
       <div className="pointer-events-none absolute inset-0 -z-10 opacity-[0.08] [background-image:linear-gradient(rgba(255,255,255,.2)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.2)_1px,transparent_1px)] [background-size:72px_72px]" />
       <div className="hero-grain pointer-events-none absolute inset-0 -z-10 mix-blend-overlay" />
       <div className="pointer-events-none absolute -right-48 -top-52 -z-10 size-[650px] rounded-full border border-brand/15" />

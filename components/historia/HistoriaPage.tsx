@@ -2,23 +2,21 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowDown,
-  ArrowRight,
   Award,
   Building2,
   Check,
   Cross,
   GraduationCap,
   HeartHandshake,
-  MapPin,
   Microscope,
   Stethoscope,
 } from "lucide-react";
 import { AnimatedText } from "@/components/ui/AnimatedText";
+import { CtaSection } from "@/components/ui/CtaSection";
 import { CurriculumTabs } from "@/components/ui/curriculum-tabs";
 import { Reveal } from "@/components/ui/Reveal";
 import { Timeline } from "@/components/ui/timeline";
 import { historiaPage } from "@/content/historia";
-import { WHATSAPP_HREF } from "@/content/site";
 
 const formationIcons = [GraduationCap, Cross, Stethoscope, Microscope] as const;
 const practiceIcons = [HeartHandshake, Stethoscope, Building2] as const;
@@ -39,10 +37,9 @@ export function HistoriaPage() {
           sizes="100vw"
           className="-z-30 object-cover object-[66%_center] sm:object-[62%_center] lg:object-center"
         />
-        <div className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,rgba(8,31,48,0.98)_0%,rgba(8,31,48,0.90)_40%,rgba(8,31,48,0.35)_72%,rgba(8,31,48,0.15)_100%)]" />
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(0deg,rgba(8,31,48,0.94)_0%,transparent_42%)]" />
-        <div className="hero-grain absolute inset-0 -z-10 mix-blend-overlay" />
-        <div className="hero-aurora absolute -left-32 top-1/3 -z-10 size-96 rounded-full bg-brand/20 blur-3xl" />
+        <div className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,var(--blue-dark)_0%,color-mix(in_srgb,var(--blue-dark)_90%,transparent)_28%,color-mix(in_srgb,var(--blue-dark)_42%,transparent)_42%,transparent_54%)] max-sm:bg-[linear-gradient(90deg,color-mix(in_srgb,var(--blue-dark)_92%,transparent)_0%,color-mix(in_srgb,var(--blue-dark)_70%,transparent)_65%,color-mix(in_srgb,var(--blue-dark)_25%,transparent)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(0deg,color-mix(in_srgb,var(--blue-dark)_65%,transparent)_0%,transparent_18%)]" />
+        <div className="hero-aurora absolute -left-32 top-1/3 -z-10 size-96 rounded-full bg-brand/15 blur-3xl" />
 
         <div className="mx-auto flex w-full max-w-6xl flex-col px-5 pb-8 pt-36 sm:px-8 lg:pt-40">
           <div className="max-w-[720px]">
@@ -119,7 +116,7 @@ export function HistoriaPage() {
         </div>
       </section>
 
-      <section id="formacao" className="relative scroll-mt-20 overflow-hidden bg-navy-deep py-24 text-white sm:py-32">
+      <section id="formacao" className="relative scroll-mt-20 overflow-hidden bg-[linear-gradient(135deg,var(--blue-dark)_0%,var(--blue)_100%)] py-24 text-white sm:py-32">
         <div className="absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(255,255,255,.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.035)_1px,transparent_1px)] [background-size:72px_72px]" />
         <div className="pointer-events-none absolute -left-20 bottom-0 size-96 rounded-full bg-brand/10 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
@@ -137,7 +134,7 @@ export function HistoriaPage() {
               const Icon = formationIcons[index];
               return (
                 <Reveal key={item.number} delay={index * 0.07}>
-                  <article className="group relative min-h-[310px] overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.055] p-7 transition duration-500 hover:-translate-y-1 hover:border-brand/40 hover:bg-white/[0.08] sm:p-9">
+                  <article className="group relative min-h-[310px] overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.06] p-7 transition duration-500 hover:-translate-y-1 hover:border-brand/40 hover:bg-white/[0.1] sm:p-9">
                     <div className="flex items-start justify-between gap-5">
                       <span className="text-xs font-bold tracking-[0.28em] text-white/35">
                         {item.number}
@@ -170,8 +167,8 @@ export function HistoriaPage() {
           data={historiaPage.timeline.map((item, index) => ({
             title: item.year,
             content: (
-              <article className="group relative max-w-2xl overflow-hidden rounded-[26px] border border-slate-200/85 bg-white p-6 shadow-[0_18px_65px_rgba(32,40,50,0.07)] transition duration-500 hover:-translate-y-1 hover:border-brand/30 hover:shadow-[0_24px_80px_rgba(32,40,50,0.10)] sm:p-8">
-                <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-brand to-brand-deep opacity-0 transition group-hover:opacity-100" />
+              <article className="group relative max-w-2xl overflow-hidden rounded-[26px] border border-slate-200/85 bg-white p-6 shadow-[0_18px_65px_color-mix(in_srgb,var(--blue-dark)_8%,transparent)] transition duration-500 hover:-translate-y-1 hover:border-brand/30 hover:shadow-[0_24px_80px_color-mix(in_srgb,var(--blue-dark)_12%,transparent)] sm:p-8">
+                <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-brand to-blue-light opacity-0 transition group-hover:opacity-100" />
                 <p className="text-[9px] font-bold uppercase tracking-[0.38em] text-brand-deep">
                   Marco {String(index + 1).padStart(2, "0")}
                 </p>
@@ -201,7 +198,7 @@ export function HistoriaPage() {
               const Icon = practiceIcons[index];
               return (
                 <Reveal key={item.title} delay={index * 0.08}>
-                  <article className="h-full rounded-[26px] border border-slate-200 bg-white p-7 shadow-[0_20px_70px_rgba(32,40,50,0.055)] sm:p-8">
+                  <article className="h-full rounded-[26px] border border-slate-200 bg-white p-7 shadow-[0_20px_70px_color-mix(in_srgb,var(--blue-dark)_6%,transparent)] sm:p-8">
                     <span className="grid size-12 place-items-center rounded-2xl bg-brand/10 text-brand-deep">
                       <Icon className="size-5" />
                     </span>
@@ -215,7 +212,7 @@ export function HistoriaPage() {
             })}
           </div>
 
-          <div className="mt-16 grid overflow-hidden rounded-[30px] bg-[#edf7f7] lg:grid-cols-[0.85fr_1.15fr]">
+          <div className="mt-16 grid overflow-hidden rounded-[30px] bg-surface-tint lg:grid-cols-[0.85fr_1.15fr]">
             <Reveal className="p-7 sm:p-10 lg:p-14">
               <Award className="size-8 text-brand-deep" />
               <h3 className="mt-8 font-display text-4xl font-medium leading-none text-ink sm:text-5xl">
@@ -246,42 +243,7 @@ export function HistoriaPage() {
 
       <CurriculumTabs />
 
-      <section className="px-4 pb-4 sm:px-6 sm:pb-6">
-        <div className="relative isolate mx-auto min-h-[520px] max-w-[1440px] overflow-hidden rounded-[30px] bg-navy-deep text-white sm:rounded-[38px]">
-          <Image
-            src="/brand/hero-clinic.jpg"
-            alt="Consultório Dr. Claudio Eduardo em Blumenau"
-            fill
-            sizes="100vw"
-            className="-z-20 object-cover object-[68%_center]"
-          />
-          <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(8,31,48,.97),rgba(8,31,48,.83)_46%,rgba(8,31,48,.18))]" />
-          <div className="mx-auto flex min-h-[520px] max-w-6xl items-center px-6 py-20 sm:px-10">
-            <Reveal className="max-w-xl">
-              <div className="flex items-center gap-3 text-brand">
-                <MapPin className="size-4" />
-                <p className="text-[10px] font-bold uppercase tracking-[0.42em]">Blumenau · SC</p>
-              </div>
-              <h2 className="mt-6 font-display text-[46px] font-medium leading-[0.98] sm:text-[64px]">
-                A próxima etapa da história pode começar com uma conversa.
-              </h2>
-              <p className="mt-6 max-w-lg text-sm leading-7 text-white/68">
-                Agende uma avaliação para conversar sobre suas expectativas e entender, com
-                clareza, quais possibilidades fazem sentido para você.
-              </p>
-              <Link
-                href={WHATSAPP_HREF}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-9 inline-flex h-12 items-center gap-3 rounded-full bg-brand px-6 text-sm font-bold text-white transition hover:bg-brand-deep"
-              >
-                Agendar avaliação
-                <ArrowRight className="size-4" />
-              </Link>
-            </Reveal>
-          </div>
-        </div>
-      </section>
+      <CtaSection />
     </main>
   );
 }

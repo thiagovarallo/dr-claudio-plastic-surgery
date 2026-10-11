@@ -26,7 +26,7 @@ export function CirurgiaContactForm({ surgeryTitle }: { surgeryTitle: string }) 
 
   return (
     <section id="formulario" className="scroll-mt-20 bg-white px-5 pb-20 sm:px-8 sm:pb-28" aria-labelledby="form-heading">
-      <div className="relative mx-auto grid max-w-6xl overflow-hidden rounded-[36px] bg-navy-deep text-white lg:grid-cols-[0.82fr_1.18fr]">
+      <div className="relative mx-auto grid max-w-6xl overflow-hidden rounded-[36px] bg-[linear-gradient(135deg,var(--blue-dark)_0%,var(--blue)_100%)] text-white lg:grid-cols-[0.82fr_1.18fr]">
         <div className="relative overflow-hidden p-7 sm:p-10 lg:p-14">
           <div className="pointer-events-none absolute -left-32 top-1/3 size-80 rounded-full bg-brand/18 blur-3xl" />
           <div className="pointer-events-none absolute -right-20 -top-20 size-64 rounded-full border border-white/10" />
@@ -49,27 +49,27 @@ export function CirurgiaContactForm({ surgeryTitle }: { surgeryTitle: string }) 
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="m-2 rounded-[30px] bg-[#f4f8fa] p-5 text-ink sm:m-3 sm:p-8 lg:p-10">
+        <form onSubmit={handleSubmit} className="m-2 rounded-[30px] bg-surface-soft p-5 text-ink sm:m-3 sm:p-8 lg:p-10">
           <div className="grid gap-5 sm:grid-cols-2">
-            <label className="block text-xs font-bold text-navy">
+            <label className="block text-xs font-bold text-blue-dark">
               Nome completo
               <input className={`${inputClassName} mt-2`} type="text" name="nome" placeholder="Informe seu nome" autoComplete="name" required />
             </label>
-            <label className="block text-xs font-bold text-navy">
+            <label className="block text-xs font-bold text-blue-dark">
               Telefone / WhatsApp
               <input className={`${inputClassName} mt-2`} type="tel" name="telefone" placeholder="(00) 00000-0000" autoComplete="tel" required />
             </label>
-            <label className="block text-xs font-bold text-navy">
+            <label className="block text-xs font-bold text-blue-dark">
               E-mail
               <input className={`${inputClassName} mt-2`} type="email" name="email" placeholder="seuemail@exemplo.com" autoComplete="email" required />
             </label>
-            <label className="block text-xs font-bold text-navy">
+            <label className="block text-xs font-bold text-blue-dark">
               Cidade / UF
               <input className={`${inputClassName} mt-2`} type="text" name="cidade" placeholder="Blumenau / SC" autoComplete="address-level2" required />
             </label>
           </div>
 
-          <label className="mt-5 block text-xs font-bold text-navy">
+          <label className="mt-5 block text-xs font-bold text-blue-dark">
             Como podemos ajudar?
             <textarea
               className="mt-2 min-h-32 w-full resize-y rounded-xl border border-ink/10 bg-white px-4 py-3 text-sm leading-6 text-ink outline-none transition placeholder:text-ink/35 focus:border-brand focus:ring-4 focus:ring-brand/10"

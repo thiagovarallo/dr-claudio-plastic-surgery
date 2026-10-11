@@ -7,6 +7,7 @@ import { Hero } from "@/components/home/Hero";
 import { Historia } from "@/components/home/Historia";
 import { Hospitais } from "@/components/home/Hospitais";
 import { Unidades } from "@/components/home/Unidades";
+import { CtaSection } from "@/components/ui/CtaSection";
 
 export default function Home() {
   return (
@@ -15,11 +16,12 @@ export default function Home() {
       <main>
         <Hero />
         <Diferenciais />
-        <Cirurgias />
         <Historia />
+        <Cirurgias />
         <Unidades />
         <Hospitais />
         <DrNaMidia />
+        <CtaSection />
       </main>
       <Footer />
     </div>

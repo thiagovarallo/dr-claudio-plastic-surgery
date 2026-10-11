@@ -13,7 +13,7 @@ export function CirurgiaFAQ({ items }: { items: CirurgiaFAQItem[] }) {
       <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28 md:grid md:grid-cols-[minmax(240px,0.76fr)_minmax(0,1.24fr)] md:gap-14 lg:gap-20">
         <ScrollReveal className="md:sticky md:top-28 md:self-start">
           <p className="text-[11px] font-bold uppercase tracking-[0.36em] text-brand-deep">Dúvidas</p>
-          <h2 id="faq-heading" className="mt-4 font-display text-5xl font-medium leading-[0.95] text-navy sm:text-6xl">
+          <h2 id="faq-heading" className="mt-4 font-display text-5xl font-medium leading-[0.95] text-blue-dark sm:text-6xl">
             Perguntas frequentes
           </h2>
           <p className="mt-6 max-w-sm text-sm leading-7 text-ink-soft/62">
@@ -30,7 +30,7 @@ export function CirurgiaFAQ({ items }: { items: CirurgiaFAQItem[] }) {
 
             return (
               <ScrollReveal key={item.question} delay={index * 60}>
-                <div className={`overflow-hidden rounded-2xl border transition-colors ${isOpen ? "border-brand/25 bg-[#f4f8fa]" : "border-ink/8 bg-white hover:border-brand/20"}`}>
+                <div className={`overflow-hidden rounded-2xl border transition-colors ${isOpen ? "border-brand/25 bg-surface-soft" : "border-ink/8 bg-white hover:border-brand/20"}`}>
                   <h3>
                     <button
                       type="button"
@@ -47,7 +47,7 @@ export function CirurgiaFAQ({ items }: { items: CirurgiaFAQItem[] }) {
                         {number}
                       </span>
                       <span
-                        className="flex-1 font-display text-xl font-medium leading-snug text-navy transition-colors sm:text-2xl"
+                        className="flex-1 font-display text-xl font-medium leading-snug text-blue-dark transition-colors sm:text-2xl"
                       >
                         {item.question}
                       </span>

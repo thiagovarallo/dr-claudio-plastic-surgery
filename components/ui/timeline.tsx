@@ -52,7 +52,7 @@ export function Timeline({ data, eyebrow, heading, description }: TimelineProps)
   const opacityTransform = useTransform(scrollYProgress, [0, 0.08], [0, 1]);
 
   return (
-    <div ref={containerRef} className="w-full bg-[#f5f8f8]">
+    <div ref={containerRef} className="w-full bg-surface-soft">
       <div className="mx-auto grid max-w-6xl gap-7 px-5 pb-4 pt-24 sm:px-8 sm:pt-32 lg:grid-cols-[1fr_1.15fr] lg:items-end">
         <div>
           <p className="text-[10px] font-bold uppercase tracking-[0.48em] text-brand-deep">
@@ -74,8 +74,8 @@ export function Timeline({ data, eyebrow, heading, description }: TimelineProps)
             className="flex justify-start gap-6 pt-14 first:pt-16 sm:gap-10 md:pt-28 md:first:pt-24"
           >
             <div className="sticky top-28 z-20 flex h-fit w-4 shrink-0 self-start items-center md:top-32 md:w-[310px] lg:w-[350px]">
-              <div className="absolute -left-[8px] grid size-10 place-items-center rounded-full bg-[#f5f8f8] md:-left-[8px]">
-                <span className="size-3.5 rounded-full border border-brand/35 bg-white shadow-[0_0_0_5px_rgba(8,191,196,0.08)]" />
+              <div className="absolute -left-[8px] grid size-10 place-items-center rounded-full bg-surface-soft md:-left-[8px]">
+                <span className="size-3.5 rounded-full border border-brand/35 bg-white shadow-[0_0_0_5px_color-mix(in_srgb,var(--green)_10%,transparent)]" />
               </div>
               <h3 className="hidden pl-16 font-display text-[42px] font-semibold leading-none tracking-[-0.03em] text-ink/42 md:block lg:text-5xl">
                 {item.title}
@@ -102,7 +102,7 @@ export function Timeline({ data, eyebrow, heading, description }: TimelineProps)
                 ? { height: "100%", opacity: 1 }
                 : { height: heightTransform, opacity: opacityTransform }
             }
-            className="absolute inset-x-0 top-0 w-px rounded-full bg-gradient-to-b from-brand via-accent to-brand-deep shadow-[0_0_12px_rgba(8,191,196,0.35)]"
+            className="absolute inset-x-0 top-0 w-px rounded-full bg-gradient-to-b from-brand via-blue-light to-blue-dark shadow-[0_0_12px_color-mix(in_srgb,var(--green)_35%,transparent)]"
           />
         </div>
       </div>

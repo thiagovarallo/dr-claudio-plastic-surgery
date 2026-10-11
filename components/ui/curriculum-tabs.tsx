@@ -60,9 +60,9 @@ export function CurriculumTabs() {
     <section
       id="curriculo"
       aria-labelledby="curriculo-title"
-      className="relative scroll-mt-20 overflow-hidden bg-[#f5f8f8] py-24 sm:py-32"
+      className="relative scroll-mt-20 overflow-hidden bg-surface-soft py-24 sm:py-32"
     >
-      <div className="pointer-events-none absolute -right-48 top-0 size-[480px] rounded-full bg-brand/7 blur-3xl" />
+      <div className="pointer-events-none absolute -right-48 top-0 size-[480px] rounded-full bg-blue-light/8 blur-3xl" />
       <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
         <div className="grid gap-7 lg:grid-cols-[1fr_0.9fr] lg:items-end">
           <div>
@@ -86,7 +86,7 @@ export function CurriculumTabs() {
           <div
             role="tablist"
             aria-label="Seções do currículo"
-            className="flex snap-x gap-1.5 overflow-x-auto rounded-[22px] border border-slate-200/90 bg-white p-2 shadow-[0_18px_60px_rgba(32,40,50,0.06)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:sticky lg:top-24 lg:flex-col lg:rounded-[28px] lg:p-3"
+            className="flex snap-x gap-1.5 overflow-x-auto rounded-[22px] border border-slate-200/90 bg-white p-2 shadow-[0_18px_60px_color-mix(in_srgb,var(--blue-dark)_7%,transparent)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:sticky lg:top-24 lg:flex-col lg:rounded-[28px] lg:p-3"
           >
             {curriculumSections.map((section, index) => {
               const Icon = sectionIcons[section.icon];
@@ -112,7 +112,7 @@ export function CurriculumTabs() {
                   {isActive ? (
                     <motion.span
                       layoutId="curriculum-active-tab"
-                      className="absolute inset-0 rounded-[16px] bg-navy-deep shadow-[0_12px_28px_rgba(8,31,48,0.18)]"
+                      className="absolute inset-0 rounded-[16px] bg-linear-to-r from-blue-dark to-blue shadow-[0_12px_28px_color-mix(in_srgb,var(--blue-dark)_20%,transparent)]"
                       transition={{ type: "spring", stiffness: 380, damping: 32 }}
                     />
                   ) : null}
@@ -136,7 +136,7 @@ export function CurriculumTabs() {
             })}
           </div>
 
-          <div className="min-h-[720px] overflow-hidden rounded-[28px] border border-slate-200/90 bg-white shadow-[0_22px_80px_rgba(32,40,50,0.065)] sm:rounded-[32px]">
+          <div className="min-h-[720px] overflow-hidden rounded-[28px] border border-slate-200/90 bg-white shadow-[0_22px_80px_color-mix(in_srgb,var(--blue-dark)_7%,transparent)] sm:rounded-[32px]">
             <AnimatePresence mode="wait" initial={false}>
               <motion.div
                 key={activeSection.id}
@@ -149,7 +149,7 @@ export function CurriculumTabs() {
                 transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
               >
                 <div className="relative overflow-hidden border-b border-slate-200/80 p-7 sm:p-10 lg:p-12">
-                  <div className="pointer-events-none absolute -right-24 -top-28 size-72 rounded-full bg-brand/8 blur-3xl" />
+                  <div className="pointer-events-none absolute -right-24 -top-28 size-72 rounded-full bg-blue-light/8 blur-3xl" />
                   <div className="relative flex items-start justify-between gap-6">
                     <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-brand/10 text-brand-deep sm:size-14">
                       <ActiveIcon className="size-5 sm:size-6" />
@@ -177,7 +177,7 @@ export function CurriculumTabs() {
                       {activeSection.credentials.map((credential) => (
                         <div
                           key={credential.value}
-                          className="flex items-center gap-4 rounded-2xl border border-brand/12 bg-[#edf8f8] p-4"
+                          className="flex items-center gap-4 rounded-2xl border border-brand/12 bg-surface-tint p-4"
                         >
                           <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-white text-brand-deep shadow-sm">
                             <BadgeCheck className="size-5" />

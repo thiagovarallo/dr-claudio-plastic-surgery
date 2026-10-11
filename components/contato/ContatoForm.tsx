@@ -142,7 +142,7 @@ export function ContatoForm() {
 export function ContactFormIntro() {
   const t = useTranslations("contact.form");
   return (
-    <div className="relative overflow-hidden rounded-[30px] bg-navy-deep p-7 text-white sm:p-10 lg:p-12">
+    <div className="relative overflow-hidden rounded-[30px] bg-[linear-gradient(145deg,var(--blue-dark)_0%,var(--blue)_100%)] p-7 text-white sm:p-10 lg:p-12">
       <div className="pointer-events-none absolute -right-20 -top-20 size-64 rounded-full border border-brand/20" />
       <div className="pointer-events-none absolute -bottom-28 -left-20 size-72 rounded-full bg-brand/15 blur-3xl" />
       <div className="relative">

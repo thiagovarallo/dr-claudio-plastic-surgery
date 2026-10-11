@@ -35,9 +35,8 @@ export function ContatoPage() {
           sizes="100vw"
           className="-z-30 object-cover object-[66%_center]"
         />
-        <div className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,rgba(8,31,48,0.98)_0%,rgba(8,31,48,0.88)_44%,rgba(8,31,48,0.34)_100%)]" />
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(0deg,rgba(8,31,48,0.94)_0%,transparent_52%)]" />
-        <div className="hero-grain absolute inset-0 -z-10 mix-blend-overlay" />
+        <div className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,var(--blue-dark)_0%,color-mix(in_srgb,var(--blue-dark)_90%,transparent)_28%,color-mix(in_srgb,var(--blue-dark)_42%,transparent)_42%,transparent_54%)] max-sm:bg-[linear-gradient(90deg,color-mix(in_srgb,var(--blue-dark)_92%,transparent)_0%,color-mix(in_srgb,var(--blue-dark)_70%,transparent)_65%,color-mix(in_srgb,var(--blue-dark)_25%,transparent)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(0deg,color-mix(in_srgb,var(--blue-dark)_65%,transparent)_0%,transparent_18%)]" />
         <motion.div
           className="hero-aurora absolute -left-32 top-1/3 -z-10 size-96 rounded-full bg-brand/20 blur-3xl"
           animate={reduced ? undefined : { x: [0, 34, 0], y: [0, -18, 0], scale: [1, 1.08, 1] }}
@@ -128,9 +127,9 @@ export function ContatoPage() {
         </div>
       </section>
 
-      <section id="consultorios" aria-labelledby="consultorios-title" className="relative overflow-hidden bg-[#f4f8fa] px-5 py-16 sm:px-8 sm:py-20">
+      <section id="consultorios" aria-labelledby="consultorios-title" className="relative overflow-hidden bg-surface-soft px-5 py-16 sm:px-8 sm:py-20">
         <motion.div
-          className="pointer-events-none absolute -right-40 top-0 size-[480px] rounded-full bg-brand/8 blur-3xl"
+          className="pointer-events-none absolute -right-40 top-0 size-[480px] rounded-full bg-blue-light/8 blur-3xl"
           animate={reduced ? undefined : { x: [0, -24, 0], y: [0, 18, 0] }}
           transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
         />
@@ -145,7 +144,7 @@ export function ContatoPage() {
           <div className="mt-8 grid gap-4 lg:grid-cols-2">
             {contactLocations.map((location, index) => (
               <Reveal key={location.id} delay={index * 0.08}>
-                <article className="h-full rounded-[28px] border border-slate-200 bg-white p-7 shadow-[0_18px_60px_rgba(32,40,50,0.06)] transition duration-500 hover:-translate-y-1 hover:border-brand/25 hover:shadow-[0_24px_72px_rgba(32,40,50,0.1)] sm:p-9">
+                <article className="h-full rounded-[28px] border border-slate-200 bg-white p-7 shadow-[0_18px_60px_color-mix(in_srgb,var(--blue-dark)_6%,transparent)] transition duration-500 hover:-translate-y-1 hover:border-brand/25 hover:shadow-[0_24px_72px_color-mix(in_srgb,var(--blue-dark)_11%,transparent)] sm:p-9">
                   <div className="flex items-start justify-between gap-5">
                     <div>
                       <p className="text-[10px] font-bold uppercase tracking-[0.35em] text-brand-deep">{locationsT(`${index}.eyebrow`)}</p>
@@ -202,7 +201,7 @@ export function ContatoPage() {
 
       <section id="mapa" aria-labelledby="mapa-title" className="scroll-mt-20 px-5 py-16 sm:px-8 sm:py-20">
         <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-          <Reveal className="relative min-h-[390px] overflow-hidden rounded-[32px] border border-slate-200 bg-slate-100 shadow-[0_24px_80px_rgba(32,40,50,0.1)] sm:min-h-[500px]">
+          <Reveal className="relative min-h-[390px] overflow-hidden rounded-[32px] border border-slate-200 bg-slate-100 shadow-[0_24px_80px_color-mix(in_srgb,var(--blue-dark)_10%,transparent)] sm:min-h-[500px]">
             <iframe
               title="Clinic location map in Blumenau"
               src={contactMap.embedSrc}
@@ -229,7 +228,7 @@ export function ContatoPage() {
             <p className="mt-6 text-sm leading-7 text-slate-600">
               {mapT("text")}
             </p>
-            <div className="mt-8 flex items-start gap-3 rounded-2xl bg-[#edf7f7] p-5 text-sm font-semibold leading-6 text-ink-soft">
+            <div className="mt-8 flex items-start gap-3 rounded-2xl bg-surface-tint p-5 text-sm font-semibold leading-6 text-ink-soft">
               <Clock3 className="mt-0.5 size-5 shrink-0 text-brand-deep" />
               <span>{mapT("hours")}</span>
             </div>
@@ -246,7 +245,7 @@ export function ContatoPage() {
         </div>
       </section>
 
-      <section aria-labelledby="pagamentos-title" className="bg-[#edf7f7] px-5 py-16 sm:px-8 sm:py-20">
+      <section aria-labelledby="pagamentos-title" className="bg-surface-tint px-5 py-16 sm:px-8 sm:py-20">
         <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[0.7fr_1.3fr] lg:items-start">
           <Reveal>
             <p className="text-[10px] font-bold uppercase tracking-[0.48em] text-brand-deep">{paymentsT("eyebrow")}</p>

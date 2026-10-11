@@ -28,8 +28,8 @@ export function CirurgiasIndexPage() {
       <Header />
 
       <main>
-        <section className="relative isolate min-h-[780px] overflow-hidden bg-navy-deep text-white">
-          <div className="absolute inset-0 -z-20 bg-[radial-gradient(70%_80%_at_18%_42%,rgba(8,191,196,0.18),transparent_62%)]" />
+        <section className="relative isolate min-h-[780px] overflow-hidden bg-[linear-gradient(135deg,var(--blue-dark)_0%,var(--blue)_100%)] text-white">
+          <div className="absolute inset-0 -z-20 bg-[radial-gradient(70%_80%_at_18%_42%,color-mix(in_srgb,var(--green)_20%,transparent),transparent_62%)]" />
           <div className="absolute inset-0 -z-10 opacity-[0.08] [background-image:linear-gradient(rgba(255,255,255,.2)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.2)_1px,transparent_1px)] [background-size:72px_72px]" />
           <div className="hero-aurora absolute -left-48 top-1/4 -z-10 size-[520px] rounded-full bg-brand/16 blur-3xl" />
           <div className="hero-grain absolute inset-0 -z-10 mix-blend-overlay" />
@@ -77,7 +77,7 @@ export function CirurgiasIndexPage() {
           </div>
         </section>
 
-        <section id="procedimentos" className="scroll-mt-16 bg-[#f4f8fa] py-20 sm:py-28">
+        <section id="procedimentos" className="scroll-mt-16 bg-surface-soft py-20 sm:py-28">
           <div className="mx-auto max-w-6xl px-5 sm:px-8">
             <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
               <Reveal>
@@ -110,7 +110,7 @@ export function CirurgiasIndexPage() {
                     className="lg:col-span-6"
                   >
                     <article
-                      className={`group relative isolate h-full min-h-[430px] overflow-hidden rounded-[32px] bg-navy-deep shadow-[0_20px_60px_rgba(8,31,48,0.12)] ${
+                      className={`group relative isolate h-full min-h-[430px] overflow-hidden rounded-[32px] bg-navy-deep shadow-[0_20px_60px_color-mix(in_srgb,var(--blue-dark)_16%,transparent)] ${
                         featured ? "sm:min-h-[520px]" : "sm:min-h-[460px]"
                       }`}
                     >
@@ -121,7 +121,7 @@ export function CirurgiasIndexPage() {
                         sizes={featured ? "(min-width: 1024px) 560px, 100vw" : "(min-width: 1024px) 370px, 100vw"}
                         className="object-cover transition duration-700 ease-out group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 -z-0 bg-[linear-gradient(180deg,rgba(8,31,48,0.06)_10%,rgba(8,31,48,0.18)_42%,rgba(8,31,48,0.96)_100%)]" />
+                      <div className="absolute inset-0 -z-0 bg-[linear-gradient(180deg,transparent_0%,transparent_42%,color-mix(in_srgb,var(--blue-dark)_94%,transparent)_100%)]" />
 
                       <div className="relative z-10 flex h-full min-h-[inherit] flex-col justify-between p-6 sm:p-8">
                         <div className="flex items-center justify-between gap-4">
@@ -160,10 +160,10 @@ export function CirurgiasIndexPage() {
         </section>
 
         <section className="relative overflow-hidden bg-white py-20 sm:py-28">
-          <div className="pointer-events-none absolute right-[-140px] top-[-180px] size-[440px] rounded-full bg-brand/10 blur-3xl" />
+          <div className="pointer-events-none absolute right-[-140px] top-[-180px] size-[440px] rounded-full bg-blue-light/10 blur-3xl" />
           <div className="mx-auto grid max-w-6xl gap-12 px-5 sm:px-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">
             <Reveal>
-              <div className="relative overflow-hidden rounded-[36px] bg-navy-deep p-8 text-white sm:p-12">
+              <div className="relative overflow-hidden rounded-[36px] bg-[linear-gradient(135deg,var(--blue-dark)_0%,var(--blue)_100%)] p-8 text-white sm:p-12">
                 <div className="absolute -right-16 -top-16 size-52 rounded-full border border-brand/25" />
                 <div className="absolute -right-6 -top-6 size-28 rounded-full bg-brand/16 blur-2xl" />
                 <p className="relative text-[11px] font-bold uppercase tracking-[0.36em] text-brand">

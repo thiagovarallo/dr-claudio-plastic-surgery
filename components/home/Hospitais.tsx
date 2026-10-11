@@ -81,7 +81,7 @@ export function Hospitais() {
       id="hospitais"
       ref={sectionRef}
       aria-labelledby="hospitais-title"
-      className="relative overflow-hidden bg-slate-50 pb-16 pt-12 sm:pb-20 sm:pt-16 lg:h-152.5 lg:py-0"
+      className="relative overflow-hidden bg-surface-soft pb-16 pt-12 sm:pb-20 sm:pt-16 lg:h-152.5 lg:py-0"
     >
       <motion.h2
         id="hospitais-title"

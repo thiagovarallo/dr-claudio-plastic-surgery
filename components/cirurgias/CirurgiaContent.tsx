@@ -14,13 +14,13 @@ export function CirurgiaContent({ overview, sections }: Props) {
   const [lead, ...rest] = overview.paragraphs;
 
   return (
-    <div className="overflow-hidden bg-[#f4f8fa]">
+    <div className="overflow-hidden bg-surface-soft">
       <section
         id="sobre-a-cirurgia"
         aria-labelledby="overview-heading"
         className="relative scroll-mt-20 py-20 sm:py-28"
       >
-        <div className="pointer-events-none absolute -left-32 top-1/3 size-80 rounded-full bg-brand/8 blur-3xl" />
+        <div className="pointer-events-none absolute -left-32 top-1/3 size-80 rounded-full bg-blue-light/8 blur-3xl" />
         <div className="pointer-events-none absolute right-[-90px] top-16 size-64 rounded-full border border-brand/15" />
 
         <div className="relative mx-auto grid max-w-6xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
@@ -43,7 +43,7 @@ export function CirurgiaContent({ overview, sections }: Props) {
             <ScrollReveal>
               <h2
                 id="overview-heading"
-                className="max-w-3xl font-display text-5xl font-medium leading-[0.94] text-navy sm:text-6xl"
+                className="max-w-3xl font-display text-5xl font-medium leading-[0.94] text-blue-dark sm:text-6xl"
               >
                 {overview.heading}
               </h2>
@@ -51,7 +51,7 @@ export function CirurgiaContent({ overview, sections }: Props) {
 
             {lead ? (
               <ScrollReveal delay={80}>
-                <p className="mt-8 max-w-3xl font-display text-2xl font-medium leading-snug text-navy/82 sm:text-3xl">
+                <p className="mt-8 max-w-3xl font-display text-2xl font-medium leading-snug text-blue-dark/82 sm:text-3xl">
                   {lead}
                 </p>
               </ScrollReveal>
@@ -67,9 +67,9 @@ export function CirurgiaContent({ overview, sections }: Props) {
 
             <ScrollReveal delay={220}>
               <div className="mt-10 flex flex-wrap gap-3 border-t border-navy/10 pt-6">
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-navy/55">CRM 14.706-SC</span>
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-navy/65">CRM 14.706-SC</span>
                 <span className="h-4 w-px bg-navy/15" />
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-navy/55">RQE 23.737</span>
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-navy/65">RQE 23.737</span>
               </div>
             </ScrollReveal>
           </div>
@@ -98,7 +98,7 @@ export function CirurgiaContent({ overview, sections }: Props) {
                   <article
                     id={section.id}
                     aria-labelledby={`${section.id}-heading`}
-                    className="group relative grid gap-6 border-b border-navy/10 py-9 transition-colors duration-500 hover:bg-[#f8fbfc] sm:py-11 lg:grid-cols-[148px_minmax(0,1fr)] lg:gap-12 lg:px-8"
+                    className="group relative grid gap-6 border-b border-navy/10 py-9 transition-colors duration-500 hover:bg-surface-soft sm:py-11 lg:grid-cols-[148px_minmax(0,1fr)] lg:gap-12 lg:px-8"
                   >
                     <span className="absolute bottom-0 left-0 top-0 w-0.5 origin-top scale-y-0 bg-brand transition-transform duration-500 group-hover:scale-y-100" />
 
@@ -110,7 +110,7 @@ export function CirurgiaContent({ overview, sections }: Props) {
                     <div className="max-w-3xl">
                       <h2
                         id={`${section.id}-heading`}
-                        className="font-display text-4xl font-medium leading-[0.98] text-navy transition-transform duration-500 group-hover:translate-x-1 sm:text-5xl"
+                        className="font-display text-4xl font-medium leading-[0.98] text-blue-dark transition-transform duration-500 group-hover:translate-x-1 sm:text-5xl"
                       >
                         {section.heading}
                       </h2>

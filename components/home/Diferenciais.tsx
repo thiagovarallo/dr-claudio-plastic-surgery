@@ -14,7 +14,7 @@ export function Diferenciais() {
   const t = useTranslations("home.differentials");
 
   return (
-    <section className="relative isolate overflow-hidden bg-brand pb-28 text-white lg:pb-36">
+    <section className="relative isolate overflow-hidden bg-blue pb-28 text-white lg:pb-36">
       <Image
         src="/cirurgias/cirurgia-intima-feminina/mockups/consulta-editorial.png"
         alt=""
@@ -22,7 +22,7 @@ export function Diferenciais() {
         sizes="100vw"
         className="-z-10 object-cover opacity-15 mix-blend-multiply"
       />
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(6,196,201,0.92)_0%,rgba(6,196,201,0.86)_49.9%,rgba(4,152,171,0.9)_50.1%,rgba(4,152,171,0.94)_100%)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(90deg,color-mix(in_srgb,var(--blue-light)_92%,transparent)_0%,color-mix(in_srgb,var(--blue-light)_88%,transparent)_49.9%,color-mix(in_srgb,var(--blue)_92%,transparent)_50.1%,color-mix(in_srgb,var(--blue-dark)_94%,transparent)_100%)]" />
 
       <div className="relative mx-auto grid max-w-6xl md:grid-cols-2">
         {diferenciais.map((item, index) => {
@@ -34,7 +34,7 @@ export function Diferenciais() {
                   index === 1 ? "border-t border-white/20 md:border-t-0 md:pl-14" : "md:pr-14"
                 }`}
               >
-                <Icon className="size-10" strokeWidth={1.4} />
+                <Icon className="size-10 text-brand" strokeWidth={1.4} />
                 <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.5em] text-white/85">{t(`items.${index}.eyebrow`)}</p>
                 <h2 className="mt-0.5 text-[28px] font-extrabold uppercase leading-none tracking-tight sm:text-[30px]">
                   {t(`items.${index}.title`)}
@@ -45,7 +45,7 @@ export function Diferenciais() {
                   </p>
                   <Link
                     href={WHATSAPP_HREF}
-                    className="inline-flex h-8 shrink-0 items-center rounded-full border border-white/80 px-4 text-[11px] font-bold transition hover:bg-white hover:text-brand-deep"
+                    className="inline-flex h-8 shrink-0 items-center rounded-full bg-brand px-4 text-[11px] font-bold text-white transition hover:bg-white hover:text-blue-dark"
                   >
                     {t("more")}
                   </Link>

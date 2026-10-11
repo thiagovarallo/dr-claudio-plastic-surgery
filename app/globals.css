@@ -1,27 +1,48 @@
 @import "tailwindcss";
 
 :root {
-  /* Paleta do site oficial Dr. Claudio Eduardo */
+  /* Mapa de cores oficial — Dr. Claudio Eduardo */
+  --color-primary-blue: #0079b5;
+  --color-secondary-blue: #0186d5;
+  --color-dark-blue: #1b5579;
+  --color-green: #08bfc4;
+  --color-green-deep: #047f92;
+
+  /* Aliases curtos para fácil utilização */
+  --blue: var(--color-primary-blue);
+  --blue-light: var(--color-secondary-blue);
+  --blue-dark: var(--color-dark-blue);
+  --green: var(--color-green);
+  --green-deep: var(--color-green-deep);
+
+  /* Tokens semânticos do tema */
   --background: #f6fbff;
   --foreground: #3f4c5d;
   --muted: #6d809d;
-  --accent: #0186d5;
-  --accent-hover: #006eaa;
+  --accent: var(--blue-light);
+  --accent-hover: var(--blue);
   --accent-soft: #e2f2fd;
-  --navy: #102b3f;
-  --navy-deep: #081f30;
+  --navy: var(--blue);
+  --navy-deep: var(--blue-dark);
   --surface: #ffffff;
+  --surface-soft: #f2f7fb;
+  --surface-tint: #e8f3f9;
   --border: #d6e6f1;
-  --warm: #fe824c;
-  --warm-soft: #fff0e8;
+  --warm: #0186d5;
+  --warm-soft: #e2f2fd;
   --aqua: #8fd4df;
-  --brand: #08bfc4;
-  --brand-deep: #047f92;
-  --ink: #202832;
-  --ink-soft: #303944;
+  --brand: var(--green);
+  --brand-deep: var(--blue);
+  --ink: #163247;
+  --ink-soft: #2c4a63;
 }
 
 @theme inline {
+  --color-blue: var(--blue);
+  --color-blue-light: var(--blue-light);
+  --color-blue-dark: var(--blue-dark);
+  --color-green: var(--green);
+  --color-green-deep: var(--green-deep);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
@@ -31,6 +52,8 @@
   --color-navy: var(--navy);
   --color-navy-deep: var(--navy-deep);
   --color-surface: var(--surface);
+  --color-surface-soft: var(--surface-soft);
+  --color-surface-tint: var(--surface-tint);
   --color-border: var(--border);
   --color-warm: var(--warm);
   --color-warm-soft: var(--warm-soft);
@@ -155,8 +178,8 @@ body {
 
 .section-paper {
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(246, 251, 255, 0.9)),
-    linear-gradient(90deg, rgba(1, 134, 213, 0.08), rgba(254, 130, 76, 0.08));
+    linear-gradient(135deg, color-mix(in srgb, var(--surface) 96%, transparent), color-mix(in srgb, var(--background) 90%, transparent)),
+    linear-gradient(90deg, color-mix(in srgb, var(--blue-light) 8%, transparent), color-mix(in srgb, var(--green) 8%, transparent));
 }
 
 @keyframes brand-orb-drift {
@@ -212,7 +235,7 @@ body {
 .hero-grain {
   pointer-events: none;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
-  opacity: 0.22;
+  opacity: 0.06;
   animation: grain 8s steps(10) infinite;
 }
 

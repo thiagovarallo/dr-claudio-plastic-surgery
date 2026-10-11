@@ -11,7 +11,7 @@ export function Footer() {
 
   return (
     <footer id="contato" className="scroll-mt-19">
-      <div className="relative isolate overflow-hidden bg-[linear-gradient(120deg,#023f55_0%,#047f92_48%,#0870a5_100%)] py-16 text-white sm:py-20">
+      <div className="relative isolate overflow-hidden bg-[linear-gradient(120deg,var(--blue-dark)_0%,var(--blue)_52%,var(--blue-light)_100%)] py-16 text-white sm:py-20">
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(70%_80%_at_78%_5%,rgba(255,255,255,0.14),transparent_62%)]" />
 
         <div className="mx-auto grid max-w-6xl gap-10 px-5 sm:grid-cols-2 sm:gap-y-12 sm:px-8 lg:grid-cols-[1fr_1fr_1.15fr_1.45fr] lg:gap-12">

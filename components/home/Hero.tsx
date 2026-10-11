@@ -43,10 +43,9 @@ export function Hero() {
         </picture>
       </motion.div>
 
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(8,31,48,0.95)_0%,rgba(8,31,48,0.82)_38%,rgba(8,31,48,0.35)_72%,rgba(8,31,48,0.12)_100%)]" />
-      <div className="absolute inset-x-0 bottom-0 -z-10 h-64 bg-[linear-gradient(0deg,rgba(8,31,48,0.92),rgba(8,31,48,0))]" />
-      <div className="hero-aurora absolute -left-32 top-1/4 -z-10 h-105 w-105 rounded-full bg-brand/22 blur-3xl" />
-      <div className="hero-grain absolute inset-0 -z-10 mix-blend-overlay" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,color-mix(in_srgb,var(--blue-dark)_65%,transparent)_0%,color-mix(in_srgb,var(--blue-dark)_32%,transparent)_30%,transparent_48%)] max-sm:bg-[linear-gradient(180deg,color-mix(in_srgb,var(--blue-dark)_35%,transparent)_0%,color-mix(in_srgb,var(--blue-dark)_82%,transparent)_100%)]" />
+      <div className="absolute inset-x-0 bottom-0 -z-10 h-20 bg-linear-to-t from-blue-dark/45 to-transparent" />
+      <div className="hero-aurora absolute -left-32 top-1/4 -z-10 h-105 w-105 rounded-full bg-brand/15 blur-3xl" />
 
       <motion.div
         style={{ y: contentY }}
