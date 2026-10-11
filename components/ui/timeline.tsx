@@ -75,15 +75,15 @@ export function Timeline({ data, eyebrow, heading, description }: TimelineProps)
           >
             <div className="sticky top-28 z-20 flex h-fit w-4 shrink-0 self-start items-center md:top-32 md:w-[310px] lg:w-[350px]">
               <div className="absolute -left-[8px] grid size-10 place-items-center rounded-full bg-surface-soft md:-left-[8px]">
-                <span className="size-3.5 rounded-full border border-brand/35 bg-white shadow-[0_0_0_5px_color-mix(in_srgb,var(--green)_10%,transparent)]" />
+                <span className="size-3.5 rounded-full border border-brand/45 bg-white shadow-[0_0_0_5px_rgba(8,191,196,0.14)]" />
               </div>
-              <h3 className="hidden pl-16 font-display text-[42px] font-semibold leading-none tracking-[-0.03em] text-ink/42 md:block lg:text-5xl">
+              <h3 className="hidden pl-16 font-display text-[42px] font-semibold leading-none tracking-[-0.03em] text-blue-dark/55 md:block lg:text-5xl">
                 {item.title}
               </h3>
             </div>
 
             <div className="min-w-0 flex-1 pb-4">
-              <h3 className="mb-5 font-display text-[32px] font-semibold leading-none tracking-[-0.03em] text-ink md:hidden">
+              <h3 className="mb-5 font-display text-[32px] font-semibold leading-none tracking-[-0.03em] text-blue-dark md:hidden">
                 {item.title}
               </h3>
               {item.content}
@@ -102,7 +102,7 @@ export function Timeline({ data, eyebrow, heading, description }: TimelineProps)
                 ? { height: "100%", opacity: 1 }
                 : { height: heightTransform, opacity: opacityTransform }
             }
-            className="absolute inset-x-0 top-0 w-px rounded-full bg-gradient-to-b from-brand via-blue-light to-blue-dark shadow-[0_0_12px_color-mix(in_srgb,var(--green)_35%,transparent)]"
+            className="absolute inset-x-0 top-0 w-px rounded-full bg-gradient-to-b from-brand via-blue-light to-blue-dark shadow-[0_0_12px_rgba(8,191,196,0.35)]"
           />
         </div>
       </div>

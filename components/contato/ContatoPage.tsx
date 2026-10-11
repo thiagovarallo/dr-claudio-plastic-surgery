@@ -144,7 +144,7 @@ export function ContatoPage() {
           <div className="mt-8 grid gap-4 lg:grid-cols-2">
             {contactLocations.map((location, index) => (
               <Reveal key={location.id} delay={index * 0.08}>
-                <article className="h-full rounded-[28px] border border-slate-200 bg-white p-7 shadow-[0_18px_60px_color-mix(in_srgb,var(--blue-dark)_6%,transparent)] transition duration-500 hover:-translate-y-1 hover:border-brand/25 hover:shadow-[0_24px_72px_color-mix(in_srgb,var(--blue-dark)_11%,transparent)] sm:p-9">
+                <article className="h-full rounded-[28px] border border-blue/15 bg-white p-7 shadow-[0_20px_50px_-10px_rgba(27,85,121,0.15),0_8px_20px_-6px_rgba(0,121,181,0.08)] transition duration-500 hover:-translate-y-1 hover:border-brand/35 hover:shadow-[0_26px_65px_-10px_rgba(27,85,121,0.22)] sm:p-9">
                   <div className="flex items-start justify-between gap-5">
                     <div>
                       <p className="text-[10px] font-bold uppercase tracking-[0.35em] text-brand-deep">{locationsT(`${index}.eyebrow`)}</p>
@@ -201,7 +201,7 @@ export function ContatoPage() {
 
       <section id="mapa" aria-labelledby="mapa-title" className="scroll-mt-20 px-5 py-16 sm:px-8 sm:py-20">
         <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-          <Reveal className="relative min-h-[390px] overflow-hidden rounded-[32px] border border-slate-200 bg-slate-100 shadow-[0_24px_80px_color-mix(in_srgb,var(--blue-dark)_10%,transparent)] sm:min-h-[500px]">
+          <Reveal className="relative min-h-[390px] overflow-hidden rounded-[32px] border border-blue/15 bg-slate-100 shadow-[0_24px_70px_-10px_rgba(27,85,121,0.18)] sm:min-h-[500px]">
             <iframe
               title="Clinic location map in Blumenau"
               src={contactMap.embedSrc}

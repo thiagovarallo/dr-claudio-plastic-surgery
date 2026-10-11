@@ -111,7 +111,7 @@ export function DrNaMidia() {
         <div className="mt-7 grid gap-4 lg:grid-cols-12 lg:items-start lg:gap-6">
           {/* Player em Destaque */}
           <div className="lg:col-span-7 xl:col-span-8">
-            <div className="group relative aspect-video overflow-hidden rounded-[26px] border border-slate-200/90 bg-navy-deep shadow-[0_20px_50px_color-mix(in_srgb,var(--blue-dark)_14%,transparent)] lg:rounded-[30px]">
+            <div className="group relative aspect-video overflow-hidden rounded-[26px] border border-slate-200/90 bg-navy-deep shadow-[0_20px_50px_rgba(27,85,121,0.16)] lg:rounded-[30px]">
               {isPlaying ? (
                 <iframe
                   key={activeVideo.id}
@@ -156,7 +156,7 @@ export function DrNaMidia() {
                     className="group/btn absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center cursor-pointer outline-none"
                   >
                     <span className="absolute size-20 rounded-full bg-brand/30 animate-ping group-hover/btn:bg-brand/50 sm:size-24" />
-                    <span className="relative flex size-18 items-center justify-center rounded-full bg-brand text-white shadow-[0_12px_36px_color-mix(in_srgb,var(--green)_45%,transparent)] transition-all duration-300 group-hover/btn:scale-110 group-hover/btn:bg-brand-deep sm:size-22">
+                    <span className="relative flex size-18 items-center justify-center rounded-full bg-brand text-white shadow-[0_12px_36px_rgba(8,191,196,0.45)] transition-all duration-300 group-hover/btn:scale-110 group-hover/btn:bg-brand-deep sm:size-22">
                       <Play className="ml-1 size-7 fill-current sm:size-8" />
                     </span>
                   </button>
@@ -339,7 +339,7 @@ export function DrNaMidia() {
                   href={item.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="group relative flex h-full flex-col justify-between rounded-[22px] border border-slate-200/80 bg-white p-5 shadow-[0_10px_30px_color-mix(in_srgb,var(--blue-dark)_4%,transparent)] transition duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-[0_16px_40px_color-mix(in_srgb,var(--blue-dark)_9%,transparent)] sm:p-5.5"
+                  className="group relative flex h-full flex-col justify-between rounded-[22px] border border-slate-200/80 bg-white p-5 shadow-[0_14px_38px_-8px_rgba(27,85,121,0.12)] transition duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-[0_20px_48px_-8px_rgba(27,85,121,0.20)] sm:p-5.5"
                 >
                   <div>
                     <div className="flex items-center justify-between gap-3">

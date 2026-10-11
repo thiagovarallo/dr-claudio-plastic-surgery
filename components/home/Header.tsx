@@ -42,7 +42,7 @@ export function Header() {
     <motion.header
       className={`fixed inset-x-0 top-0 z-50 transition-[background,box-shadow,border-color] duration-500 ${
         scrolled
-          ? "border-b border-ink/8 bg-white/78 shadow-[0_10px_40px_color-mix(in_srgb,var(--blue-dark)_10%,transparent)] backdrop-blur-xl"
+          ? "border-b border-ink/8 bg-white/78 shadow-[0_10px_40px_rgba(27,85,121,0.10)] backdrop-blur-xl"
           : "border-b border-transparent bg-transparent"
       }`}
     >

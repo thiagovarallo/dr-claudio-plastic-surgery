@@ -72,7 +72,7 @@ export function HistoriaPage() {
             </div>
           </div>
 
-          <div className="mt-auto grid gap-px overflow-hidden rounded-[24px] border border-white/12 bg-white/12 backdrop-blur-xl sm:grid-cols-3">
+          <div className="mt-6 grid gap-px overflow-hidden rounded-[24px] border border-white/12 bg-white/12 backdrop-blur-xl sm:grid-cols-3">
             {historiaPage.metrics.map((metric) => (
               <div key={metric.value} className="bg-navy-deep/45 px-6 py-5 sm:px-7 sm:py-6">
                 <strong className="font-display text-3xl font-semibold text-white sm:text-4xl">
@@ -167,15 +167,15 @@ export function HistoriaPage() {
           data={historiaPage.timeline.map((item, index) => ({
             title: item.year,
             content: (
-              <article className="group relative max-w-2xl overflow-hidden rounded-[26px] border border-slate-200/85 bg-white p-6 shadow-[0_18px_65px_color-mix(in_srgb,var(--blue-dark)_8%,transparent)] transition duration-500 hover:-translate-y-1 hover:border-brand/30 hover:shadow-[0_24px_80px_color-mix(in_srgb,var(--blue-dark)_12%,transparent)] sm:p-8">
+              <article className="group relative max-w-2xl overflow-hidden rounded-[26px] border border-blue/15 bg-white p-6 shadow-[0_20px_50px_-10px_rgba(27,85,121,0.16),0_8px_20px_-6px_rgba(0,121,181,0.08)] transition duration-500 hover:-translate-y-1 hover:border-brand/40 hover:shadow-[0_26px_65px_-10px_rgba(27,85,121,0.22)] sm:p-8">
                 <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-brand to-blue-light opacity-0 transition group-hover:opacity-100" />
                 <p className="text-[9px] font-bold uppercase tracking-[0.38em] text-brand-deep">
                   Marco {String(index + 1).padStart(2, "0")}
                 </p>
-                <h3 className="mt-4 text-base font-extrabold leading-6 text-ink sm:text-lg">
+                <h3 className="mt-4 text-base font-extrabold leading-6 text-blue-dark sm:text-lg">
                   {item.title}
                 </h3>
-                <p className="mt-3 text-sm leading-7 text-slate-600">{item.text}</p>
+                <p className="mt-3 text-sm leading-7 text-ink-soft">{item.text}</p>
               </article>
             ),
           }))}
@@ -198,32 +198,32 @@ export function HistoriaPage() {
               const Icon = practiceIcons[index];
               return (
                 <Reveal key={item.title} delay={index * 0.08}>
-                  <article className="h-full rounded-[26px] border border-slate-200 bg-white p-7 shadow-[0_20px_70px_color-mix(in_srgb,var(--blue-dark)_6%,transparent)] sm:p-8">
-                    <span className="grid size-12 place-items-center rounded-2xl bg-brand/10 text-brand-deep">
+                  <article className="h-full rounded-[26px] border border-blue/15 bg-white p-7 shadow-[0_20px_50px_-10px_rgba(27,85,121,0.15),0_8px_20px_-6px_rgba(0,121,181,0.08)] transition duration-300 hover:-translate-y-1 hover:border-brand/35 hover:shadow-[0_26px_65px_-10px_rgba(27,85,121,0.22)] sm:p-8">
+                    <span className="grid size-12 place-items-center rounded-2xl bg-brand/12 text-brand-deep">
                       <Icon className="size-5" />
                     </span>
-                    <h3 className="mt-10 font-display text-[30px] font-semibold leading-none text-ink">
+                    <h3 className="mt-10 font-display text-[30px] font-semibold leading-none text-blue-dark">
                       {item.title}
                     </h3>
-                    <p className="mt-4 text-sm leading-7 text-slate-600">{item.text}</p>
+                    <p className="mt-4 text-sm leading-7 text-ink-soft">{item.text}</p>
                   </article>
                 </Reveal>
               );
             })}
           </div>
 
-          <div className="mt-16 grid overflow-hidden rounded-[30px] bg-surface-tint lg:grid-cols-[0.85fr_1.15fr]">
+          <div className="mt-16 grid overflow-hidden rounded-[30px] border border-blue/15 bg-surface-tint shadow-[0_24px_60px_-12px_rgba(27,85,121,0.16)] lg:grid-cols-[0.85fr_1.15fr]">
             <Reveal className="p-7 sm:p-10 lg:p-14">
               <Award className="size-8 text-brand-deep" />
-              <h3 className="mt-8 font-display text-4xl font-medium leading-none text-ink sm:text-5xl">
+              <h3 className="mt-8 font-display text-4xl font-medium leading-none text-blue-dark sm:text-5xl">
                 Credenciais que sustentam a prática.
               </h3>
-              <p className="mt-5 text-sm leading-7 text-slate-600">
+              <p className="mt-5 text-sm leading-7 text-ink-soft">
                 Formação reconhecida, participação em sociedades médicas e atuação contínua em
                 instituições de saúde.
               </p>
             </Reveal>
-            <div className="border-t border-brand/12 bg-white/55 p-7 sm:p-10 lg:border-l lg:border-t-0 lg:p-14">
+            <div className="border-t border-blue/12 bg-white/80 p-7 sm:p-10 lg:border-l lg:border-t-0 lg:p-14">
               <ul className="space-y-5">
                 {historiaPage.credentials.map((credential, index) => (
                   <Reveal key={credential} delay={index * 0.04}>

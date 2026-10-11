@@ -110,7 +110,7 @@ export function CirurgiasIndexPage() {
                     className="lg:col-span-6"
                   >
                     <article
-                      className={`group relative isolate h-full min-h-[430px] overflow-hidden rounded-[32px] bg-navy-deep shadow-[0_20px_60px_color-mix(in_srgb,var(--blue-dark)_16%,transparent)] ${
+                      className={`group relative isolate h-full min-h-[430px] overflow-hidden rounded-[32px] bg-navy-deep shadow-[0_20px_60px_rgba(27,85,121,0.18)] ${
                         featured ? "sm:min-h-[520px]" : "sm:min-h-[460px]"
                       }`}
                     >

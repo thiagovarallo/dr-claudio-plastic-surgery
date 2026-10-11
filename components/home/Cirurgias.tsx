@@ -64,7 +64,7 @@ export function Cirurgias() {
                     href={surgery.href}
                     target={external ? "_blank" : undefined}
                     rel={external ? "noopener noreferrer" : undefined}
-                    className="group relative block h-full min-h-80 overflow-hidden rounded-[28px] bg-navy-deep shadow-[0_18px_48px_color-mix(in_srgb,var(--blue-dark)_16%,transparent)] outline-none transition duration-500 hover:-translate-y-1 hover:shadow-[0_24px_60px_color-mix(in_srgb,var(--blue-dark)_26%,transparent)] focus-visible:ring-4 focus-visible:ring-brand/30 lg:min-h-0"
+                    className="group relative block h-full min-h-80 overflow-hidden rounded-[28px] bg-navy-deep shadow-[0_18px_48px_rgba(27,85,121,0.18)] outline-none transition duration-500 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(27,85,121,0.28)] focus-visible:ring-4 focus-visible:ring-brand/30 lg:min-h-0"
                   >
                     <Image
                       src={surgery.image}

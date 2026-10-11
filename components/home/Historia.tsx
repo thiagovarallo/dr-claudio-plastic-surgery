@@ -88,24 +88,24 @@ function TimelinePoint({
           }`}
         >
           <span
-            className={`absolute inset-[7px] rotate-45 rounded-[13px] border-2 bg-white shadow-[0_8px_22px_color-mix(in_srgb,var(--blue-dark)_10%,transparent)] transition-[box-shadow,border-color,background-color] duration-500 ${
+            className={`absolute inset-[7px] rotate-45 rounded-[13px] border-2 bg-white shadow-[0_8px_22px_rgba(27,85,121,0.12)] transition-[box-shadow,border-color,background-color] duration-500 ${
             isActive
               ? isBrand
-                ? "border-brand shadow-[0_0_0_8px_color-mix(in_srgb,var(--green)_16%,transparent)]"
-                : "border-blue shadow-[0_0_0_8px_color-mix(in_srgb,var(--blue)_14%,transparent)]"
+                ? "border-brand shadow-[0_0_0_8px_rgba(8,191,196,0.16)]"
+                : "border-blue shadow-[0_0_0_8px_rgba(0,121,181,0.14)]"
               : isBrand
                 ? "border-brand"
                 : "border-border"
             }`}
           />
           <span
-            className={`relative z-10 size-5 rounded-full border-[3px] border-white shadow-[0_2px_8px_color-mix(in_srgb,var(--blue-dark)_18%,transparent)] transition-[background-color,transform] duration-500 xl:size-6 ${
+            className={`relative z-10 size-5 rounded-full border-[3px] border-white shadow-[0_2px_8px_rgba(27,85,121,0.18)] transition-[background-color,transform] duration-500 xl:size-6 ${
               isBrand ? "bg-brand" : "bg-blue-dark"
             }`}
           />
         </span>
         <strong
-          className={`mt-1 inline-flex rounded-full border bg-white px-3 py-1 text-[17px] font-extrabold leading-none tracking-[-0.05em] shadow-[0_5px_14px_color-mix(in_srgb,var(--blue-dark)_8%,transparent)] transition-[border-color,color] duration-500 xl:text-[20px] ${
+          className={`mt-1 inline-flex rounded-full border bg-white px-3 py-1 text-[17px] font-extrabold leading-none tracking-[-0.05em] shadow-[0_5px_14px_rgba(27,85,121,0.10)] transition-[border-color,color] duration-500 xl:text-[20px] ${
             isBrand ? "text-brand" : "text-blue-dark"
           } ${isActive ? (isBrand ? "border-brand/45" : "border-blue/40") : "border-border"}`}
         >
@@ -140,7 +140,7 @@ function ActiveStory({ node, index, marco }: { node: Node; index: number; marco:
             }`}
           />
           <article
-            className={`absolute left-0 z-10 w-full overflow-hidden rounded-[10px] bg-linear-to-br from-blue-light to-blue p-2.5 text-white shadow-[0_22px_55px_color-mix(in_srgb,var(--blue)_26%,transparent)] ${
+            className={`absolute left-0 z-10 w-full overflow-hidden rounded-[10px] bg-linear-to-br from-blue-light to-blue p-2.5 text-white shadow-[0_22px_55px_rgba(0,121,181,0.28)] ${
               isAbove ? "bottom-[4.5rem]" : "top-24"
             }`}
           >

@@ -181,7 +181,7 @@ export function Unidades() {
 
               <Link
                 href={WHATSAPP_HREF}
-                className="mt-8 inline-flex h-12 items-center gap-4 rounded-full bg-brand px-8 text-sm font-bold text-white shadow-[0_10px_24px_color-mix(in_srgb,var(--green)_24%,transparent)] transition hover:-translate-y-0.5 hover:bg-brand-deep"
+                className="mt-8 inline-flex h-12 items-center gap-4 rounded-full bg-brand px-8 text-sm font-bold text-white shadow-[0_10px_24px_rgba(8,191,196,0.26)] transition hover:-translate-y-0.5 hover:bg-brand-deep"
               >
                 {t(`items.${unitIndex}.contact`)}
                 <ArrowRight className="size-4" />
