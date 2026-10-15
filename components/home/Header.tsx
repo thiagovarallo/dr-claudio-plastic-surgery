@@ -47,14 +47,18 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex h-[76px] max-w-6xl items-center gap-6 px-5 sm:px-8">
-        <Link href="/#inicio" aria-label={t("homeAria")} className="relative h-8 w-[148px] shrink-0">
+        <Link
+          href="/#inicio"
+          aria-label={t("homeAria")}
+          className="relative h-6 w-[190px] shrink-0 sm:h-7 sm:w-[225px] lg:h-8 lg:w-[250px]"
+        >
           <Image
             src="/brand/logo.png"
             alt="Dr. Claudio Eduardo"
             fill
-            sizes="148px"
+            sizes="(max-width: 639px) 190px, (max-width: 1023px) 225px, 250px"
             priority
-            className="object-contain transition-[filter] duration-500"
+            className="object-contain object-left transition-[filter] duration-500"
             style={{
               filter: scrolled
                 ? "none"
