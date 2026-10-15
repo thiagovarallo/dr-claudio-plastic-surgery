@@ -100,7 +100,7 @@ export function Footer() {
 
         <div className="mx-auto mt-14 flex max-w-6xl flex-col gap-4 border-t border-white/20 px-5 pt-6 text-xs leading-5 text-white/70 sm:flex-row sm:items-center sm:justify-between sm:px-8">
           <span>{t("copyright")}</span>
-          <Link href="/#inicio" className="relative h-7 w-36 shrink-0" aria-label="Ir para o início">
+          <Link href="/#inicio" className="relative h-7 w-36 shrink-0" aria-label={headerT("homeAria")}>
             <Image
               src="/brand/logo-footer.png"
               alt="Dr. Claudio Eduardo"

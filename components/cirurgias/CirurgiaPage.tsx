@@ -1,4 +1,6 @@
 import type { CirurgiaContent } from "@/content/cirurgias/types";
+import { getLocale } from "next-intl/server";
+import { localizeContent } from "@/i18n/content";
 import { Footer } from "@/components/home/Footer";
 import { Header } from "@/components/home/Header";
 import { CirurgiaContactForm } from "./CirurgiaContactForm";
@@ -10,20 +12,23 @@ type Props = {
   cirurgia: CirurgiaContent;
 };
 
-export function CirurgiaPage({ cirurgia }: Props) {
+export async function CirurgiaPage({ cirurgia }: Props) {
+  const locale = await getLocale();
+  const localized = localizeContent(locale, cirurgia);
+
   return (
     <div className="min-h-svh overflow-x-clip bg-white text-ink">
       <Header />
       <main>
         <article>
           <CirurgiaHero
-            category={cirurgia.category}
-            title={cirurgia.title}
-            subtitle={cirurgia.subtitle}
+            category={localized.category}
+            title={localized.title}
+            subtitle={localized.subtitle}
           />
-          <CirurgiaContentBlocks overview={cirurgia.overview} sections={cirurgia.sections} />
-          <CirurgiaFAQ items={cirurgia.faq} />
-          <CirurgiaContactForm surgeryTitle={cirurgia.title} />
+          <CirurgiaContentBlocks overview={localized.overview} sections={localized.sections} />
+          <CirurgiaFAQ items={localized.faq} />
+          <CirurgiaContactForm surgeryTitle={localized.title} />
         </article>
       </main>
       <Footer />

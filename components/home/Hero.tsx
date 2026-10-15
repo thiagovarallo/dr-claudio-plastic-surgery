@@ -34,7 +34,7 @@ export function Hero() {
           <source media="(max-width: 639px)" srcSet="/brand/hero-home-mobile.png" />
           <Image
             src="/brand/hero-home-desktop.png"
-            alt="Dr. Claudio Eduardo em seu consultório"
+            alt={t("imageAlt")}
             fill
             priority
             sizes="100vw"

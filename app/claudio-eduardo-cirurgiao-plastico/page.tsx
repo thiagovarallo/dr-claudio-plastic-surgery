@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { Footer } from "@/components/home/Footer";
 import { Header } from "@/components/home/Header";
 import { HistoriaPage } from "@/components/historia/HistoriaPage";
 
-export const metadata: Metadata = {
-  title: "Minha História | Cirurgião Plástico em Blumenau",
-  description:
-    "Conheça a formação, a trajetória profissional e as especializações do Dr. Claudio Eduardo, cirurgião plástico em Blumenau/SC.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("meta");
+  return { title: t("historyTitle"), description: t("historyDescription") };
+}
 
 export default function ClaudioEduardoPage() {
   return (

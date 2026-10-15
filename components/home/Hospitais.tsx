@@ -10,12 +10,14 @@ import { hospitals } from "@/content/home";
 function HospitalPhoto({
   hospital,
   displayName,
+  imageAlt,
   className,
   depth,
   sizes,
 }: {
   hospital: (typeof hospitals)[number];
   displayName: string;
+  imageAlt: string;
   className: string;
   depth: number;
   sizes: string;
@@ -46,7 +48,7 @@ function HospitalPhoto({
           <motion.div style={{ y }} className="absolute -inset-y-12 inset-x-0">
             <Image
               src={hospital.image}
-              alt={hospital.alt}
+              alt={`${imageAlt} ${displayName}`}
               fill
               sizes={sizes}
               className="object-cover transition duration-700 group-hover:scale-105"
@@ -168,6 +170,7 @@ export function Hospitais() {
         <HospitalPhoto
           hospital={activeHospital}
           displayName={t(`items.${hospitalIndex}`)}
+          imageAlt={t("imageAlt")}
           depth={10}
           sizes="(max-width: 1023px) 100vw, 41vw"
           className="h-77.5 rounded-[26px] sm:h-105 lg:mx-5 lg:h-125 lg:rounded-[30px] xl:h-132.5"
@@ -182,6 +185,7 @@ export function Hospitais() {
           <HospitalPhoto
             hospital={secondaryHospital}
             displayName={t(`items.${(hospitalIndex + 1) % hospitals.length}`)}
+            imageAlt={t("imageAlt")}
             depth={6}
             sizes="(max-width: 1023px) 100vw, 29vw"
             className="h-65 rounded-[26px] sm:h-90 lg:h-125 lg:rounded-l-[30px] lg:rounded-r-none xl:h-132.5"

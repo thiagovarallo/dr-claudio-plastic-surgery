@@ -1,4 +1,16 @@
 {
+  "meta": {
+    "siteTitle": "Dr. Claudio Eduardo | Plastic Surgeon",
+    "siteDescription": "Plastic surgeon in Blumenau, Brazil. CRM 14.706-SC | RQE 23.737. Information about surgery and specialized care.",
+    "historyTitle": "My Story | Plastic Surgeon in Blumenau",
+    "historyDescription": "Discover the training, professional journey and specializations of Dr. Claudio Eduardo, a plastic surgeon in Blumenau, Brazil.",
+    "surgeriesTitle": "Surgeries",
+    "surgeriesDescription": "Explore aesthetic, reconstructive and gender-affirming procedures performed by Dr. Claudio Eduardo in Blumenau.",
+    "contactTitle": "Contact | Plastic Surgeon in Blumenau",
+    "contactDescription": "Contact Dr. Claudio Eduardo. Find the clinic's address, phone number, WhatsApp, email and location in Blumenau, Brazil.",
+    "contactOgTitle": "Contact | Dr. Claudio Eduardo",
+    "contactOgDescription": "Talk to the clinic and find its address and location in Blumenau, Brazil."
+  },
   "header": {
     "navigation": ["Home", "About", "Surgeries", "Locations", "Hospitals", "Contact"],
     "schedule": "Book an evaluation",
@@ -14,6 +26,7 @@
       "eyebrow": "Plastic surgery · Blumenau",
       "title": "Surgical care with precision and discretion",
       "description": "Dr. Claudio Eduardo, CRM 14.706-SC and RQE 23.737. Focused on aesthetic, reconstructive and gender-affirming procedures.",
+      "imageAlt": "Dr. Claudio Eduardo in his clinic",
       "schedule": "Book an evaluation",
       "surgeries": "View surgeries",
       "scroll": "Scroll to explore"
@@ -48,6 +61,7 @@
       ]
     },
     "units": {
+      "imageAlts": ["Modern clinic reception in Blumenau", "Modern, equipped consultation room", "Clinic interior", "Dr. Claudio Eduardo's consultation space"],
       "title": "Our locations",
       "choose": "Choose a location",
       "next": "Next environments",
@@ -58,6 +72,7 @@
       ]
     },
     "hospitals": {
+      "imageAlt": "Facade of",
       "title": "Our hospitals",
       "eyebrow": "Hospital network",
       "choose": "Choose a hospital",
@@ -81,6 +96,7 @@
       "nowPlaying": "Now playing",
       "playlistTitle": "All interviews",
       "playlistSubtitle": "Select to watch",
+      "videosCount": "{count} videos",
       "videos": [
         { "title": "Dr. Claudio Eduardo explains phalloplasty" },
         { "title": "Dr. Claudio Eduardo on The Noite with Danilo Gentili" },
@@ -99,6 +115,13 @@
         { "type": "Interview", "title": "The importance of aligning expectations with medical care", "text": "Jornal Opção interview about intimate surgery and follow-up care." }
       ]
     },
+    "cta": {
+      "eyebrow": "Blumenau · SC",
+      "title": "The next chapter can begin with a conversation.",
+      "description": "Book an evaluation to discuss your expectations and understand clearly which options may be right for you.",
+      "ctaLabel": "Book an evaluation",
+      "imageAlt": "Dr. Claudio Eduardo wearing a suit"
+    },
     "footer": {
       "siteMap": "Site map",
       "certifications": "Credentials",
@@ -113,7 +136,9 @@
     }
   },
   "contact": {
-    "hero": { "eyebrow": "Contact · Blumenau/SC", "title": "Let's talk about your next step.", "text": "Ask your questions, share what you are looking for and find the best path to an individual assessment.", "send": "Send a message", "whatsapp": "Talk on WhatsApp", "email": "Email", "office": "Office", "center": "Centro · Blumenau/SC" },
+    "building": "Stein Tower Building",
+    "floorAddress": "8th floor, Room 801 · Centro, Blumenau/SC",
+    "hero": { "eyebrow": "Contact · Blumenau/SC", "title": "Let's talk about your next step.", "text": "Ask your questions, share what you are looking for and find the best path to an individual assessment.", "imageAlt": "Dr. Claudio Eduardo wearing a white coat in his clinic", "send": "Send a message", "whatsapp": "Talk on WhatsApp", "email": "Email", "office": "Office", "center": "Centro · Blumenau/SC" },
     "formSection": { "eyebrow": "Talk to the clinic", "title": "Find a clear path forward." },
     "offices": { "eyebrow": "Where to find us", "title": "Our offices", "map": "View on map" },
     "map": { "eyebrow": "Location", "title": "Easy to find. Made to welcome you.", "text": "Appointments take place at Stein Tower Building, in downtown Blumenau. Check the best route before your visit.", "hours": "Open Monday to Friday, from 8:00 am to 6:00 pm.", "open": "Open in Google Maps", "talk": "Talk to the clinic" },

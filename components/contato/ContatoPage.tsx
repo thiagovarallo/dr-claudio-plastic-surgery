@@ -11,6 +11,7 @@ import { ContactFormIntro, ContatoForm } from "@/components/contato/ContatoForm"
 import { Reveal } from "@/components/ui/Reveal";
 
 export function ContatoPage() {
+  const contactT = useTranslations("contact");
   const heroT = useTranslations("contact.hero");
   const formSectionT = useTranslations("contact.formSection");
   const officesT = useTranslations("contact.offices");
@@ -25,15 +26,15 @@ export function ContatoPage() {
       <section
         id="inicio"
         aria-labelledby="contato-hero-title"
-        className="relative isolate flex min-h-[620px] overflow-hidden bg-navy-deep text-white lg:min-h-[660px]"
+        className="relative isolate flex min-h-[700px] overflow-hidden bg-navy-deep text-white lg:min-h-[760px]"
       >
         <Image
-          src="/brand/hero-alt.jpg"
-          alt="Ambiente de atendimento do Dr. Claudio Eduardo"
+          src="/brand/hero-contato-jaleco.png"
+          alt={heroT("imageAlt")}
           fill
           priority
           sizes="100vw"
-          className="-z-30 object-cover object-[66%_center]"
+          className="-z-30 object-cover object-[68%_top] sm:object-top"
         />
         <div className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,var(--blue-dark)_0%,color-mix(in_srgb,var(--blue-dark)_90%,transparent)_28%,color-mix(in_srgb,var(--blue-dark)_42%,transparent)_42%,transparent_54%)] max-sm:bg-[linear-gradient(90deg,color-mix(in_srgb,var(--blue-dark)_92%,transparent)_0%,color-mix(in_srgb,var(--blue-dark)_70%,transparent)_65%,color-mix(in_srgb,var(--blue-dark)_25%,transparent)_100%)]" />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(0deg,color-mix(in_srgb,var(--blue-dark)_65%,transparent)_0%,transparent_18%)]" />
@@ -77,7 +78,7 @@ export function ContatoPage() {
             </div>
           </div>
 
-          <div className="mt-auto grid gap-px overflow-hidden rounded-[26px] border border-white/12 bg-white/12 backdrop-blur-xl sm:grid-cols-3">
+          <div className="mt-12 grid gap-px overflow-hidden rounded-[26px] border border-white/12 bg-white/12 backdrop-blur-xl sm:mt-14 sm:grid-cols-3 lg:mt-16">
             <a
               href={primaryLocation.emailHref}
               className="animate-fade-up bg-navy-deep/50 px-5 py-4 transition hover:bg-navy-deep/70 sm:px-7 sm:py-5 focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-brand"
@@ -159,11 +160,11 @@ export function ContatoPage() {
 
                   <address className="mt-9 space-y-4 not-italic text-sm leading-6 text-slate-600">
                     <p>
-                      <strong className="font-extrabold text-ink">{location.building}</strong>
+                      <strong className="font-extrabold text-ink">{contactT("building")}</strong>
                       <br />
                       {location.address}
                       <br />
-                      {location.complement}
+                      {contactT("floorAddress")}
                       {location.postalCode ? (
                         <>
                           <br />

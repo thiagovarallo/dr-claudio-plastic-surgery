@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { getLocale } from "next-intl/server";
 import { CirurgiaPage } from "@/components/cirurgias/CirurgiaPage";
 import { getCirurgiaBySlug, getCirurgiaSlugs } from "@/content/cirurgias";
+import { localizeContent } from "@/i18n/content";
 
 type CirurgiaRouteProps = PageProps<"/cirurgias/[slug]">;
 
@@ -17,9 +19,11 @@ export async function generateMetadata({
   if (!cirurgia) {
     return {};
   }
+  const locale = await getLocale();
+  const seo = localizeContent(locale, cirurgia.seo);
   return {
-    title: cirurgia.seo.title,
-    description: cirurgia.seo.description,
+    title: seo.title.replace(/\s*\|\s*Dr\. Claudio Eduardo$/, ""),
+    description: seo.description,
   };
 }
 

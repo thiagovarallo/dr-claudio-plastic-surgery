@@ -98,7 +98,7 @@ export function Unidades() {
       <div className="relative mx-auto grid max-w-[1905px] gap-4 px-5 pt-20 sm:px-8 sm:pt-24 lg:h-full lg:grid-cols-[29%_41%_30%] lg:gap-0 lg:px-0 lg:pt-18.5 z-50">
         <ClinicPhoto
           src={first.src}
-          alt={first.alt}
+          alt={t(`imageAlts.${start % clinicGallery.length}`)}
           depth={6}
           sizes="(max-width: 1023px) 100vw, 29vw"
           className="h-65 rounded-[26px] sm:h-90 lg:h-125 lg:rounded-l-none lg:rounded-r-[30px] xl:h-132.5"
@@ -106,7 +106,7 @@ export function Unidades() {
 
         <ClinicPhoto
           src={second.src}
-          alt={second.alt}
+          alt={t(`imageAlts.${(start + 1) % clinicGallery.length}`)}
           depth={10}
           sizes="(max-width: 1023px) 100vw, 41vw"
           className="h-77.5 rounded-[26px] sm:h-105 lg:mx-5 lg:h-125 lg:rounded-[30px] xl:h-132.5"

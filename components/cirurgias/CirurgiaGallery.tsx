@@ -1,22 +1,26 @@
 import Image from "next/image";
+import { useLocale } from "next-intl";
 import type { CirurgiaGalleryItem } from "@/content/cirurgias/types";
+import { translateContent } from "@/i18n/content";
 import { ScrollReveal } from "./ScrollReveal";
 
 type Props = { items: CirurgiaGalleryItem[] };
 
 export function CirurgiaGallery({ items }: Props) {
+  const locale = useLocale();
+  const tr = (text: string) => translateContent(locale, text);
   return (
     <section className="overflow-hidden bg-navy-deep py-20 text-white sm:py-28" aria-labelledby="gallery-heading">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="grid gap-7 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <ScrollReveal>
             <h2 id="gallery-heading" className="max-w-xl font-display text-5xl font-medium leading-[0.95] sm:text-6xl">
-              Informação, acolhimento e discrição
+              {tr("Informação, acolhimento e discrição")}
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={80} className="lg:justify-self-end">
             <p className="max-w-lg text-sm leading-7 text-white/62">
-              A consulta é um espaço reservado para esclarecer dúvidas, alinhar expectativas e compreender cada etapa com tranquilidade.
+              {tr("A consulta é um espaço reservado para esclarecer dúvidas, alinhar expectativas e compreender cada etapa com tranquilidade.")}
             </p>
           </ScrollReveal>
         </div>

@@ -1,5 +1,7 @@
 import { Check } from "lucide-react";
+import { useLocale } from "next-intl";
 import type { CirurgiaSection } from "@/content/cirurgias/types";
+import { translateContent } from "@/i18n/content";
 import { ScrollReveal } from "./ScrollReveal";
 
 type Props = {
@@ -11,6 +13,8 @@ type Props = {
 };
 
 export function CirurgiaContent({ overview, sections }: Props) {
+  const locale = useLocale();
+  const tr = (text: string) => translateContent(locale, text);
   const [lead, ...rest] = overview.paragraphs;
 
   return (
@@ -28,13 +32,13 @@ export function CirurgiaContent({ overview, sections }: Props) {
             <div className="flex items-center gap-4">
               <span className="h-px w-10 bg-brand" />
               <p className="text-[10px] font-bold uppercase tracking-[0.38em] text-brand-deep">
-                Sobre a cirurgia
+                {tr("Sobre a cirurgia")}
               </p>
             </div>
             <div className="mt-8 hidden lg:block">
               <span className="block h-24 w-px bg-gradient-to-b from-brand to-transparent" />
               <p className="mt-5 max-w-[170px] text-xs leading-5 text-ink-soft/50">
-                Informação clara para decisões tomadas com segurança.
+                {tr("Informação clara para decisões tomadas com segurança.")}
               </p>
             </div>
           </ScrollReveal>
@@ -76,14 +80,14 @@ export function CirurgiaContent({ overview, sections }: Props) {
         </div>
       </section>
 
-      <section className="relative bg-white py-20 sm:py-28" aria-label="Etapas e orientações da cirurgia">
+      <section className="relative bg-white py-20 sm:py-28" aria-label={tr("Etapas e orientações da cirurgia")}>
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-navy/8" />
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <ScrollReveal>
             <div className="flex items-center gap-4">
               <span className="h-px w-10 bg-brand" />
               <p className="text-[10px] font-bold uppercase tracking-[0.38em] text-brand-deep">
-                Etapas e orientações
+                {tr("Etapas e orientações")}
               </p>
             </div>
           </ScrollReveal>

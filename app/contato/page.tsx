@@ -1,26 +1,28 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { Footer } from "@/components/home/Footer";
 import { Header } from "@/components/home/Header";
 import { ContatoPage } from "@/components/contato/ContatoPage";
 import { contactLocations } from "@/content/contato";
 
-export const metadata: Metadata = {
-  title: "Contato | Cirurgião Plástico em Blumenau",
-  description:
-    "Entre em contato com o Dr. Claudio Eduardo. Consulte endereço, telefone, WhatsApp, e-mail e localização dos consultórios em Blumenau/SC.",
-  keywords: [
-    "contato cirurgião plástico Blumenau",
-    "Clínica Dr. Claudio Eduardo",
-    "cirurgião plástico Blumenau telefone",
-    "consulta cirurgia plástica Blumenau",
-  ],
-  openGraph: {
-    title: "Contato | Dr. Claudio Eduardo",
-    description:
-      "Fale com a clínica, consulte os endereços e encontre a localização dos consultórios em Blumenau/SC.",
-    type: "website",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("meta");
+  return {
+    title: t("contactTitle"),
+    description: t("contactDescription"),
+    keywords: [
+      "contato cirurgião plástico Blumenau",
+      "Clínica Dr. Claudio Eduardo",
+      "cirurgião plástico Blumenau telefone",
+      "consulta cirurgia plástica Blumenau",
+    ],
+    openGraph: {
+      title: t("contactOgTitle"),
+      description: t("contactOgDescription"),
+      type: "website",
+    },
+  };
+}
 
 const primaryLocation = contactLocations[0];
 

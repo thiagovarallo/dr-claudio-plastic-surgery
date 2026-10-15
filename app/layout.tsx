@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages } from "next-intl/server";
+import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -17,14 +17,16 @@ const manrope = Manrope({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: {
-    default: "Dr. Claudio Eduardo | Cirurgião Plástico",
-    template: "%s | Dr. Claudio Eduardo",
-  },
-  description:
-    "Cirurgião plástico em Blumenau/SC. CRM 14.706-SC | RQE 23.737. Informações sobre cirurgias e cuidados especializados.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("meta");
+  return {
+    title: {
+      default: t("siteTitle"),
+      template: "%s | Dr. Claudio Eduardo",
+    },
+    description: t("siteDescription"),
+  };
+}
 
 export default async function RootLayout({ children }: LayoutProps<"/">) {
   const locale = await getLocale();

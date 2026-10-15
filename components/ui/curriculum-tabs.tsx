@@ -13,7 +13,9 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { useRef, useState, type KeyboardEvent } from "react";
+import { useLocale } from "next-intl";
 import { curriculumSections } from "@/content/historia";
+import { localizeContent, translateContent } from "@/i18n/content";
 
 const sectionIcons: Record<(typeof curriculumSections)[number]["icon"], LucideIcon> = {
   graduation: GraduationCap,
@@ -25,18 +27,21 @@ const sectionIcons: Record<(typeof curriculumSections)[number]["icon"], LucideIc
 };
 
 export function CurriculumTabs() {
+  const locale = useLocale();
+  const localizedSections = localizeContent(locale, curriculumSections);
+  const tr = (text: string) => translateContent(locale, text);
   const [activeId, setActiveId] = useState<(typeof curriculumSections)[number]["id"]>(
-    curriculumSections[0].id,
+    localizedSections[0].id,
   );
   const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
   const reduced = useReducedMotion();
-  const activeIndex = curriculumSections.findIndex((section) => section.id === activeId);
-  const activeSection = curriculumSections[activeIndex] ?? curriculumSections[0];
+  const activeIndex = localizedSections.findIndex((section) => section.id === activeId);
+  const activeSection = localizedSections[activeIndex] ?? localizedSections[0];
   const ActiveIcon = sectionIcons[activeSection.icon];
 
   const selectTab = (index: number) => {
-    const normalized = (index + curriculumSections.length) % curriculumSections.length;
-    setActiveId(curriculumSections[normalized].id);
+    const normalized = (index + localizedSections.length) % localizedSections.length;
+    setActiveId(localizedSections[normalized].id);
     tabRefs.current[normalized]?.focus();
   };
 
@@ -52,7 +57,7 @@ export function CurriculumTabs() {
       selectTab(0);
     } else if (event.key === "End") {
       event.preventDefault();
-      selectTab(curriculumSections.length - 1);
+      selectTab(localizedSections.length - 1);
     }
   };
 
@@ -67,28 +72,27 @@ export function CurriculumTabs() {
         <div className="grid gap-7 lg:grid-cols-[1fr_0.9fr] lg:items-end">
           <div>
             <p className="text-[10px] font-bold uppercase tracking-[0.48em] text-brand-deep">
-              Currículo completo
+              {tr("Currículo completo")}
             </p>
             <h2
               id="curriculo-title"
               className="mt-5 max-w-2xl font-display text-[46px] font-medium leading-[0.98] text-ink sm:text-[64px]"
             >
-              Formação e experiência em detalhes.
+              {tr("Formação e experiência em detalhes.")}
             </h2>
           </div>
           <p className="max-w-lg text-sm leading-7 text-slate-600 lg:justify-self-end">
-            Explore a formação acadêmica, a atuação médica e as atividades profissionais que
-            compõem essa trajetória.
+            {tr("Explore a formação acadêmica, a atuação médica e as atividades profissionais que compõem essa trajetória.")}
           </p>
         </div>
 
         <div className="mt-14 grid items-start gap-5 lg:mt-20 lg:grid-cols-[290px_minmax(0,1fr)]">
           <div
             role="tablist"
-            aria-label="Seções do currículo"
-            className="flex snap-x gap-1.5 overflow-x-auto rounded-[22px] border border-blue/15 bg-white p-2.5 shadow-[0_20px_50px_-10px_rgba(27,85,121,0.16),0_8px_20px_-6px_rgba(0,121,181,0.08)] ring-1 ring-blue-dark/5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:sticky lg:top-24 lg:flex-col lg:rounded-[28px] lg:p-3.5"
+            aria-label={tr("Seções do currículo")}
+            className="flex snap-x gap-2.5 overflow-x-auto rounded-[22px] border border-blue/15 bg-white p-3 shadow-[0_20px_50px_-10px_rgba(27,85,121,0.16),0_8px_20px_-6px_rgba(0,121,181,0.08)] ring-1 ring-blue-dark/5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:sticky lg:top-24 lg:flex-col lg:gap-3.5 lg:rounded-[28px] lg:p-4"
           >
-            {curriculumSections.map((section, index) => {
+            {localizedSections.map((section, index) => {
               const Icon = sectionIcons[section.icon];
               const isActive = section.id === activeSection.id;
               return (
@@ -237,7 +241,7 @@ export function CurriculumTabs() {
                   <span>{activeSection.label}</span>
                   <span className="text-blue-dark">
                     {String(activeIndex + 1).padStart(2, "0")} /{" "}
-                    {String(curriculumSections.length).padStart(2, "0")}
+                    {String(localizedSections.length).padStart(2, "0")}
                   </span>
                 </div>
               </motion.div>

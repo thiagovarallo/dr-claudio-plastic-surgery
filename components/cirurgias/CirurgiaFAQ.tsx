@@ -1,10 +1,14 @@
 "use client";
 
 import { useId, useState } from "react";
+import { useLocale } from "next-intl";
 import type { CirurgiaFAQItem } from "@/content/cirurgias/types";
+import { translateContent } from "@/i18n/content";
 import { ScrollReveal } from "./ScrollReveal";
 
 export function CirurgiaFAQ({ items }: { items: CirurgiaFAQItem[] }) {
+  const locale = useLocale();
+  const tr = (text: string) => translateContent(locale, text);
   const baseId = useId();
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
@@ -12,12 +16,12 @@ export function CirurgiaFAQ({ items }: { items: CirurgiaFAQItem[] }) {
     <section className="bg-white" aria-labelledby="faq-heading">
       <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28 md:grid md:grid-cols-[minmax(240px,0.76fr)_minmax(0,1.24fr)] md:gap-14 lg:gap-20">
         <ScrollReveal className="md:sticky md:top-28 md:self-start">
-          <p className="text-[11px] font-bold uppercase tracking-[0.36em] text-brand-deep">Dúvidas</p>
+          <p className="text-[11px] font-bold uppercase tracking-[0.36em] text-brand-deep">{tr("Dúvidas")}</p>
           <h2 id="faq-heading" className="mt-4 font-display text-5xl font-medium leading-[0.95] text-blue-dark sm:text-6xl">
-            Perguntas frequentes
+            {tr("Perguntas frequentes")}
           </h2>
           <p className="mt-6 max-w-sm text-sm leading-7 text-ink-soft/62">
-            Respostas objetivas para orientar a decisão com mais tranquilidade antes da consulta.
+            {tr("Respostas objetivas para orientar a decisão com mais tranquilidade antes da consulta.")}
           </p>
         </ScrollReveal>
 

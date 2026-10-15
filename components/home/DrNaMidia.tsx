@@ -10,8 +10,9 @@ import {
   Radio,
   Tv,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { mediaPress, mediaVideos } from "@/content/media";
+import { translateContent } from "@/i18n/content";
 import { Reveal } from "@/components/ui/Reveal";
 
 function MediaLogo({ source }: { source: string }) {
@@ -49,6 +50,8 @@ function MediaLogo({ source }: { source: string }) {
 }
 
 export function DrNaMidia() {
+  const locale = useLocale();
+  const tr = (text: string) => translateContent(locale, text);
   const t = useTranslations("home.media");
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -144,7 +147,7 @@ export function DrNaMidia() {
                     </span>
 
                     <span className="rounded-full border border-white/20 bg-navy-deep/60 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-white/90 backdrop-blur-md">
-                      {activeVideo.badge}
+                      {tr(activeVideo.badge)}
                     </span>
                   </div>
 
@@ -164,7 +167,7 @@ export function DrNaMidia() {
                   {/* Título sobreposto na parte inferior */}
                   <div className="absolute inset-x-5 bottom-5 sm:inset-x-7 sm:bottom-7">
                     <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-brand">
-                      {activeVideo.program}
+                      {tr(activeVideo.program)}
                     </p>
                     <h3 className="mt-1 font-display text-xl font-medium leading-snug text-white sm:text-2xl lg:text-3xl">
                       {t(`videos.${activeIndex}.title`)}
@@ -178,7 +181,7 @@ export function DrNaMidia() {
             <div className="mt-2.5 flex flex-col justify-between gap-2.5 rounded-2xl border border-slate-200/80 bg-white p-3 shadow-xs sm:flex-row sm:items-center sm:px-4.5 sm:py-2.5">
               <div className="min-w-0">
                 <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-deep">
-                  {activeVideo.program} · {activeVideo.channel}
+                  {tr(activeVideo.program)} · {activeVideo.channel}
                 </span>
                 <p className="mt-0.5 truncate text-xs font-bold text-ink sm:text-sm">
                   {t(`videos.${activeIndex}.title`)}
@@ -228,7 +231,7 @@ export function DrNaMidia() {
                   <span>{t("playlistTitle")}</span>
                 </div>
                 <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-bold text-slate-600">
-                  {mediaVideos.length} vídeos
+                  {t("videosCount", { count: mediaVideos.length })}
                 </span>
               </div>
 
@@ -363,7 +366,7 @@ export function DrNaMidia() {
                   </div>
 
                   <div className="mt-4 flex items-center justify-between border-t border-slate-100 pt-3 text-xs font-semibold text-slate-500">
-                    <span className="text-[11px] text-slate-400">{item.publisher}</span>
+                    <span className="text-[11px] text-slate-400">{tr(item.publisher)}</span>
                     <span className="inline-flex items-center gap-1 text-[11px] font-bold text-brand-deep transition group-hover:text-brand">
                       {t("readArticle")}
                       <ArrowUpRight className="size-3" />

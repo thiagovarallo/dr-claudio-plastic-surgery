@@ -1,4 +1,16 @@
 {
+  "meta": {
+    "siteTitle": "Dr. Claudio Eduardo | Cirurgião Plástico",
+    "siteDescription": "Cirurgião plástico em Blumenau/SC. CRM 14.706-SC | RQE 23.737. Informações sobre cirurgias e cuidados especializados.",
+    "historyTitle": "Minha História | Cirurgião Plástico em Blumenau",
+    "historyDescription": "Conheça a formação, a trajetória profissional e as especializações do Dr. Claudio Eduardo, cirurgião plástico em Blumenau/SC.",
+    "surgeriesTitle": "Cirurgias",
+    "surgeriesDescription": "Conheça os procedimentos estéticos, reparadores e de afirmação de gênero realizados pelo Dr. Claudio Eduardo em Blumenau.",
+    "contactTitle": "Contato | Cirurgião Plástico em Blumenau",
+    "contactDescription": "Entre em contato com o Dr. Claudio Eduardo. Consulte endereço, telefone, WhatsApp, e-mail e localização dos consultórios em Blumenau/SC.",
+    "contactOgTitle": "Contato | Dr. Claudio Eduardo",
+    "contactOgDescription": "Fale com a clínica, consulte os endereços e encontre a localização dos consultórios em Blumenau/SC."
+  },
   "header": {
     "navigation": ["Home", "Sobre", "Cirurgias", "Unidades", "Hospitais", "Contato"],
     "schedule": "Agendar avaliação",
@@ -14,6 +26,7 @@
       "eyebrow": "Cirurgia plástica · Blumenau",
       "title": "Cuidado cirúrgico com precisão e discrição",
       "description": "Dr. Claudio Eduardo, CRM 14.706-SC e RQE 23.737. Atuação em procedimentos estéticos, reparadores e cirurgias de afirmação de gênero.",
+      "imageAlt": "Dr. Claudio Eduardo em seu consultório",
       "schedule": "Agendar avaliação",
       "surgeries": "Ver cirurgias",
       "scroll": "Role para explorar"
@@ -48,6 +61,7 @@
       ]
     },
     "units": {
+      "imageAlts": ["Recepção moderna da clínica em Blumenau", "Sala de atendimento moderna e equipada", "Ambiente clínico do consultório", "Espaço de consulta do Dr. Claudio Eduardo"],
       "title": "Nossas unidades",
       "choose": "Escolha uma unidade",
       "next": "Próximos ambientes",
@@ -58,6 +72,7 @@
       ]
     },
     "hospitals": {
+      "imageAlt": "Fachada de",
       "title": "Nossos hospitais",
       "eyebrow": "Estrutura hospitalar",
       "choose": "Escolha um hospital",
@@ -81,6 +96,7 @@
       "nowPlaying": "Em reprodução",
       "playlistTitle": "Todas as entrevistas",
       "playlistSubtitle": "Selecione para assistir",
+      "videosCount": "{count} vídeos",
       "videos": [
         { "title": "Dr. Claudio Eduardo explica tudo sobre faloplastia" },
         { "title": "Dr. Claudio Eduardo no The Noite com Danilo Gentili" },
@@ -99,6 +115,13 @@
         { "type": "Entrevista", "title": "A importância de alinhar expectativas e cuidado médico", "text": "Entrevista ao Jornal Opção sobre cirurgia íntima e acompanhamento." }
       ]
     },
+    "cta": {
+      "eyebrow": "Blumenau · SC",
+      "title": "A próxima etapa da história pode começar com uma conversa.",
+      "description": "Agende uma avaliação para conversar sobre suas expectativas e entender, com clareza, quais possibilidades fazem sentido para você.",
+      "ctaLabel": "Agendar avaliação",
+      "imageAlt": "Dr. Claudio Eduardo em traje social"
+    },
     "footer": {
       "siteMap": "Mapa do site",
       "certifications": "Certificações",
@@ -113,7 +136,9 @@
     }
   },
   "contact": {
-    "hero": { "eyebrow": "Contato · Blumenau/SC", "title": "Vamos conversar sobre o seu próximo passo.", "text": "Tire suas dúvidas, compartilhe o que você busca e encontre o melhor caminho para uma avaliação individual.", "send": "Enviar uma mensagem", "whatsapp": "Falar pelo WhatsApp", "email": "E-mail", "office": "Consultório", "center": "Centro · Blumenau/SC" },
+    "building": "Edifício Stein Tower",
+    "floorAddress": "8º andar, Sala 801 · Centro, Blumenau/SC",
+    "hero": { "eyebrow": "Contato · Blumenau/SC", "title": "Vamos conversar sobre o seu próximo passo.", "text": "Tire suas dúvidas, compartilhe o que você busca e encontre o melhor caminho para uma avaliação individual.", "imageAlt": "Dr. Claudio Eduardo de jaleco em seu consultório", "send": "Enviar uma mensagem", "whatsapp": "Falar pelo WhatsApp", "email": "E-mail", "office": "Consultório", "center": "Centro · Blumenau/SC" },
     "formSection": { "eyebrow": "Fale com a clínica", "title": "Encontre um caminho com clareza." },
     "offices": { "eyebrow": "Onde encontrar", "title": "Nossos consultórios", "map": "Ver no mapa" },
     "map": { "eyebrow": "Localização", "title": "Fácil de encontrar. Feito para receber você.", "text": "O atendimento acontece no Edifício Stein Tower, no Centro de Blumenau. Consulte a melhor rota antes da sua visita.", "hours": "Atendimento de segunda a sexta, das 08h00 às 18h00.", "open": "Abrir no Google Maps", "talk": "Falar com a clínica" },
