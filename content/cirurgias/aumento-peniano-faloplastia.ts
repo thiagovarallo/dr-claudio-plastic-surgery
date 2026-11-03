@@ -87,7 +87,7 @@ export const aumentoPenianoFaloplastia: CirurgiaContent = {
     },
   ],
   seo: {
-    title: "Aumento peniano (Faloplastia) | Dr. Claudio Eduardo",
-    description: "Informações sobre avaliação, planejamento e recuperação da cirurgia de aumento peniano em Blumenau/SC.",
+    title: "Aumento Peniano (Faloplastia) em Blumenau/SC | Dr. Claudio Eduardo",
+    description: "Informações sobre avaliação, planejamento e recuperação da cirurgia de aumento peniano (faloplastia) em Blumenau/SC com o Dr. Claudio Eduardo.",
   },
 };

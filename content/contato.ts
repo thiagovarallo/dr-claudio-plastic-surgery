@@ -7,8 +7,8 @@ export const contactLocations = [
     address: "R. Floriano Peixoto, 222",
     complement: "8º andar, Sala 801 · Centro, Blumenau/SC",
     postalCode: "CEP 89010-022",
-    email: "clinicadrclaudioeduardo@gmail.com",
-    emailHref: "mailto:clinicadrclaudioeduardo@gmail.com",
+    email: "contato@drclaudioeduardo.com.br",
+    emailHref: "mailto:contato@drclaudioeduardo.com.br",
     phones: [
       { label: "WhatsApp", value: "(47) 99611-7198", href: "tel:+5547996117198" },
     ],

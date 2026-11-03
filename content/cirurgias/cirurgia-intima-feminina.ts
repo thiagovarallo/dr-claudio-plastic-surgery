@@ -95,8 +95,8 @@ export const cirurgiaIntimaFeminina: CirurgiaContent = {
     { question: "O resultado é permanente?", answer: "A remoção do excesso de tecido é definitiva, mas alterações hormonais futuras podem influenciar a região. O acompanhamento médico ajuda a orientar cada etapa." },
   ],
   seo: {
-    title: "Cirurgia Íntima Feminina (Hipertrofia de clitóris)",
+    title: "Cirurgia Íntima Feminina em Blumenau/SC | Dr. Claudio Eduardo",
     description:
-      "Cirurgia íntima feminina para hipertrofia de clitóris: candidatas, procedimento, recuperação e FAQ. Dr. Claudio Eduardo, cirurgião plástico em Blumenau/SC.",
+      "Cirurgia íntima feminina (ninfoplastia e hipertrofia de clitóris): indicações, procedimento, recuperação e FAQ com o Dr. Claudio Eduardo em Blumenau/SC.",
   },
 };

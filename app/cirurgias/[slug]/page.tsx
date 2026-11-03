@@ -7,6 +7,8 @@ import { localizeContent } from "@/i18n/content";
 
 type CirurgiaRouteProps = PageProps<"/cirurgias/[slug]">;
 
+const BASE_URL = "https://www.drclaudioeduardo.com.br";
+
 export function generateStaticParams() {
   return getCirurgiaSlugs().map((slug) => ({ slug }));
 }
@@ -21,9 +23,27 @@ export async function generateMetadata({
   }
   const locale = await getLocale();
   const seo = localizeContent(locale, cirurgia.seo);
+  const cleanTitle = seo.title.replace(/\s*\|\s*Dr\. Claudio Eduardo$/, "");
+  const ogImage = cirurgia.heroImage?.src ?? cirurgia.overview.image?.src ?? "/home/doutor-hero.png";
+
   return {
-    title: seo.title.replace(/\s*\|\s*Dr\. Claudio Eduardo$/, ""),
+    title: cleanTitle,
     description: seo.description,
+    alternates: {
+      canonical: `/cirurgias/${slug}`,
+    },
+    openGraph: {
+      title: seo.title,
+      description: seo.description,
+      url: `${BASE_URL}/cirurgias/${slug}`,
+      type: "article",
+      images: [
+        {
+          url: ogImage,
+          alt: cirurgia.heroImage?.alt ?? cirurgia.title,
+        },
+      ],
+    },
   };
 }
 
@@ -35,5 +55,74 @@ export default async function CirurgiaRoutePage({ params }: CirurgiaRouteProps) 
     notFound();
   }
 
-  return <CirurgiaPage cirurgia={cirurgia} />;
+  const locale = await getLocale();
+  const localized = localizeContent(locale, cirurgia);
+  const pageUrl = `${BASE_URL}/cirurgias/${slug}`;
+  const ogImage = cirurgia.heroImage?.src
+    ? `${BASE_URL}${cirurgia.heroImage.src}`
+    : `${BASE_URL}/home/doutor-hero.png`;
+
+  const surgerySchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: locale === "en" ? "Home" : locale === "es" ? "Inicio" : "Início",
+            item: BASE_URL,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: locale === "en" ? "Surgeries" : locale === "es" ? "Cirugías" : "Cirurgias",
+            item: `${BASE_URL}/cirurgias`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: localized.title,
+            item: pageUrl,
+          },
+        ],
+      },
+      {
+        "@type": "MedicalProcedure",
+        "@id": `${pageUrl}#procedure`,
+        name: localized.title,
+        description: localized.seo.description,
+        url: pageUrl,
+        image: ogImage,
+        procedureType: "https://schema.org/SurgicalProcedure",
+      },
+      ...(localized.faq.length > 0
+        ? [
+            {
+              "@type": "FAQPage",
+              "@id": `${pageUrl}#faq`,
+              mainEntity: localized.faq.map((item) => ({
+                "@type": "Question",
+                name: item.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: item.answer,
+                },
+              })),
+            },
+          ]
+        : []),
+    ],
+  };
+
+  return (
+    <>
+      <CirurgiaPage cirurgia={cirurgia} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(surgerySchema) }}
+      />
+    </>
+  );
 }

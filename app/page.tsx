@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { Cirurgias } from "@/components/home/Cirurgias";
 import { Diferenciais } from "@/components/home/Diferenciais";
 import { DrNaMidia } from "@/components/home/DrNaMidia";
@@ -8,6 +10,84 @@ import { Historia } from "@/components/home/Historia";
 import { Hospitais } from "@/components/home/Hospitais";
 import { Unidades } from "@/components/home/Unidades";
 import { CtaSection } from "@/components/ui/CtaSection";
+
+const BASE_URL = "https://www.drclaudioeduardo.com.br";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("meta");
+  return {
+    title: {
+      absolute: t("siteTitle"),
+    },
+    description: t("siteDescription"),
+    alternates: {
+      canonical: "/",
+    },
+    openGraph: {
+      title: t("siteTitle"),
+      description: t("siteDescription"),
+      url: BASE_URL,
+      type: "website",
+    },
+  };
+}
+
+const homeSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${BASE_URL}/#website`,
+      url: BASE_URL,
+      name: "Dr. Claudio Eduardo — Cirurgião Plástico",
+      inLanguage: "pt-BR",
+      publisher: {
+        "@id": `${BASE_URL}/#clinic`,
+      },
+    },
+    {
+      "@type": "MedicalClinic",
+      "@id": `${BASE_URL}/#clinic`,
+      name: "Clínica Dr. Claudio Eduardo",
+      url: BASE_URL,
+      image: `${BASE_URL}/home/doutor-hero.png`,
+      telephone: "+55-47-98902-4069",
+      email: "contato@drclaudioeduardo.com.br",
+      medicalSpecialty: "PlasticSurgery",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "R. Floriano Peixoto, 222, 8º andar, Sala 801 — Edifício Stein Tower",
+        addressLocality: "Blumenau",
+        addressRegion: "SC",
+        postalCode: "89010-022",
+        addressCountry: "BR",
+      },
+      areaServed: {
+        "@type": "City",
+        name: "Blumenau",
+      },
+    },
+    {
+      "@type": "Physician",
+      "@id": `${BASE_URL}/#physician`,
+      name: "Dr. Claudio Eduardo",
+      url: `${BASE_URL}/claudio-eduardo-cirurgiao-plastico`,
+      image: `${BASE_URL}/home/doutor-hero.png`,
+      medicalSpecialty: "PlasticSurgery",
+      identifier: [
+        { "@type": "PropertyValue", name: "CRM", value: "14.706-SC" },
+        { "@type": "PropertyValue", name: "RQE", value: "23.737" },
+      ],
+      memberOf: {
+        "@type": "MedicalOrganization",
+        name: "Sociedade Brasileira de Cirurgia Plástica (SBCP)",
+      },
+      worksFor: {
+        "@id": `${BASE_URL}/#clinic`,
+      },
+    },
+  ],
+};
 
 export default function Home() {
   return (
@@ -24,6 +104,10 @@ export default function Home() {
         <CtaSection />
       </main>
       <Footer />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema) }}
+      />
     </div>
   );
 }

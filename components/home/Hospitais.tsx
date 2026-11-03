@@ -94,7 +94,7 @@ export function Hospitais() {
       </motion.h2>
 
       <div className="relative z-10 mx-auto grid max-w-[1905px] gap-4 px-5 pt-20 sm:px-8 sm:pt-24 lg:h-full lg:grid-cols-[30%_41%_29%] lg:gap-0 lg:px-0 lg:pt-18.5">
-        <div className="self-center pb-7 sm:pb-9 lg:px-10 lg:pb-0 xl:px-12">
+        <div className="self-center pb-7 sm:pb-9 lg:px-6 lg:pb-0 xl:px-12">
           <div className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.42em] text-brand-deep">
             <Building2 className="size-4" />
             {t("eyebrow")}
@@ -103,7 +103,7 @@ export function Hospitais() {
           <div
             role="tablist"
             aria-label={t("choose")}
-            className="mt-5 grid max-w-md grid-cols-2 gap-2"
+            className="mt-5 grid max-w-md grid-cols-1 gap-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3"
           >
             {hospitals.map((hospital, index) => (
               <button

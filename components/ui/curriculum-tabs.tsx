@@ -90,7 +90,7 @@ export function CurriculumTabs() {
           <div
             role="tablist"
             aria-label={tr("Seções do currículo")}
-            className="flex snap-x gap-2.5 overflow-x-auto rounded-[22px] border border-blue/15 bg-white p-3 shadow-[0_20px_50px_-10px_rgba(27,85,121,0.16),0_8px_20px_-6px_rgba(0,121,181,0.08)] ring-1 ring-blue-dark/5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:sticky lg:top-24 lg:flex-col lg:gap-3.5 lg:rounded-[28px] lg:p-4"
+            className="flex min-w-0 snap-x gap-2.5 overflow-x-auto rounded-[22px] border border-blue/15 bg-white p-3 shadow-[0_20px_50px_-10px_rgba(27,85,121,0.16),0_8px_20px_-6px_rgba(0,121,181,0.08)] ring-1 ring-blue-dark/5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:sticky lg:top-24 lg:flex-col lg:gap-3.5 lg:rounded-[28px] lg:p-4"
           >
             {localizedSections.map((section, index) => {
               const Icon = sectionIcons[section.icon];
@@ -142,7 +142,7 @@ export function CurriculumTabs() {
             })}
           </div>
 
-          <div className="min-h-[720px] overflow-hidden rounded-[28px] border border-blue/15 bg-white shadow-[0_28px_80px_-12px_rgba(27,85,121,0.20),0_12px_32px_-8px_rgba(0,121,181,0.12)] ring-1 ring-blue-dark/5 sm:rounded-[32px]">
+          <div className="min-h-[720px] min-w-0 overflow-hidden rounded-[28px] border border-blue/15 bg-white shadow-[0_28px_80px_-12px_rgba(27,85,121,0.20),0_12px_32px_-8px_rgba(0,121,181,0.12)] ring-1 ring-blue-dark/5 sm:rounded-[32px]">
             <AnimatePresence mode="wait" initial={false}>
               <motion.div
                 key={activeSection.id}

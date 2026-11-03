@@ -1,30 +1,30 @@
 import type { CirurgiaContent } from "./types";
 
 const procedureImage = {
-  src: "/procedimentos/_destaque_mastectomia_masculinizadora.v2.jpg",
-  alt: "Imagem ilustrativa para mastectomia masculinizadora",
-  width: 1200,
-  height: 800,
+  src: "/procedimentos/_destaque_mastectomia_masculinizadora.v3.jpg",
+  alt: "Técnica bi-incisional com enxerto de aréolas para mastectomia masculinizadora",
+  width: 600,
+  height: 338,
 };
 
 export const mastectomiaMasculinizadora: CirurgiaContent = {
   slug: "mastectomia-masculinizadora",
   category: "Afirmação de gênero",
-  title: "Mastectomia masculinizadora",
+  title: "Mastectomia Masculinizadora",
   subtitle:
-    "Planejamento cirúrgico individualizado para masculinização do tórax, com acolhimento, segurança e acompanhamento especializado.",
+    "Esta cirurgia é indicada para os homens transgêneros, proporcionando plenitude para o controle da disforia de gênero com planejamento cirúrgico seguro e acompanhamento hospitalar.",
   heroImage: procedureImage,
   benefits: [
-    "Planejamento conforme anatomia e objetivos individuais",
-    "Procedimento hospitalar com equipe especializada",
-    "Orientações claras para cada fase da recuperação",
+    "Indicada para homens transgêneros após os 21 anos",
+    "Técnica bi-incisional com enxerto de aréolas",
+    "Anestesia geral e 01 dia de internação hospitalar",
   ],
   overview: {
-    heading: "Masculinização do tórax com planejamento individual",
+    heading: "Plenitude para o controle da disforia de gênero",
     paragraphs: [
-      "A mastectomia masculinizadora é um procedimento de afirmação de gênero que busca construir um tórax com contorno mais compatível com os objetivos do homem trans ou de pessoas transmasculinas.",
-      "A técnica é escolhida após avaliar volume e qualidade da pele, posição das aréolas, elasticidade dos tecidos e expectativas sobre cicatrizes e contorno final.",
-      "Cada etapa é discutida em consulta, com informações sobre preparo, cirurgia, curativos, drenos e recuperação.",
+      "Esta cirurgia é indicada para os Homens Transgêneros.",
+      "As mamas são o símbolo da feminilidade da mulher. Para os Homens Trans, as mamas são as estruturas anatômicas que mais lhes trazem incômodo.",
+      "Geralmente, com a realização da cirurgia, trazem plenitude para o controle da disforia de gênero. A técnica habitualmente utilizada é a bi-incisional, com enxerto de aréolas.",
     ],
     image: procedureImage,
   },
@@ -32,62 +32,79 @@ export const mastectomiaMasculinizadora: CirurgiaContent = {
   sections: [
     {
       id: "planejamento",
-      heading: "Escolha da técnica",
+      heading: "Técnica cirúrgica e requisitos",
       paragraphs: [
-        "Não existe uma única técnica adequada para todos os casos. O planejamento considera o tamanho das mamas, a qualidade da pele, o posicionamento desejado das aréolas e o equilíbrio do tórax.",
-        "A consulta também aborda cicatrizes, possibilidade de ajustes e os resultados esperados de forma realista.",
+        "A técnica habitualmente utilizada é a bi-incisional, com enxerto de aréolas, proporcionando um contorno torácico masculino adequado à anatomia do paciente.",
+        "O procedimento é permitido após os 21 anos e é necessário apresentar laudo psicológico e psiquiátrico!",
       ],
       bullets: [
-        "Avaliação da anatomia do tórax e da pele",
-        "Discussão sobre cicatrizes e contorno corporal",
-        "Definição individualizada da estratégia cirúrgica",
+        "Técnica habitualmente utilizada: bi-incisional com enxerto de aréolas",
+        "Procedimento permitido após os 21 anos",
+        "Necessário laudo psicológico e psiquiátrico",
       ],
-      image: { ...procedureImage, alt: "Avaliação para cirurgia de masculinização do tórax" },
+      image: procedureImage,
     },
     {
       id: "procedimento",
-      heading: "Cirurgia e internação",
+      heading: "Cirurgia, anestesia e internação",
       paragraphs: [
-        "A cirurgia é realizada em ambiente hospitalar, sob anestesia definida pela equipe anestésica. O uso de drenos, curativos e o tempo de internação dependem do planejamento e da evolução imediata.",
-        "Antes do procedimento, a equipe explica a preparação necessária e os cuidados do primeiro período após a cirurgia.",
+        "A cirurgia é realizada sob anestesia geral, tendo ao redor de 4 horas de duração e 01 dia de internação em ambiente hospitalar.",
+        "Durante o procedimento, há utilização de drenos e curativo oclusivo, a serem abertos entre o 5° e o 7° dia de pós-operatório.",
+      ],
+      bullets: [
+        "Realizada sob anestesia geral",
+        "Duração ao redor de 4 horas e 01 dia de internação hospitalar",
+        "Utilização de drenos e curativo oclusivo (abertos entre o 5° e o 7° dia de pós-operatório)",
       ],
       image: { src: "/brand/clinic/treatment-room.jpg", alt: "Ambiente de clínica para orientação cirúrgica", width: 1200, height: 800 },
     },
     {
       id: "recuperacao",
-      heading: "Cuidados após a cirurgia",
+      heading: "Retorno às atividades habituais",
       paragraphs: [
-        "No pós-operatório, são feitas orientações sobre curativos, drenos quando utilizados, movimentação dos braços, uso de malha e retorno gradual às atividades.",
-        "O acompanhamento presencial permite monitorar a cicatrização e adaptar as recomendações conforme a evolução de cada paciente.",
+        "O retorno às atividades habituais geralmente segue prazos progressivos conforme a recuperação pós-operatória: estender braços para lavar cabelos (7 dias), dirigir (14 dias), retorno ao trabalho (15 dias; a depender da ocupação), atividades físicas (30 dias) e exposição solar (60 dias).",
+        "Os drenos e o curativo oclusivo são acompanhados pela equipe médica e abertos entre o 5° e o 7° dia de pós-operatório.",
       ],
       bullets: [
-        "Retornos para avaliação de curativos e cicatrização",
-        "Liberação progressiva para dirigir, trabalhar e exercícios",
-        "Proteção das cicatrizes conforme orientação médica",
+        "Estender braços para lavar cabelos: 7 dias",
+        "Dirigir: 14 dias",
+        "Retorno ao trabalho: 15 dias (a depender da ocupação)",
+        "Atividades físicas: 30 dias",
+        "Exposição solar: 60 dias",
       ],
       image: { src: "/brand/clinic/reception.jpg", alt: "Clínica para acompanhamento pós-operatório", width: 1200, height: 800 },
     },
   ],
   faq: [
     {
-      question: "A técnica é a mesma para todos os pacientes?",
-      answer: "Não. A técnica é definida conforme a anatomia do tórax, o volume mamário, a pele e o resultado desejado.",
+      question: "Para quem a Mastectomia Masculinizadora é indicada?",
+      answer:
+        "Esta cirurgia é indicada para os Homens Transgêneros, para quem as mamas são as estruturas anatômicas que mais trazem incômodo, auxiliando com plenitude no controle da disforia de gênero.",
     },
     {
-      question: "Haverá cicatrizes?",
-      answer: "Toda cirurgia deixa cicatrizes. A localização e a extensão variam conforme a técnica necessária e são discutidas durante a consulta.",
+      question: "Qual é a técnica habitualmente utilizada?",
+      answer:
+        "A técnica habitualmente utilizada é a bi-incisional, com enxerto de aréolas.",
     },
     {
-      question: "Quando é possível retomar exercícios?",
-      answer: "A liberação é gradual e depende da evolução clínica. A equipe orienta o retorno seguro a cada tipo de atividade.",
+      question: "Como funciona a cirurgia, a internação e o uso de curativos?",
+      answer:
+        "A cirurgia é realizada sob anestesia geral, tendo ao redor de 4 horas de duração, 01 dia de internação em ambiente hospitalar, utilização de drenos e curativo oclusivo, a serem abertos entre o 5° e o 7° dia de pós-operatório.",
     },
     {
-      question: "É necessário acompanhamento antes da cirurgia?",
-      answer: "A equipe orienta os exames, documentos e acompanhamentos necessários conforme a avaliação individual e as recomendações médicas aplicáveis.",
+      question: "Qual a idade mínima e quais laudos são necessários?",
+      answer:
+        "O procedimento é permitido após os 21 anos e é necessário apresentar laudo psicológico e psiquiátrico.",
+    },
+    {
+      question: "Como é o retorno às atividades habituais?",
+      answer:
+        "O retorno às atividades habituais geralmente é: estender braços para lavar cabelos (7 dias), dirigir (14 dias), retorno ao trabalho (15 dias; a depender da ocupação), atividades físicas (30 dias) e exposição solar (60 dias).",
     },
   ],
   seo: {
-    title: "Mastectomia masculinizadora | Dr. Claudio Eduardo",
-    description: "Informações sobre mastectomia masculinizadora, planejamento e recuperação em Blumenau/SC.",
+    title: "Mastectomia Masculinizadora em Blumenau/SC | Dr. Claudio Eduardo",
+    description:
+      "Mastectomia masculinizadora indicada para homens transgêneros: técnica bi-incisional com enxerto de aréolas, requisitos, internação e recuperação em Blumenau/SC.",
   },
 };

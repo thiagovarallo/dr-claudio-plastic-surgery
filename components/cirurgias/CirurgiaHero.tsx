@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowDown, ArrowLeft, ArrowUpRight, ShieldCheck } from "lucide-react";
+import { ArrowDown, ArrowUpRight, ChevronRight, ShieldCheck } from "lucide-react";
 import { useTranslations } from "next-intl";
 import type { CirurgiaContent } from "@/content/cirurgias/types";
 
@@ -18,18 +18,34 @@ export function CirurgiaHero({ category, title, subtitle }: Props) {
 
       <div className="mx-auto flex min-h-[680px] max-w-6xl items-center px-5 pb-20 pt-32 sm:px-8 sm:pb-24">
         <div className="animate-fade-up max-w-4xl">
-          <Link
-            href="/cirurgias"
-            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/8 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.26em] text-white/75 transition hover:border-white/35 hover:text-white"
-          >
-            <ArrowLeft className="size-3.5" />
-            {t("back")}
-          </Link>
+          <nav aria-label="Breadcrumb">
+            <ol className="inline-flex flex-wrap items-center gap-1.5 rounded-full border border-white/15 bg-white/8 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-white/75">
+              <li>
+                <Link href="/" className="transition hover:text-white">
+                  {t("home")}
+                </Link>
+              </li>
+              <li aria-hidden="true">
+                <ChevronRight className="size-3 text-white/40" />
+              </li>
+              <li>
+                <Link href="/cirurgias" className="transition hover:text-white">
+                  {t("back")}
+                </Link>
+              </li>
+              <li aria-hidden="true">
+                <ChevronRight className="size-3 text-white/40" />
+              </li>
+              <li aria-current="page" className="text-brand">
+                {title}
+              </li>
+            </ol>
+          </nav>
 
           <p className="mt-10 text-[10px] font-bold uppercase tracking-[0.4em] text-brand">{category}</p>
           <h1
             id="cirurgia-hero-title"
-            className="mt-5 max-w-3xl font-display text-[58px] font-medium leading-[0.88] tracking-[-0.035em] text-white sm:text-7xl lg:text-[94px]"
+            className="mt-5 max-w-3xl break-words font-display text-[42px] font-medium leading-[0.9] tracking-[-0.035em] text-white sm:text-7xl lg:text-[94px]"
           >
             {title}
           </h1>

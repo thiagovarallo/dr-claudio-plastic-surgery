@@ -87,7 +87,7 @@ export const redesignacaoSexual: CirurgiaContent = {
     },
   ],
   seo: {
-    title: "Redesignação sexual MTF | Dr. Claudio Eduardo",
-    description: "Informações sobre cirurgia de redesignação sexual MTF, preparo e recuperação em Blumenau/SC.",
+    title: "Redesignação Sexual MTF em Blumenau/SC | Dr. Claudio Eduardo",
+    description: "Informações sobre cirurgia de redesignação sexual MTF (afirmação de gênero), preparo e recuperação em Blumenau/SC com o Dr. Claudio Eduardo.",
   },
 };

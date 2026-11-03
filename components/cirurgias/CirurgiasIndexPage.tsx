@@ -17,6 +17,10 @@ const surgeryMeta: Record<string, { category: SurgeryCategory; number: string }>
   "Mastectomia masculinizadora": { category: "Afirmação de gênero", number: "04" },
   "Prótese de mama": { category: "Estética", number: "05" },
   Gluteoplastia: { category: "Estética", number: "06" },
+  Rinoplastia: { category: "Estética", number: "07" },
+  "Lifting facial": { category: "Estética", number: "08" },
+  Lipoaspiração: { category: "Estética", number: "09" },
+  Blefaroplastia: { category: "Estética", number: "10" },
 };
 
 export function CirurgiasIndexPage() {
@@ -39,7 +43,7 @@ export function CirurgiasIndexPage() {
               <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/8 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.3em] text-white/75 backdrop-blur-md">
                 {t("badge")}
               </div>
-              <h1 className="mt-7 font-display text-[58px] font-medium leading-[0.9] tracking-[-0.03em] sm:text-7xl lg:text-[96px]">
+              <h1 className="mt-7 font-display text-[44px] font-medium leading-[0.9] tracking-[-0.03em] sm:text-7xl lg:text-[96px]">
                 {t("headlineA")}
                 <span className="block text-brand">{t("headlineB")}</span>
               </h1>

@@ -51,7 +51,7 @@ export function ContatoPage() {
             </p>
             <h1
               id="contato-hero-title"
-              className="mt-6 max-w-2xl font-display text-[54px] font-medium leading-[0.9] tracking-[-0.035em] text-white sm:text-7xl lg:text-[86px]"
+              className="mt-6 max-w-2xl font-display text-[42px] font-medium leading-[0.92] tracking-[-0.035em] text-white sm:text-7xl lg:text-[86px]"
             >
               {heroT("title")}
             </h1>
@@ -201,25 +201,49 @@ export function ContatoPage() {
       </section>
 
       <section id="mapa" aria-labelledby="mapa-title" className="scroll-mt-20 px-5 py-16 sm:px-8 sm:py-20">
-        <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-          <Reveal className="relative min-h-[390px] overflow-hidden rounded-[32px] border border-blue/15 bg-slate-100 shadow-[0_24px_70px_-10px_rgba(27,85,121,0.18)] sm:min-h-[500px]">
-            <iframe
-              title="Clinic location map in Blumenau"
-              src={contactMap.embedSrc}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="absolute inset-0 size-full border-0 grayscale-[0.15]"
-            />
-            <a
-              href={contactMap.directionsHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute bottom-5 left-5 inline-flex items-center gap-2 rounded-full bg-white/95 px-4 py-3 text-xs font-bold text-ink shadow-lg backdrop-blur transition hover:bg-brand hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:bottom-7 sm:left-7"
-            >
-              {mapT("open")}
-              <ExternalLink className="size-4" />
-            </a>
-          </Reveal>
+        <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[1.28fr_0.72fr] lg:items-center">
+          <div className="grid gap-4 sm:grid-cols-[0.85fr_1.15fr]">
+            <Reveal className="group relative min-h-[340px] overflow-hidden rounded-[32px] border border-blue/15 bg-navy-deep shadow-[0_24px_70px_-10px_rgba(27,85,121,0.18)] sm:min-h-[480px] lg:min-h-[500px]">
+              <Image
+                src="/brand/stein-tower.jpg"
+                alt={`${contactT("building")} · ${heroT("center")}`}
+                fill
+                sizes="(min-width: 1024px) 320px, (min-width: 640px) 45vw, 100vw"
+                className="object-cover transition duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-navy-deep/85 via-navy-deep/35 to-transparent" />
+              <div className="absolute inset-x-5 bottom-5 text-white sm:inset-x-6 sm:bottom-6">
+                <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-brand">
+                  {heroT("office")}
+                </p>
+                <p className="mt-1 text-sm font-extrabold leading-tight">
+                  {contactT("building")}
+                </p>
+                <p className="mt-0.5 text-xs text-white/75">
+                  {heroT("center")}
+                </p>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.06} className="relative min-h-[340px] overflow-hidden rounded-[32px] border border-blue/15 bg-slate-100 shadow-[0_24px_70px_-10px_rgba(27,85,121,0.18)] sm:min-h-[480px] lg:min-h-[500px]">
+              <iframe
+                title="Clinic location map in Blumenau"
+                src={contactMap.embedSrc}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="absolute inset-0 size-full border-0 grayscale-[0.15]"
+              />
+              <a
+                href={contactMap.directionsHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-5 left-5 inline-flex items-center gap-2 rounded-full bg-white/95 px-4 py-3 text-xs font-bold text-ink shadow-lg backdrop-blur transition hover:bg-brand hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:bottom-6 sm:left-6"
+              >
+                {mapT("open")}
+                <ExternalLink className="size-4" />
+              </a>
+            </Reveal>
+          </div>
 
           <Reveal delay={0.1}>
             <p className="text-[10px] font-bold uppercase tracking-[0.48em] text-brand-deep">{mapT("eyebrow")}</p>

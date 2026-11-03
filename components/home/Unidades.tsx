@@ -95,7 +95,7 @@ export function Unidades() {
         {t("title")}
       </motion.h2>
 
-      <div className="relative mx-auto grid max-w-[1905px] gap-4 px-5 pt-20 sm:px-8 sm:pt-24 lg:h-full lg:grid-cols-[29%_41%_30%] lg:gap-0 lg:px-0 lg:pt-18.5 z-50">
+      <div className="relative z-0 mx-auto grid max-w-[1905px] gap-4 px-5 pt-20 sm:px-8 sm:pt-24 lg:h-full lg:grid-cols-[29%_41%_30%] lg:gap-0 lg:px-0 lg:pt-18.5">
         <ClinicPhoto
           src={first.src}
           alt={t(`imageAlts.${start % clinicGallery.length}`)}
@@ -112,7 +112,28 @@ export function Unidades() {
           className="h-77.5 rounded-[26px] sm:h-105 lg:mx-5 lg:h-125 lg:rounded-[30px] xl:h-132.5"
         />
 
-        <div className="self-center px-1 pt-7 sm:col-span-2 lg:col-span-1 lg:px-8 lg:pt-0 xl:px-12">
+        <div className="flex justify-center py-1 lg:contents">
+          <div className="z-10 flex gap-3 lg:absolute lg:left-[29%] lg:top-57.5 lg:-translate-x-1/2 lg:flex-col">
+            <button
+              type="button"
+              onClick={() => go(1)}
+              aria-label={t("next")}
+              className="grid size-13 place-items-center rounded-full bg-brand text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-brand-deep sm:size-14 lg:size-16"
+            >
+              <ArrowRight className="size-4" />
+            </button>
+            <button
+              type="button"
+              onClick={() => go(-1)}
+              aria-label={t("previous")}
+              className="grid size-13 place-items-center rounded-full bg-blue-dark text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-blue sm:size-14 lg:size-16"
+            >
+              <ArrowLeft className="size-4" />
+            </button>
+          </div>
+        </div>
+
+        <div className="self-center px-1 pt-3 lg:col-span-1 lg:px-8 lg:pt-0 xl:px-12">
           <div
             role="tablist"
             aria-label={t("choose")}
@@ -188,25 +209,6 @@ export function Unidades() {
               </Link>
             </motion.div>
           </AnimatePresence>
-        </div>
-
-        <div className="absolute left-1/2 top-78 z-10 flex -translate-x-1/2 gap-2 lg:left-[29%] lg:top-57.5 lg:flex-col lg:gap-3">
-          <button
-            type="button"
-            onClick={() => go(1)}
-            aria-label={t("next")}
-            className="grid size-14 place-items-center rounded-full bg-brand text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-brand-deep lg:size-16"
-          >
-            <ArrowRight className="size-4" />
-          </button>
-          <button
-            type="button"
-            onClick={() => go(-1)}
-            aria-label={t("previous")}
-            className="grid size-14 place-items-center rounded-full bg-blue-dark text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-blue lg:size-16"
-          >
-            <ArrowLeft className="size-4" />
-          </button>
         </div>
       </div>
     </section>

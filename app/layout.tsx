@@ -17,14 +17,50 @@ const manrope = Manrope({
   display: "swap",
 });
 
+const BASE_URL = "https://www.drclaudioeduardo.com.br";
+
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("meta");
+  const locale = await getLocale();
+  const ogLocale = locale === "en" ? "en_US" : locale === "es" ? "es_ES" : "pt_BR";
+
   return {
+    metadataBase: new URL(BASE_URL),
     title: {
       default: t("siteTitle"),
       template: "%s | Dr. Claudio Eduardo",
     },
     description: t("siteDescription"),
+    alternates: {
+      canonical: "/",
+    },
+    openGraph: {
+      title: t("siteTitle"),
+      description: t("siteDescription"),
+      url: BASE_URL,
+      siteName: "Dr. Claudio Eduardo — Cirurgião Plástico",
+      locale: ogLocale,
+      type: "website",
+      images: [
+        {
+          url: "/home/doutor-hero.png",
+          width: 1200,
+          height: 630,
+          alt: "Dr. Claudio Eduardo — Cirurgião Plástico em Blumenau/SC",
+        },
+      ],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
   };
 }
 

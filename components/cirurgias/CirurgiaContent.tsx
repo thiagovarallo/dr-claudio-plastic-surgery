@@ -1,6 +1,7 @@
+import Image from "next/image";
 import { Check } from "lucide-react";
 import { useLocale } from "next-intl";
-import type { CirurgiaSection } from "@/content/cirurgias/types";
+import type { CirurgiaGalleryItem, CirurgiaSection } from "@/content/cirurgias/types";
 import { translateContent } from "@/i18n/content";
 import { ScrollReveal } from "./ScrollReveal";
 
@@ -8,6 +9,7 @@ type Props = {
   overview: {
     heading: string;
     paragraphs: string[];
+    image?: CirurgiaGalleryItem;
   };
   sections: CirurgiaSection[];
 };
@@ -35,6 +37,22 @@ export function CirurgiaContent({ overview, sections }: Props) {
                 {tr("Sobre a cirurgia")}
               </p>
             </div>
+            {overview.image ? (
+              <figure className="mt-8 overflow-hidden rounded-[28px] border border-navy/10 bg-white shadow-[0_20px_50px_rgba(27,85,121,0.12)]">
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-navy-deep">
+                  <Image
+                    src={overview.image.src}
+                    alt={overview.image.alt}
+                    fill
+                    sizes="(min-width: 1024px) 380px, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <figcaption className="px-4 py-3 text-xs leading-5 text-ink-soft/65">
+                  {overview.image.alt}
+                </figcaption>
+              </figure>
+            ) : null}
             <div className="mt-8 hidden lg:block">
               <span className="block h-24 w-px bg-gradient-to-b from-brand to-transparent" />
               <p className="mt-5 max-w-[170px] text-xs leading-5 text-ink-soft/50">

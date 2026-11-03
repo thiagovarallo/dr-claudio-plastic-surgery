@@ -1,14 +1,14 @@
 {
   "meta": {
-    "siteTitle": "Dr. Claudio Eduardo | Cirujano Plástico",
-    "siteDescription": "Cirujano plástico en Blumenau, Brasil. CRM 14.706-SC | RQE 23.737. Información sobre cirugías y atención especializada.",
-    "historyTitle": "Mi Historia | Cirujano Plástico en Blumenau",
-    "historyDescription": "Conozca la formación, la trayectoria profesional y las especializaciones del Dr. Claudio Eduardo, cirujano plástico en Blumenau, Brasil.",
-    "surgeriesTitle": "Cirugías",
-    "surgeriesDescription": "Conozca los procedimientos estéticos, reconstructivos y de afirmación de género realizados por el Dr. Claudio Eduardo en Blumenau.",
-    "contactTitle": "Contacto | Cirujano Plástico en Blumenau",
-    "contactDescription": "Contacte con el Dr. Claudio Eduardo. Consulte la dirección, el teléfono, WhatsApp, el correo electrónico y la ubicación de la clínica en Blumenau, Brasil.",
-    "contactOgTitle": "Contacto | Dr. Claudio Eduardo",
+    "siteTitle": "Dr. Claudio Eduardo | Cirujano Plástico en Blumenau, Brasil",
+    "siteDescription": "Dr. Claudio Eduardo, cirujano plástico en Blumenau, Brasil (CRM 14.706-SC | RQE 23.737). Cirugía plástica estética, reconstructiva, íntima y de afirmación de género.",
+    "historyTitle": "Mi Historia | Cirujano Plástico en Blumenau, Brasil",
+    "historyDescription": "Conozca la formación, la trayectoria profesional y las especializaciones del Dr. Claudio Eduardo, cirujano plástico en Blumenau, Brasil (CRM 14.706-SC | RQE 23.737).",
+    "surgeriesTitle": "Cirugías Plásticas en Blumenau, Brasil",
+    "surgeriesDescription": "Conozca los procedimientos estéticos, reconstructivos, íntimos y de afirmación de género realizados por el Dr. Claudio Eduardo en Blumenau, Brasil.",
+    "contactTitle": "Contacto y Ubicación | Cirujano Plástico en Blumenau, Brasil",
+    "contactDescription": "Contacte con el Dr. Claudio Eduardo. Consulte la dirección en el Edificio Stein Tower, el teléfono, WhatsApp, el correo electrónico y la ubicación de la clínica en Blumenau, Brasil.",
+    "contactOgTitle": "Contacto | Dr. Claudio Eduardo — Cirujano Plástico en Blumenau",
     "contactOgDescription": "Hable con la clínica y encuentre su dirección y ubicación en Blumenau, Brasil."
   },
   "header": {
@@ -77,15 +77,15 @@
       "eyebrow": "Estructura hospitalaria",
       "choose": "Elija un hospital",
       "next": "Ver información de",
-      "items": ["Hospital Unimed", "Hospital Santo Antônio"]
+      "items": ["Hospital Unimed", "Hospital Santo Antônio", "Hospital Santa Isabel"]
     },
     "surgeries": {
       "eyebrow": "Nuestras",
       "title": "Cirugías",
       "description": "Procedimientos estéticos, reconstructivos y de afirmación de género. Toda indicación parte de una evaluación individual en consulta.",
-      "categories": ["Íntima", "Íntima", "Afirmación de género", "Afirmación de género", "Estética", "Estética"],
+      "categories": ["Íntima", "Íntima", "Afirmación de género", "Afirmación de género", "Estética", "Estética", "Estética", "Estética", "Estética", "Estética"],
       "alt": "Imagen ilustrativa de",
-      "items": ["Aumento de pene", "Cirugía íntima femenina", "Cirugía de afirmación de género", "Mastectomía masculinizadora", "Implantes mamarios", "Gluteoplastia"]
+      "items": ["Aumento de pene", "Cirugía íntima femenina", "Cirugía de afirmación de género", "Mastectomía masculinizadora", "Implantes mamarios", "Gluteoplastia", "Rinoplastia", "Lifting facial", "Liposucción", "Blefaroplastia"]
     },
     "media": {
       "eyebrow": "El Dr. en los medios",
@@ -150,9 +150,10 @@
     "form": { "introEyebrow": "Atención individual", "introTitle": "Una conversación puede aclarar el próximo paso.", "introText": "Envíe sus datos y cuéntenos qué desea entender. El equipo responderá por el WhatsApp de la clínica.", "name": "Nombre completo", "namePlaceholder": "Informe su nombre", "phone": "Teléfono / WhatsApp", "email": "E-mail", "emailPlaceholder": "suemail@ejemplo.com", "city": "Ciudad / Estado", "cityPlaceholder": "Blumenau / SC", "comment": "Comentario", "commentPlaceholder": "Cuéntenos brevemente cómo podemos ayudarle.", "attachments": "Archivos adjuntos", "accepted": "Formatos aceptados: DOC, DOCX, PDF y JPG. El archivo podrá enviarse en la conversación de WhatsApp.", "consent": "Autorizo a la clínica a contactarme con los datos informados para esta solicitud.", "privacy": "Sus datos se utilizarán exclusivamente para responder a su solicitud.", "submit": "Enviar por WhatsApp", "sent": "Su mensaje fue preparado en WhatsApp", "none": "Ninguno" }
   },
   "surgeryIndex": {
-    "badge": "Cuidado en cada etapa", "headlineA": "Cirugías con", "headlineB": "precisión y cuidado.", "description": "Procedimientos estéticos, íntimos y de afirmación de género planificados según su anatomía, su momento y sus objetivos.", "explore": "Explorar cirugías", "schedule": "Agendar evaluación", "specialties": "Especialidades", "procedures": "Procedimientos", "possibilities": "Posibilidades para cada camino", "procedureText": "Cada cirugía comienza con una conversación. La evaluación médica considera su historial, anatomía, expectativas y seguridad para construir una indicación verdaderamente individual.", "talk": "Hablar con el equipo", "learn": "Conocer la cirugía", "safetyEyebrow": "Seguridad y claridad", "safetyTitle": "La cirugía adecuada comienza con la indicación adecuada.", "safetyText": "La decisión se construye en consulta, con información clara sobre posibilidades, límites, preparación y recuperación.", "careEyebrow": "Cómo cuidamos de usted", "careSteps": ["Consulta y escucha individual", "Indicación médica responsable", "Planificación preoperatoria", "Seguimiento de la recuperación"], "scheduleFull": "Agendar una evaluación", "procedureDescriptions": ["Procedimientos para aumentar la longitud y el grosor del pene, indicados solo después de una evaluación individual.", "Tratamiento del exceso de los labios menores y otras alteraciones íntimas, con técnica y discreción.", "Cirugía de afirmación de género con indicación responsable y seguimiento especializado.", "Cirugía indicada para personas en transición, con planificación proporcional y atención individual.", "Aumento mamario estético o reconstructivo definido tras evaluar la anatomía y las expectativas.", "Implantes de silicona en el músculo glúteo mayor, con indicación y técnica individualizadas."]
+    "badge": "Cuidado en cada etapa", "headlineA": "Cirugías con", "headlineB": "precisión y cuidado.", "description": "Procedimientos estéticos, íntimos y de afirmación de género planificados según su anatomía, su momento y sus objetivos.", "explore": "Explorar cirugías", "schedule": "Agendar evaluación", "specialties": "Especialidades", "procedures": "Procedimientos", "possibilities": "Posibilidades para cada camino", "procedureText": "Cada cirugía comienza con una conversación. La evaluación médica considera su historial, anatomía, expectativas y seguridad para construir una indicación verdaderamente individual.", "talk": "Hablar con el equipo", "learn": "Conocer la cirugía", "safetyEyebrow": "Seguridad y claridad", "safetyTitle": "La cirugía adecuada comienza con la indicación adecuada.", "safetyText": "La decisión se construye en consulta, con información clara sobre posibilidades, límites, preparación y recuperación.", "careEyebrow": "Cómo cuidamos de usted", "careSteps": ["Consulta y escucha individual", "Indicación médica responsable", "Planificación preoperatoria", "Seguimiento de la recuperación"], "scheduleFull": "Agendar una evaluación", "procedureDescriptions": ["Procedimientos para aumentar la longitud y el grosor del pene, indicados solo después de una evaluación individual.", "Tratamiento del exceso de los labios menores y otras alteraciones íntimas, con técnica y discreción.", "Cirugía de afirmación de género con indicación responsable y seguimiento especializado.", "Cirugía indicada para hombres transgénero, realizada con técnica bi-incisional e injerto de areolas para el control de la disforia de género.", "Aumento mamario estético o reconstructivo definido tras evaluar la anatomía y las expectativas.", "Implantes de silicona en el músculo glúteo mayor, con indicación y técnica individualizadas.", "Cirugía que remodela la estructura de la nariz con fines estéticos o funcionales, como la corrección del tabique desviado.", "Reposicionamiento de músculos y tejidos profundos del rostro para reducir la flacidez, las arrugas y redefinir el contorno facial.", "Eliminación de grasa localizada para mejorar el contorno corporal en áreas como abdomen, flancos, espalda, brazos, muslos y papada.", "Cirugía que elimina el exceso de piel, músculo o grasa de los párpados para rejuvenecer la mirada y mejorar el campo visual."]
   },
   "surgeryDetail": {
+    "home": "Inicio",
     "back": "Cirugías",
     "request": "Solicitar evaluación",
     "understand": "Entender la cirugía",

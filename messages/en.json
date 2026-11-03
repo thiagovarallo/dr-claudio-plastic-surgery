@@ -1,14 +1,14 @@
 {
   "meta": {
-    "siteTitle": "Dr. Claudio Eduardo | Plastic Surgeon",
-    "siteDescription": "Plastic surgeon in Blumenau, Brazil. CRM 14.706-SC | RQE 23.737. Information about surgery and specialized care.",
-    "historyTitle": "My Story | Plastic Surgeon in Blumenau",
-    "historyDescription": "Discover the training, professional journey and specializations of Dr. Claudio Eduardo, a plastic surgeon in Blumenau, Brazil.",
-    "surgeriesTitle": "Surgeries",
-    "surgeriesDescription": "Explore aesthetic, reconstructive and gender-affirming procedures performed by Dr. Claudio Eduardo in Blumenau.",
-    "contactTitle": "Contact | Plastic Surgeon in Blumenau",
-    "contactDescription": "Contact Dr. Claudio Eduardo. Find the clinic's address, phone number, WhatsApp, email and location in Blumenau, Brazil.",
-    "contactOgTitle": "Contact | Dr. Claudio Eduardo",
+    "siteTitle": "Dr. Claudio Eduardo | Plastic Surgeon in Blumenau, Brazil",
+    "siteDescription": "Dr. Claudio Eduardo, plastic surgeon in Blumenau, Brazil (CRM 14.706-SC | RQE 23.737). Aesthetic, reconstructive, intimate and gender-affirming plastic surgery.",
+    "historyTitle": "My Story | Plastic Surgeon in Blumenau, Brazil",
+    "historyDescription": "Discover the training, professional journey and specializations of Dr. Claudio Eduardo, a plastic surgeon in Blumenau, Brazil (CRM 14.706-SC | RQE 23.737).",
+    "surgeriesTitle": "Plastic Surgeries in Blumenau, Brazil",
+    "surgeriesDescription": "Explore aesthetic, reconstructive, intimate and gender-affirming procedures performed by Dr. Claudio Eduardo in Blumenau, Brazil.",
+    "contactTitle": "Contact & Location | Plastic Surgeon in Blumenau, Brazil",
+    "contactDescription": "Contact Dr. Claudio Eduardo. Find the clinic's address at Stein Tower Building, phone number, WhatsApp, email and location in Blumenau, Brazil.",
+    "contactOgTitle": "Contact | Dr. Claudio Eduardo — Plastic Surgeon in Blumenau",
     "contactOgDescription": "Talk to the clinic and find its address and location in Blumenau, Brazil."
   },
   "header": {
@@ -77,15 +77,15 @@
       "eyebrow": "Hospital network",
       "choose": "Choose a hospital",
       "next": "View information for",
-      "items": ["Hospital Unimed", "Hospital Santo Antônio"]
+      "items": ["Hospital Unimed", "Hospital Santo Antônio", "Hospital Santa Isabel"]
     },
     "surgeries": {
       "eyebrow": "Our",
       "title": "Surgeries",
       "description": "Aesthetic, reconstructive and gender-affirming procedures. Every recommendation begins with an individual medical assessment.",
-      "categories": ["Intimate", "Intimate", "Gender affirmation", "Gender affirmation", "Aesthetic", "Aesthetic"],
+      "categories": ["Intimate", "Intimate", "Gender affirmation", "Gender affirmation", "Aesthetic", "Aesthetic", "Aesthetic", "Aesthetic", "Aesthetic", "Aesthetic"],
       "alt": "Illustrative image of",
-      "items": ["Penile enhancement", "Female intimate surgery", "Gender confirmation surgery", "Masculinizing mastectomy", "Breast implants", "Gluteoplasty"]
+      "items": ["Penile enhancement", "Female intimate surgery", "Gender confirmation surgery", "Masculinizing mastectomy", "Breast implants", "Gluteoplasty", "Rhinoplasty", "Facelift", "Liposuction", "Blepharoplasty"]
     },
     "media": {
       "eyebrow": "Dr. in the media",
@@ -150,9 +150,10 @@
     "form": { "introEyebrow": "Individual care", "introTitle": "A conversation can clarify the next step.", "introText": "Send your details and tell us what you would like to understand. The team will reply through the clinic's WhatsApp.", "name": "Full name", "namePlaceholder": "Enter your name", "phone": "Phone / WhatsApp", "email": "Email", "emailPlaceholder": "you@example.com", "city": "City / State", "cityPlaceholder": "Blumenau / SC", "comment": "Comment", "commentPlaceholder": "Briefly tell us how we can help.", "attachments": "Attachments", "accepted": "Accepted formats: DOC, DOCX, PDF and JPG. The file can be sent in the WhatsApp conversation.", "consent": "I authorize the clinic to contact me using the information provided for this request.", "privacy": "Your data will be used exclusively to respond to your request.", "submit": "Send via WhatsApp", "sent": "Your message was prepared in WhatsApp", "none": "None" }
   },
   "surgeryIndex": {
-    "badge": "Care at every step", "headlineA": "Surgeries with", "headlineB": "precision and care.", "description": "Aesthetic, intimate and gender-affirming procedures planned around your anatomy, your moment and your goals.", "explore": "Explore surgeries", "schedule": "Book an evaluation", "specialties": "Specialties", "procedures": "Procedures", "possibilities": "Possibilities for every journey", "procedureText": "Every surgery begins with a conversation. The medical assessment considers your history, anatomy, expectations and safety to build a truly individual recommendation.", "talk": "Talk to the team", "learn": "Learn about the surgery", "safetyEyebrow": "Safety and clarity", "safetyTitle": "The right surgery starts with the right indication.", "safetyText": "The decision is built in consultation, with clear information about possibilities, limits, preparation and recovery.", "careEyebrow": "How we care for you", "careSteps": ["Individual consultation and listening", "Responsible medical indication", "Preoperative planning", "Recovery follow-up"], "scheduleFull": "Book an evaluation", "procedureDescriptions": ["Procedures for increasing penile length and girth, recommended only after individual assessment.", "Treatment for excess tissue of the labia and other intimate changes, with technique and discretion.", "Gender-affirming surgery with responsible indication and specialized follow-up.", "Surgery for people in transition, with proportional planning and individual care.", "Aesthetic or reconstructive breast augmentation defined after assessing anatomy and expectations.", "Silicone implants placed in the gluteus maximus muscle with individualized indication and technique."]
+    "badge": "Care at every step", "headlineA": "Surgeries with", "headlineB": "precision and care.", "description": "Aesthetic, intimate and gender-affirming procedures planned around your anatomy, your moment and your goals.", "explore": "Explore surgeries", "schedule": "Book an evaluation", "specialties": "Specialties", "procedures": "Procedures", "possibilities": "Possibilities for every journey", "procedureText": "Every surgery begins with a conversation. The medical assessment considers your history, anatomy, expectations and safety to build a truly individual recommendation.", "talk": "Talk to the team", "learn": "Learn about the surgery", "safetyEyebrow": "Safety and clarity", "safetyTitle": "The right surgery starts with the right indication.", "safetyText": "The decision is built in consultation, with clear information about possibilities, limits, preparation and recovery.", "careEyebrow": "How we care for you", "careSteps": ["Individual consultation and listening", "Responsible medical indication", "Preoperative planning", "Recovery follow-up"], "scheduleFull": "Book an evaluation", "procedureDescriptions": ["Procedures for increasing penile length and girth, recommended only after individual assessment.", "Treatment for excess tissue of the labia and other intimate changes, with technique and discretion.", "Gender-affirming surgery with responsible indication and specialized follow-up.", "Surgery indicated for transgender men, performed with a bi-incisional technique and areola graft to help manage gender dysphoria.", "Aesthetic or reconstructive breast augmentation defined after assessing anatomy and expectations.", "Silicone implants placed in the gluteus maximus muscle with individualized indication and technique.", "Surgery that reshapes the nasal structure for aesthetic or functional purposes, such as correcting a deviated septum.", "Repositioning of muscles and deep facial tissues to reduce sagging, wrinkles and redefine facial contour.", "Removal of localized fat to improve body contour in areas such as the abdomen, flanks, back, arms, thighs and double chin.", "Surgery that removes excess skin, muscle or fat from the eyelids to rejuvenate the eyes and improve the visual field."]
   },
   "surgeryDetail": {
+    "home": "Home",
     "back": "Surgeries",
     "request": "Request an evaluation",
     "understand": "Understand the surgery",

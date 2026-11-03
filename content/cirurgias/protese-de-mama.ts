@@ -87,7 +87,7 @@ export const proteseDeMama: CirurgiaContent = {
     },
   ],
   seo: {
-    title: "Prótese de mama | Dr. Claudio Eduardo",
-    description: "Informações sobre mamoplastia de aumento, planejamento e recuperação em Blumenau/SC.",
+    title: "Prótese de Mama em Blumenau/SC | Dr. Claudio Eduardo",
+    description: "Informações sobre prótese de mama (mamoplastia de aumento), planejamento cirúrgico e recuperação em Blumenau/SC com o Dr. Claudio Eduardo.",
   },
 };

@@ -87,7 +87,7 @@ export const gluteoplastia: CirurgiaContent = {
     },
   ],
   seo: {
-    title: "Gluteoplastia | Dr. Claudio Eduardo",
-    description: "Informações sobre gluteoplastia com implantes, planejamento e recuperação em Blumenau/SC.",
+    title: "Gluteoplastia em Blumenau/SC | Dr. Claudio Eduardo",
+    description: "Informações sobre gluteoplastia com implantes de silicone, planejamento cirúrgico e recuperação em Blumenau/SC com o Dr. Claudio Eduardo.",
   },
 };

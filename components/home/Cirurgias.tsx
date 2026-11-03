@@ -46,12 +46,17 @@ export function Cirurgias() {
         <ul className="mt-12 grid gap-4 sm:mt-16 sm:gap-5 lg:auto-rows-[250px] lg:grid-cols-12 lg:gap-5">
           {surgeries.map((surgery, index) => {
             const external = surgery.href.startsWith("http");
+            const restCount = surgeries.length - 3;
+            const tailTwoColCount =
+              restCount % 3 === 1 ? 4 : restCount % 3 === 2 ? 2 : 0;
             const layout =
               index === 0
                 ? "lg:col-span-7 lg:row-span-2"
                 : index < 3
                   ? "lg:col-span-5"
-                  : "lg:col-span-4";
+                  : index >= surgeries.length - tailTwoColCount
+                    ? "lg:col-span-6"
+                    : "lg:col-span-4";
             const imageSizes =
               index === 0
                 ? "(min-width: 1024px) 58vw, 100vw"

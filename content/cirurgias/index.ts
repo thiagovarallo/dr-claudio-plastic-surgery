@@ -1,9 +1,13 @@
 import { aumentoPenianoFaloplastia } from "./aumento-peniano-faloplastia";
+import { blefaroplastia } from "./blefaroplastia";
 import { cirurgiaIntimaFeminina } from "./cirurgia-intima-feminina";
 import { gluteoplastia } from "./gluteoplastia";
+import { liftingFacial } from "./lifting-facial";
+import { lipoaspiracao } from "./lipoaspiracao";
 import { mastectomiaMasculinizadora } from "./mastectomia-masculinizadora";
 import { proteseDeMama } from "./protese-de-mama";
 import { redesignacaoSexual } from "./redesignacao-sexual";
+import { rinoplastia } from "./rinoplastia";
 import type { CirurgiaContent } from "./types";
 
 const cirurgias: CirurgiaContent[] = [
@@ -13,6 +17,10 @@ const cirurgias: CirurgiaContent[] = [
   mastectomiaMasculinizadora,
   proteseDeMama,
   gluteoplastia,
+  rinoplastia,
+  liftingFacial,
+  lipoaspiracao,
+  blefaroplastia,
 ];
 
 export function getAllCirurgias(): CirurgiaContent[] {

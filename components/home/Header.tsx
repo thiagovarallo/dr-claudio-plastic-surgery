@@ -40,17 +40,17 @@ export function Header() {
 
   return (
     <motion.header
-      className={`fixed inset-x-0 top-0 z-50 transition-[background,box-shadow,border-color] duration-500 ${
+      className={`fixed inset-x-0 top-0 z-[100] transition-[background,box-shadow,border-color] duration-500 ${
         scrolled
           ? "border-b border-ink/8 bg-white/78 shadow-[0_10px_40px_rgba(27,85,121,0.10)] backdrop-blur-xl"
           : "border-b border-transparent bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-[76px] max-w-6xl items-center gap-6 px-5 sm:px-8">
+      <div className="mx-auto flex h-[76px] max-w-6xl items-center gap-3 px-4 sm:gap-6 sm:px-8">
         <Link
           href="/#inicio"
           aria-label={t("homeAria")}
-          className="relative h-6 w-[190px] shrink-0 sm:h-7 sm:w-[225px] lg:h-8 lg:w-[250px]"
+          className="relative h-6 w-[160px] shrink-0 sm:h-7 sm:w-[225px] lg:h-8 lg:w-[250px]"
         >
           <Image
             src="/brand/logo.png"
@@ -183,7 +183,7 @@ export function Header() {
             initial={reduced ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 top-[76px] z-40 bg-navy-deep/96 px-6 py-10 text-white backdrop-blur-xl lg:hidden"
+            className="fixed inset-0 top-[76px] z-40 overflow-y-auto bg-navy-deep/96 px-6 py-8 text-white backdrop-blur-xl lg:hidden"
           >
             <nav aria-label={t("mobileNav")} className="flex flex-col gap-2">
               {translatedNavigation.map((item, index) => (

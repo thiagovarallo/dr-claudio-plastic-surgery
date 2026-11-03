@@ -49,13 +49,13 @@ export function Hero() {
 
       <motion.div
         style={{ y: contentY }}
-        className="relative mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-5 pb-16 pt-32 sm:px-8"
+        className="relative mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-5 pb-16 pt-28 sm:px-8 sm:pt-32"
       >
         <p className="text-[11px] font-semibold uppercase tracking-[0.46em] text-brand">{t("eyebrow")}</p>
         <AnimatedText
           as="h1"
           delay={0.08}
-          className="mt-5 max-w-3xl font-display text-[54px] font-medium leading-[0.94] text-white sm:text-7xl lg:text-[86px]"
+          className="mt-5 max-w-3xl font-display text-[44px] font-medium leading-[0.94] text-white sm:text-7xl lg:text-[86px]"
           text={t("title")}
         />
         <motion.p
@@ -93,7 +93,7 @@ export function Hero() {
         aria-label={t("scroll")}
         animate={reduced ? undefined : { y: [0, 7, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-[6.75rem] left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-[10px] font-bold uppercase tracking-[0.28em] text-white/65 transition hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand sm:bottom-28"
+        className="absolute bottom-28 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-2 text-[10px] font-bold uppercase tracking-[0.28em] text-white/65 transition hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand sm:flex"
       >
         <span>{t("scroll")}</span>
         <span className="grid size-8 place-items-center rounded-full border border-white/25 bg-navy-deep/25 backdrop-blur-sm">

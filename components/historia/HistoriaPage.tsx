@@ -57,7 +57,7 @@ export function HistoriaPage() {
               id="historia-hero-title"
               delay={0.08}
               text={page.hero.title}
-              className="mt-6 font-display text-[50px] font-medium leading-[0.92] tracking-[-0.035em] text-white sm:text-7xl lg:text-[88px]"
+              className="mt-6 font-display text-[40px] font-medium leading-[0.94] tracking-[-0.035em] text-white sm:text-7xl lg:text-[88px]"
             />
             <div className="animate-fade-up [animation-delay:560ms]">
               <p className="mt-7 max-w-xl text-sm leading-7 text-white/72 sm:text-base">
