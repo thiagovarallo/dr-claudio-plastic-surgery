@@ -88,7 +88,7 @@ export function Hospitais() {
       <motion.h2
         id="hospitais-title"
         style={{ x: titleX }}
-        className="pointer-events-none absolute right-[26%] top-0 whitespace-nowrap text-[clamp(4rem,8vw,8.8rem)] font-extrabold uppercase leading-none tracking-[-0.055em] text-white"
+        className="pointer-events-none absolute left-5 top-0 whitespace-nowrap text-[clamp(4rem,8vw,8.8rem)] font-extrabold uppercase leading-none tracking-[-0.055em] text-white sm:left-8 lg:left-6 xl:left-12"
       >
         {t("title")}
       </motion.h2>
