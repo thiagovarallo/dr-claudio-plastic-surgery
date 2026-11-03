@@ -41,7 +41,7 @@ export function Header() {
   return (
     <motion.header
       className={`fixed inset-x-0 top-0 z-[100] transition-[background,box-shadow,border-color] duration-500 ${
-        scrolled
+        scrolled || menuOpen
           ? "border-b border-ink/8 bg-white/78 shadow-[0_10px_40px_rgba(27,85,121,0.10)] backdrop-blur-xl"
           : "border-b border-transparent bg-transparent"
       }`}
@@ -61,7 +61,7 @@ export function Header() {
             className="object-contain object-left transition-[filter] duration-500"
             style={{
               filter: scrolled
-                ? "none"
+                    ? "none"
                 : "brightness(0) invert(1)",
             }}
           />
@@ -183,7 +183,7 @@ export function Header() {
             initial={reduced ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 top-[76px] z-40 overflow-y-auto bg-navy-deep/96 px-6 py-8 text-white backdrop-blur-xl lg:hidden"
+            className="absolute inset-x-0 top-full z-[110] max-h-[calc(100dvh-76px)] overflow-y-auto overscroll-contain bg-navy-deep px-6 py-8 text-white shadow-[0_18px_32px_rgba(22,50,71,0.22)] lg:hidden"
           >
             <nav aria-label={t("mobileNav")} className="flex flex-col gap-2">
               {translatedNavigation.map((item, index) => (

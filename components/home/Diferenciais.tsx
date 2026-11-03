@@ -14,7 +14,7 @@ export function Diferenciais() {
   const t = useTranslations("home.differentials");
 
   return (
-    <section className="relative isolate overflow-hidden bg-blue py-7 sm:py-9 lg:py-11 text-white">
+    <section className="relative isolate overflow-hidden bg-blue py-7 text-white sm:py-9 lg:py-11">
       <Image
         src="/cirurgias/cirurgia-intima-feminina/mockups/consulta-editorial.png"
         alt=""
@@ -22,7 +22,8 @@ export function Diferenciais() {
         sizes="100vw"
         className="-z-10 object-cover opacity-15 mix-blend-multiply"
       />
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(1,134,213,0.92)_0%,rgba(1,134,213,0.88)_49.9%,rgba(0,121,181,0.92)_50.1%,rgba(27,85,121,0.94)_100%)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(135deg,var(--blue-dark)_0%,var(--blue)_55%,var(--blue-light)_100%)] opacity-95" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_90%_at_15%_50%,color-mix(in_srgb,var(--green)_18%,transparent),transparent_65%)]" />
 
       <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
         <div className="grid divide-y divide-white/15 md:grid-cols-2 md:divide-y-0 md:divide-x">
@@ -40,7 +41,7 @@ export function Diferenciais() {
                       <span className="flex size-12 sm:size-13 shrink-0 items-center justify-center rounded-xl border border-white/20 bg-white/12 text-brand shadow-[0_6px_20px_rgba(8,191,196,0.25)] backdrop-blur-md">
                         <Icon className="size-6 sm:size-6.5" strokeWidth={1.75} />
                       </span>
-                      <p className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.38em] text-brand">
+                      <p className="text-xs font-bold uppercase tracking-[0.38em] text-brand sm:text-[13px]">
                         {t(`items.${index}.eyebrow`)}
                       </p>
                     </div>
