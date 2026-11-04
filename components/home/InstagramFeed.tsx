@@ -6,7 +6,7 @@ import { ArrowUpRight, CheckCircle2, Heart, MessageCircle, Play, Sparkles } from
 import { useTranslations } from "next-intl";
 import { Reveal } from "@/components/ui/Reveal";
 import { FALLBACK_INSTAGRAM_POSTS, type InstagramPostItem } from "@/content/instagram";
-import { INSTAGRAM_HANDLE, INSTAGRAM_HREF } from "@/content/site";
+import { FACEBOOK_HREF, INSTAGRAM_HANDLE, INSTAGRAM_HREF, YOUTUBE_HREF } from "@/content/site";
 
 function InstagramIcon({ className = "size-4" }: { className?: string }) {
   return (
@@ -23,6 +23,32 @@ function InstagramIcon({ className = "size-4" }: { className?: string }) {
       <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
       <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
       <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+  );
+}
+
+function YouTubeIcon({ className = "size-4" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+      className={className}
+    >
+      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+    </svg>
+  );
+}
+
+function FacebookIcon({ className = "size-4" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+      className={className}
+    >
+      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
     </svg>
   );
 }
@@ -222,6 +248,44 @@ export function InstagramFeed() {
             );
           })}
         </div>
+      </div>
+
+      {/* Barra "Acompanhe em nossas redes sociais": YouTube e Facebook */}
+      <div className="mx-auto mt-8 max-w-6xl px-5 sm:mt-10 sm:px-8">
+        <Reveal>
+          <div className="flex flex-col items-center justify-between gap-4 rounded-2xl border border-slate-200/90 bg-surface-soft px-5 py-4 shadow-xs sm:flex-row sm:px-7 sm:py-4.5">
+            <div className="flex items-center gap-3">
+              <span className="size-2 rounded-full bg-brand" />
+              <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-ink sm:text-sm">
+                {t("socialPrompt")}
+              </p>
+            </div>
+
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <a
+                href={YOUTUBE_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-11 items-center gap-2.5 rounded-full bg-[#FF0000] px-5 text-xs font-bold text-white shadow-[0_8px_20px_rgba(255,0,0,0.22)] transition hover:-translate-y-0.5 hover:bg-[#cc0000]"
+              >
+                <YouTubeIcon className="size-4" />
+                <span>YouTube</span>
+                <ArrowUpRight className="size-3.5" />
+              </a>
+
+              <a
+                href={FACEBOOK_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-11 items-center gap-2.5 rounded-full bg-[#1877F2] px-5 text-xs font-bold text-white shadow-[0_8px_20px_rgba(24,119,242,0.25)] transition hover:-translate-y-0.5 hover:bg-[#1464cc]"
+              >
+                <FacebookIcon className="size-4" />
+                <span>Facebook</span>
+                <ArrowUpRight className="size-3.5" />
+              </a>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -3,6 +3,8 @@ export const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER}`;
 export const WHATSAPP_LABEL = "Entre em contato";
 export const INSTAGRAM_HANDLE = "@drclaudioeduardo";
 export const INSTAGRAM_HREF = "https://www.instagram.com/drclaudioeduardo";
+export const FACEBOOK_HREF = "https://www.facebook.com/claudioeduardo.souza";
+export const YOUTUBE_HREF = "https://www.youtube.com/@faloplastia2288";
 
 export const COLORS = {
   blue: "#0079b5",

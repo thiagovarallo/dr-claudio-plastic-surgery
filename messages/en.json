@@ -122,6 +122,7 @@
       "follow": "Follow on Instagram",
       "viewPost": "View on Instagram",
       "verifiedRole": "Plastic Surgeon · CRM 14.706-SC | RQE 23.737",
+      "socialPrompt": "Follow us on our social media",
       "posts": [
         { "tag": "Intimate Surgery", "title": "Phalloplasty: medical assessment and individualized planning", "caption": "Understand how the evaluation consultation works and the surgical safety criteria." },
         { "tag": "Gender Affirmation", "title": "Masculinizing mastectomy and multidisciplinary care", "caption": "Bi-incisional technique with areola grafting, preoperative preparation and recovery." },

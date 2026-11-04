@@ -63,7 +63,11 @@ const homeSchema = {
         postalCode: "89010-022",
         addressCountry: "BR",
       },
-      sameAs: ["https://www.instagram.com/drclaudioeduardo"],
+      sameAs: [
+        "https://www.instagram.com/drclaudioeduardo",
+        "https://www.facebook.com/claudioeduardo.souza",
+        "https://www.youtube.com/@faloplastia2288",
+      ],
       areaServed: {
         "@type": "City",
         name: "Blumenau",
@@ -76,7 +80,11 @@ const homeSchema = {
       url: `${BASE_URL}/claudio-eduardo-cirurgiao-plastico`,
       image: `${BASE_URL}/home/doutor-hero.png`,
       medicalSpecialty: "PlasticSurgery",
-      sameAs: ["https://www.instagram.com/drclaudioeduardo"],
+      sameAs: [
+        "https://www.instagram.com/drclaudioeduardo",
+        "https://www.facebook.com/claudioeduardo.souza",
+        "https://www.youtube.com/@faloplastia2288",
+      ],
       identifier: [
         { "@type": "PropertyValue", name: "CRM", value: "14.706-SC" },
         { "@type": "PropertyValue", name: "RQE", value: "23.737" },
