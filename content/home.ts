@@ -175,20 +175,44 @@ export const hospitals = [
 
 export const clinicGallery = [
   {
-    src: "/brand/clinic/reception.jpg",
+    src: "/brand/clinic/consultorio-01.png",
     alt: "Recepção moderna da clínica em Blumenau",
   },
   {
-    src: "/brand/clinic/treatment-room.jpg",
-    alt: "Sala de atendimento moderna e equipada",
+    src: "/brand/clinic/consultorio-02.png",
+    alt: "Sala de consulta médica do Dr. Claudio Eduardo",
   },
   {
-    src: "/brand/official/banner-principal-03.jpg",
-    alt: "Ambiente clínico do consultório",
+    src: "/brand/clinic/consultorio-03.png",
+    alt: "Recepção e sala de espera da clínica",
   },
   {
-    src: "/brand/official/banner-principal-01.jpg",
-    alt: "Espaço de consulta do Dr. Claudio Eduardo",
+    src: "/brand/clinic/consultorio-04.png",
+    alt: "Consultório com diplomas e mostruário de próteses",
+  },
+  {
+    src: "/brand/clinic/consultorio-05.png",
+    alt: "Mesa de atendimento e biblioteca médica",
+  },
+  {
+    src: "/brand/clinic/consultorio-06.png",
+    alt: "Sala de avaliação clínica e procedimentos com vista de Blumenau",
+  },
+  {
+    src: "/brand/clinic/consultorio-07.png",
+    alt: "Sala de exames e avaliação médica",
+  },
+  {
+    src: "/brand/clinic/consultorio-08.png",
+    alt: "Bancada de apoio e equipamentos clínicos",
+  },
+  {
+    src: "/brand/clinic/consultorio-09.png",
+    alt: "Estrutura da sala de atendimento médico",
+  },
+  {
+    src: "/brand/clinic/consultorio-10.png",
+    alt: "Espaço de espera e conveniência da clínica",
   },
 ] as const;
 

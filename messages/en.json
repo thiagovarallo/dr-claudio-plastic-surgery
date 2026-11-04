@@ -61,7 +61,18 @@
       ]
     },
     "units": {
-      "imageAlts": ["Modern clinic reception in Blumenau", "Modern, equipped consultation room", "Clinic interior", "Dr. Claudio Eduardo's consultation space"],
+      "imageAlts": [
+        "Modern clinic reception in Blumenau",
+        "Dr. Claudio Eduardo's medical consultation room",
+        "Clinic reception and waiting area",
+        "Consultation office with diplomas and implant display",
+        "Consultation desk and medical library",
+        "Clinical assessment and procedure room overlooking Blumenau",
+        "Examination and medical evaluation room",
+        "Clinical support bench and equipment",
+        "Medical care room infrastructure",
+        "Clinic waiting and convenience space"
+      ],
       "title": "Our locations",
       "choose": "Choose a location",
       "next": "Next environments",

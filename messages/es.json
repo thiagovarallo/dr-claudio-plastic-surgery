@@ -61,7 +61,18 @@
       ]
     },
     "units": {
-      "imageAlts": ["Recepción moderna de la clínica en Blumenau", "Sala de atención moderna y equipada", "Interior de la clínica", "Espacio de consulta del Dr. Claudio Eduardo"],
+      "imageAlts": [
+        "Recepción moderna de la clínica en Blumenau",
+        "Sala de consulta médica del Dr. Claudio Eduardo",
+        "Recepción y sala de espera de la clínica",
+        "Consultorio con diplomas y muestrario de implantes",
+        "Mesa de atención y biblioteca médica",
+        "Sala de evaluación clínica y procedimientos con vista a Blumenau",
+        "Sala de exámenes y evaluación médica",
+        "Bancada de apoyo y equipamiento clínico",
+        "Estructura de la sala de atención médica",
+        "Espacio de espera y conveniencia de la clínica"
+      ],
       "title": "Nuestras unidades",
       "choose": "Elija una unidad",
       "next": "Siguientes ambientes",
