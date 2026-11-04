@@ -17,6 +17,7 @@ import { CtaSection } from "@/components/ui/CtaSection";
 import { CurriculumTabs } from "@/components/ui/curriculum-tabs";
 import { Reveal } from "@/components/ui/Reveal";
 import { Timeline } from "@/components/ui/timeline";
+import { DiplomaShowcase } from "@/components/historia/DiplomaShowcase";
 import { historiaPage } from "@/content/historia";
 import { localizeContent, translateContent } from "@/i18n/content";
 
@@ -33,21 +34,23 @@ export function HistoriaPage() {
       <section
         id="inicio"
         aria-labelledby="historia-hero-title"
-        className="relative isolate flex min-h-[760px] overflow-hidden bg-navy-deep text-white lg:min-h-[820px]"
+        className="relative isolate flex min-h-svh overflow-hidden bg-navy-deep text-white sm:min-h-[760px] lg:min-h-[820px]"
       >
-        <Image
-          src="/brand/hero-contato-jaleco.png"
-          alt={tr("Dr. Claudio Eduardo em seu consultório")}
-          fill
-          priority
-          sizes="100vw"
-          className="-z-30 object-cover object-[68%_top] sm:object-top"
-        />
-        <div className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,var(--blue-dark)_0%,color-mix(in_srgb,var(--blue-dark)_90%,transparent)_28%,color-mix(in_srgb,var(--blue-dark)_42%,transparent)_42%,transparent_54%)] max-sm:bg-[linear-gradient(90deg,color-mix(in_srgb,var(--blue-dark)_92%,transparent)_0%,color-mix(in_srgb,var(--blue-dark)_70%,transparent)_65%,color-mix(in_srgb,var(--blue-dark)_25%,transparent)_100%)]" />
+        <div className="absolute inset-x-0 top-0 -z-30 h-[66svh] max-sm:[mask-image:linear-gradient(to_bottom,black_0%,black_42%,rgba(0,0,0,0.52)_72%,transparent_100%)] sm:inset-0 sm:h-full">
+          <Image
+            src="/brand/hero-contato-jaleco.png"
+            alt={tr("Dr. Claudio Eduardo em seu consultório")}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[70%_12%] sm:object-top"
+          />
+        </div>
+        <div className="absolute inset-0 -z-20 bg-[linear-gradient(180deg,color-mix(in_srgb,var(--blue-dark)_40%,transparent)_0%,transparent_22%,color-mix(in_srgb,var(--blue-dark)_30%,transparent)_40%,color-mix(in_srgb,var(--blue-dark)_72%,transparent)_54%,color-mix(in_srgb,var(--blue-dark)_94%,transparent)_66%,var(--blue-dark)_78%)] sm:bg-[linear-gradient(90deg,var(--blue-dark)_0%,color-mix(in_srgb,var(--blue-dark)_92%,transparent)_30%,color-mix(in_srgb,var(--blue-dark)_45%,transparent)_46%,transparent_60%)]" />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(0deg,color-mix(in_srgb,var(--blue-dark)_65%,transparent)_0%,transparent_18%)]" />
         <div className="hero-aurora absolute -left-32 top-1/3 -z-10 size-96 rounded-full bg-brand/15 blur-3xl" />
 
-        <div className="mx-auto flex w-full max-w-6xl flex-col px-5 pb-8 pt-36 sm:px-8 lg:pt-40">
+        <div className="mx-auto flex w-full max-w-6xl flex-col justify-end px-5 pb-8 pt-[38svh] sm:justify-start sm:px-8 sm:pt-36 lg:pt-40">
           <div className="max-w-[720px]">
             <p className="text-[10px] font-bold uppercase tracking-[0.48em] text-brand sm:text-xs">
               {page.hero.eyebrow}
@@ -57,14 +60,14 @@ export function HistoriaPage() {
               id="historia-hero-title"
               delay={0.08}
               text={page.hero.title}
-              className="mt-6 font-display text-[40px] font-medium leading-[0.94] tracking-[-0.035em] text-white sm:text-7xl lg:text-[88px]"
+              className="mt-4 font-display text-[36px] font-medium leading-[0.94] tracking-[-0.035em] text-white sm:mt-6 sm:text-7xl lg:text-[88px]"
             />
             <div className="animate-fade-up [animation-delay:560ms]">
-              <p className="mt-7 max-w-xl text-sm leading-7 text-white/72 sm:text-base">
+              <p className="mt-4 max-w-xl text-sm leading-6 text-white/78 sm:mt-7 sm:text-base sm:leading-7">
                 {page.hero.text}
               </p>
             </div>
-            <div className="animate-fade-up mt-9 flex flex-wrap items-center gap-5 sm:gap-6 [animation-delay:680ms]">
+            <div className="animate-fade-up mt-6 flex flex-wrap items-center gap-4 sm:mt-9 sm:gap-6 [animation-delay:680ms]">
               <Link
                 href="#trajetoria"
                 className="inline-flex h-12 items-center gap-3 rounded-full bg-brand px-6 text-sm font-bold text-white transition hover:bg-brand-deep"
@@ -219,6 +222,8 @@ export function HistoriaPage() {
               </ul>
             </div>
           </div>
+
+          <DiplomaShowcase />
         </div>
       </section>
 

@@ -29,7 +29,11 @@ export function Hero() {
       ref={ref}
       className="relative isolate flex min-h-svh flex-col overflow-hidden bg-navy-deep text-white"
     >
-      <motion.div style={{ y: imageY, scale: imageScale }} className="absolute inset-0 -z-20">
+      {/* Imagem full-bleed contínua com máscara alpha suave no mobile para fusão perfeita com o BG */}
+      <motion.div
+        style={{ y: imageY, scale: imageScale }}
+        className="absolute inset-x-0 top-0 -z-20 h-[68svh] max-sm:[mask-image:linear-gradient(to_bottom,black_0%,black_44%,rgba(0,0,0,0.55)_72%,transparent_100%)] sm:inset-0 sm:h-full"
+      >
         <picture className="block size-full">
           <source media="(max-width: 639px)" srcSet="/brand/hero-home-mobile.png" />
           <Image
@@ -38,31 +42,32 @@ export function Hero() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-[68%_center] sm:object-[68%_18%] lg:object-[68%_14%]"
+            className="object-cover object-[76%_16%] sm:object-[72%_18%] lg:object-[70%_14%]"
           />
         </picture>
       </motion.div>
 
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,color-mix(in_srgb,var(--blue-dark)_65%,transparent)_0%,color-mix(in_srgb,var(--blue-dark)_32%,transparent)_30%,transparent_48%)] max-sm:bg-[linear-gradient(180deg,color-mix(in_srgb,var(--blue-dark)_35%,transparent)_0%,color-mix(in_srgb,var(--blue-dark)_82%,transparent)_100%)]" />
+      {/* Gradiente cinematográfico multi-stop: mescla imagem e BG sem qualquer linha divisória */}
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,color-mix(in_srgb,var(--blue-dark)_40%,transparent)_0%,transparent_22%,color-mix(in_srgb,var(--blue-dark)_30%,transparent)_42%,color-mix(in_srgb,var(--blue-dark)_72%,transparent)_56%,color-mix(in_srgb,var(--blue-dark)_94%,transparent)_68%,var(--blue-dark)_80%)] sm:bg-[linear-gradient(90deg,color-mix(in_srgb,var(--blue-dark)_86%,transparent)_0%,color-mix(in_srgb,var(--blue-dark)_68%,transparent)_34%,color-mix(in_srgb,var(--blue-dark)_16%,transparent)_54%,transparent_70%)]" />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-20 bg-linear-to-t from-blue-dark/45 to-transparent" />
       <div className="hero-aurora absolute -left-32 top-1/4 -z-10 h-105 w-105 rounded-full bg-brand/15 blur-3xl" />
 
       <motion.div
         style={{ y: contentY }}
-        className="relative mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-5 pb-16 pt-28 sm:px-8 sm:pt-32"
+        className="relative mx-auto flex w-full max-w-6xl flex-1 flex-col justify-end px-5 pb-10 pt-[36svh] sm:justify-center sm:px-8 sm:pb-16 sm:pt-32"
       >
         <p className="text-[11px] font-semibold uppercase tracking-[0.46em] text-brand">{t("eyebrow")}</p>
         <AnimatedText
           as="h1"
           delay={0.08}
-          className="mt-5 max-w-3xl font-display text-[44px] font-medium leading-[0.94] text-white sm:text-7xl lg:text-[86px]"
+          className="mt-3 max-w-2xl font-display text-[38px] font-medium leading-[0.94] text-white sm:mt-5 sm:max-w-xl sm:text-6xl lg:max-w-2xl lg:text-[82px]"
           text={t("title")}
         />
         <motion.p
           initial={reduced ? false : { opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.55, duration: 0.6 }}
-          className="mt-7 max-w-lg text-sm leading-7 text-white/76 sm:text-base"
+          className="mt-4 max-w-md text-sm leading-6 text-white/80 sm:mt-7 sm:max-w-lg sm:text-base sm:leading-7"
         >
           {t("description")}
         </motion.p>
@@ -70,18 +75,18 @@ export function Hero() {
           initial={reduced ? false : { opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.6 }}
-          className="mt-9 flex flex-wrap items-center gap-3"
+          className="mt-6 flex flex-wrap items-center gap-3 sm:mt-9"
         >
           <Link
-            href={WHATSAPP_HREF}
-            className="inline-flex h-12 items-center gap-2 rounded-full bg-brand px-6 text-sm font-bold text-white transition hover:bg-brand-deep"
+            href="/contato"
+            className="inline-flex h-12 items-center gap-2 rounded-full bg-brand px-6 text-sm font-bold text-white shadow-[0_10px_24px_rgba(8,191,196,0.28)] transition hover:bg-brand-deep"
           >
             {t("schedule")}
             <ArrowRight className="size-4" />
           </Link>
           <Link
             href="/cirurgias"
-            className="inline-flex h-12 items-center rounded-full border border-white/25 px-6 text-sm font-semibold text-white/88 transition hover:border-white/60"
+            className="inline-flex h-12 items-center rounded-full border border-white/25 bg-white/5 px-6 text-sm font-semibold text-white/92 backdrop-blur-xs transition hover:border-white/60 hover:bg-white/10"
           >
             {t("surgeries")}
           </Link>

@@ -35,22 +35,22 @@ export function CtaSection({
           alt={t("imageAlt")}
           width={1310}
           height={1200}
-          sizes="(max-width: 639px) 76vw, (max-width: 1023px) 58vw, 48vw"
+          sizes="(max-width: 1023px) 58vw, 48vw"
           priority
-          className="pointer-events-none absolute -bottom-[80px] right-[-19%] z-0 h-[112%] w-auto max-w-none object-contain object-bottom brightness-110 contrast-110 sm:-bottom-[96px] sm:right-[-9%] sm:h-[118%] lg:-bottom-[112px] lg:right-[-3%] lg:h-[124%]"
+          className="pointer-events-none absolute -bottom-[96px] right-[-9%] z-0 hidden h-[118%] w-auto max-w-none object-contain object-bottom brightness-110 contrast-110 sm:block lg:-bottom-[112px] lg:right-[-3%] lg:h-[124%]"
         />
-        <div className="pointer-events-none absolute inset-0 z-10 bg-[linear-gradient(90deg,var(--blue-dark)_0%,color-mix(in_srgb,var(--blue-dark)_98%,transparent)_38%,color-mix(in_srgb,var(--blue-dark)_78%,transparent)_54%,color-mix(in_srgb,var(--blue-dark)_18%,transparent)_76%,transparent_90%)] max-sm:bg-[linear-gradient(90deg,color-mix(in_srgb,var(--blue-dark)_96%,transparent)_0%,color-mix(in_srgb,var(--blue-dark)_84%,transparent)_48%,color-mix(in_srgb,var(--blue-dark)_24%,transparent)_100%)]" />
-        <div className="relative z-20 mx-auto flex min-h-[520px] max-w-6xl items-center px-6 py-16 sm:px-10 sm:py-20">
+        <div className="pointer-events-none absolute inset-0 z-10 hidden bg-[linear-gradient(90deg,var(--blue-dark)_0%,color-mix(in_srgb,var(--blue-dark)_98%,transparent)_38%,color-mix(in_srgb,var(--blue-dark)_78%,transparent)_54%,color-mix(in_srgb,var(--blue-dark)_18%,transparent)_76%,transparent_90%)] sm:block" />
+        <div className="relative z-20 mx-auto flex min-h-[520px] max-w-6xl flex-col justify-between px-6 pt-12 pb-0 sm:flex-row sm:items-center sm:px-10 sm:py-20">
           <Reveal className="max-w-xl sm:max-w-[52%]">
             <div className="flex items-center gap-3 text-brand">
               <MapPin className="size-4" />
               <p className="text-[10px] font-bold uppercase tracking-[0.42em]">{eyebrow ?? t("eyebrow")}</p>
             </div>
-            <h2 className="mt-6 font-display text-[46px] font-medium leading-[0.98] sm:text-[64px]">
+            <h2 className="mt-5 font-display text-[38px] font-medium leading-[0.98] sm:mt-6 sm:text-[64px]">
               {title ?? t("title")}
             </h2>
-            <p className="mt-6 max-w-lg text-sm leading-7 text-white/72">{description ?? t("description")}</p>
-            <div className="mt-9 flex flex-wrap items-center gap-3">
+            <p className="mt-4 max-w-lg text-sm leading-6 text-white/78 sm:mt-6 sm:leading-7">{description ?? t("description")}</p>
+            <div className="mt-7 flex flex-wrap items-center gap-3 sm:mt-9">
               <Link
                 href={href}
                 target={isExternal ? "_blank" : undefined}
@@ -71,6 +71,17 @@ export function CtaSection({
               </a>
             </div>
           </Reveal>
+
+          <div className="relative mt-6 flex justify-center sm:hidden">
+            <Image
+              src="/brand/dr-claudio-cta.png"
+              alt={t("imageAlt")}
+              width={655}
+              height={600}
+              sizes="85vw"
+              className="pointer-events-none h-[290px] w-auto object-contain object-bottom brightness-110 contrast-110"
+            />
+          </div>
         </div>
       </div>
     </section>

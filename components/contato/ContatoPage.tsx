@@ -26,17 +26,19 @@ export function ContatoPage() {
       <section
         id="inicio"
         aria-labelledby="contato-hero-title"
-        className="relative isolate flex min-h-[700px] overflow-hidden bg-navy-deep text-white lg:min-h-[760px]"
+        className="relative isolate flex min-h-svh overflow-hidden bg-navy-deep text-white sm:min-h-[700px] lg:min-h-[760px]"
       >
-        <Image
-          src="/brand/hero-contato-jaleco.png"
-          alt={heroT("imageAlt")}
-          fill
-          priority
-          sizes="100vw"
-          className="-z-30 object-cover object-[68%_top] sm:object-top"
-        />
-        <div className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,var(--blue-dark)_0%,color-mix(in_srgb,var(--blue-dark)_90%,transparent)_28%,color-mix(in_srgb,var(--blue-dark)_42%,transparent)_42%,transparent_54%)] max-sm:bg-[linear-gradient(90deg,color-mix(in_srgb,var(--blue-dark)_92%,transparent)_0%,color-mix(in_srgb,var(--blue-dark)_70%,transparent)_65%,color-mix(in_srgb,var(--blue-dark)_25%,transparent)_100%)]" />
+        <div className="absolute inset-x-0 top-0 -z-30 h-[66svh] max-sm:[mask-image:linear-gradient(to_bottom,black_0%,black_42%,rgba(0,0,0,0.52)_72%,transparent_100%)] sm:inset-0 sm:h-full">
+          <Image
+            src="/brand/hero-contato-jaleco.png"
+            alt={heroT("imageAlt")}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[70%_12%] sm:object-top"
+          />
+        </div>
+        <div className="absolute inset-0 -z-20 bg-[linear-gradient(180deg,color-mix(in_srgb,var(--blue-dark)_40%,transparent)_0%,transparent_22%,color-mix(in_srgb,var(--blue-dark)_30%,transparent)_40%,color-mix(in_srgb,var(--blue-dark)_72%,transparent)_54%,color-mix(in_srgb,var(--blue-dark)_94%,transparent)_66%,var(--blue-dark)_78%)] sm:bg-[linear-gradient(90deg,var(--blue-dark)_0%,color-mix(in_srgb,var(--blue-dark)_92%,transparent)_30%,color-mix(in_srgb,var(--blue-dark)_45%,transparent)_46%,transparent_60%)]" />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(0deg,color-mix(in_srgb,var(--blue-dark)_65%,transparent)_0%,transparent_18%)]" />
         <motion.div
           className="hero-aurora absolute -left-32 top-1/3 -z-10 size-96 rounded-full bg-brand/20 blur-3xl"
@@ -44,21 +46,21 @@ export function ContatoPage() {
           transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
         />
 
-        <div className="relative mx-auto flex w-full max-w-6xl flex-col px-5 pb-6 pt-32 sm:px-8 sm:pb-8 lg:pt-36">
+        <div className="relative mx-auto flex w-full max-w-6xl flex-col justify-end px-5 pb-6 pt-[38svh] sm:justify-start sm:px-8 sm:pb-8 sm:pt-32 lg:pt-36">
           <div className="max-w-3xl animate-fade-up">
             <p className="text-[10px] font-bold uppercase tracking-[0.48em] text-brand sm:text-xs">
               {heroT("eyebrow")}
             </p>
             <h1
               id="contato-hero-title"
-              className="mt-6 max-w-2xl font-display text-[42px] font-medium leading-[0.92] tracking-[-0.035em] text-white sm:text-7xl lg:text-[86px]"
+              className="mt-4 max-w-2xl font-display text-[36px] font-medium leading-[0.92] tracking-[-0.035em] text-white sm:mt-6 sm:text-7xl lg:text-[86px]"
             >
               {heroT("title")}
             </h1>
-            <p className="mt-7 max-w-xl text-sm leading-7 text-white/72 sm:text-base">
+            <p className="mt-4 max-w-xl text-sm leading-6 text-white/78 sm:mt-7 sm:text-base sm:leading-7">
               {heroT("text")}
             </p>
-            <div className="mt-9 flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-wrap gap-3 sm:mt-9">
               <Link
                 href="#formulario"
                 className="inline-flex h-12 items-center gap-3 rounded-full bg-brand px-6 text-sm font-bold text-white transition hover:bg-brand-deep focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
@@ -78,7 +80,7 @@ export function ContatoPage() {
             </div>
           </div>
 
-          <div className="mt-12 grid gap-px overflow-hidden rounded-[26px] border border-white/12 bg-white/12 backdrop-blur-xl sm:mt-14 sm:grid-cols-3 lg:mt-16">
+          <div className="mt-8 grid gap-px overflow-hidden rounded-[26px] border border-white/12 bg-white/12 backdrop-blur-xl sm:mt-14 sm:grid-cols-3 lg:mt-16">
             <a
               href={primaryLocation.emailHref}
               className="animate-fade-up bg-navy-deep/50 px-5 py-4 transition hover:bg-navy-deep/70 sm:px-7 sm:py-5 focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-brand"
