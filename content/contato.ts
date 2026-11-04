@@ -12,7 +12,7 @@ export const contactLocations = [
     phones: [
       { label: "WhatsApp", value: "(47) 99611-7198", href: "tel:+5547996117198" },
     ],
-    whatsappHref: "https://wa.me/5547996117198",
+    whatsappHref: "https://wa.me/554796117198",
   },
   {
     id: "centro-clinico-santa-catarina",

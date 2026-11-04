@@ -115,6 +115,24 @@
         { "type": "Interview", "title": "The importance of aligning expectations with medical care", "text": "Jornal Opção interview about intimate surgery and follow-up care." }
       ]
     },
+    "instagram": {
+      "eyebrow": "On Instagram",
+      "title": "Daily insights and medical guidance.",
+      "description": "Follow educational videos, procedure explanations and clinic updates on the official @drclaudioeduardo profile.",
+      "follow": "Follow on Instagram",
+      "viewPost": "View on Instagram",
+      "verifiedRole": "Plastic Surgeon · CRM 14.706-SC | RQE 23.737",
+      "posts": [
+        { "tag": "Intimate Surgery", "title": "Phalloplasty: medical assessment and individualized planning", "caption": "Understand how the evaluation consultation works and the surgical safety criteria." },
+        { "tag": "Gender Affirmation", "title": "Masculinizing mastectomy and multidisciplinary care", "caption": "Bi-incisional technique with areola grafting, preoperative preparation and recovery." },
+        { "tag": "Facial Aesthetics", "title": "Aesthetic and functional Rhinoplasty", "caption": "Open and closed approaches to harmonize the nose and preserve breathing function." },
+        { "tag": "Rejuvenation", "title": "Facelift: firmness and natural contour", "caption": "Repositioning of muscles and deep tissues for lasting facial rejuvenation." },
+        { "tag": "Body Contouring", "title": "Safe Liposuction and body definition", "caption": "SBCP guidelines on surgical limits, techniques and postoperative recovery." },
+        { "tag": "Breast & Body", "title": "Breast Implants and Gluteoplasty", "caption": "Individualized choice of volume, anatomical plane and postoperative follow-up." },
+        { "tag": "Intimate Health", "title": "Female intimate surgery with discretion and care", "caption": "Specialized treatment focused on functional comfort and well-being." },
+        { "tag": "Clinic", "title": "In-person care in Blumenau, Brazil & Telemedicine", "caption": "Discover our clinic at Stein Tower Building and our partner hospitals." }
+      ]
+    },
     "cta": {
       "eyebrow": "Blumenau · SC",
       "title": "The next chapter can begin with a conversation.",

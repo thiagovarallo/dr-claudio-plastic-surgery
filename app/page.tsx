@@ -8,6 +8,7 @@ import { Header } from "@/components/home/Header";
 import { Hero } from "@/components/home/Hero";
 import { Historia } from "@/components/home/Historia";
 import { Hospitais } from "@/components/home/Hospitais";
+import { InstagramFeed } from "@/components/home/InstagramFeed";
 import { Unidades } from "@/components/home/Unidades";
 import { CtaSection } from "@/components/ui/CtaSection";
 
@@ -62,6 +63,7 @@ const homeSchema = {
         postalCode: "89010-022",
         addressCountry: "BR",
       },
+      sameAs: ["https://www.instagram.com/drclaudioeduardo"],
       areaServed: {
         "@type": "City",
         name: "Blumenau",
@@ -74,6 +76,7 @@ const homeSchema = {
       url: `${BASE_URL}/claudio-eduardo-cirurgiao-plastico`,
       image: `${BASE_URL}/home/doutor-hero.png`,
       medicalSpecialty: "PlasticSurgery",
+      sameAs: ["https://www.instagram.com/drclaudioeduardo"],
       identifier: [
         { "@type": "PropertyValue", name: "CRM", value: "14.706-SC" },
         { "@type": "PropertyValue", name: "RQE", value: "23.737" },
@@ -101,6 +104,7 @@ export default function Home() {
         <Unidades />
         <Hospitais />
         <DrNaMidia />
+        <InstagramFeed />
         <CtaSection />
       </main>
       <Footer />

@@ -29,7 +29,7 @@ export function ContatoForm() {
     ].join("\n");
 
     window.open(
-      `https://wa.me/5547996117198?text=${encodeURIComponent(message)}`,
+      `https://wa.me/554796117198?text=${encodeURIComponent(message)}`,
       "_blank",
       "noopener,noreferrer",
     );

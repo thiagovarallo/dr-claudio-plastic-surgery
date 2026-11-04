@@ -25,7 +25,7 @@ export function CirurgiaContactForm({ surgeryTitle }: { surgeryTitle: string }) 
       `${tr("Comentário:")} ${form.get("comentario") || tr("Não informado")}`,
     ].join("\n");
 
-    window.open(`https://wa.me/5547996117198?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
+    window.open(`https://wa.me/554796117198?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
   }
 
   return (

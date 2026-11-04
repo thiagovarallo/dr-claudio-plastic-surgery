@@ -88,6 +88,15 @@ export function Footer() {
                 <a href={unit.emailHref} className="break-all transition hover:text-white">
                   {unit.email}
                 </a>
+                <br />
+                <a
+                  href="https://www.instagram.com/drclaudioeduardo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition hover:text-white"
+                >
+                  @drclaudioeduardo
+                </a>
               </p>
               <p>
                 {t("weekdays")}

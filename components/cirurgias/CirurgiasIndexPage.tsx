@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { Footer } from "@/components/home/Footer";
 import { Header } from "@/components/home/Header";
 import { Reveal } from "@/components/ui/Reveal";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppFloat";
 import { surgeries } from "@/content/home";
 import { WHATSAPP_HREF } from "@/content/site";
 
@@ -199,13 +200,24 @@ export function CirurgiasIndexPage() {
                   </li>
                 ))}
               </ul>
-              <Link
-                href={WHATSAPP_HREF}
-                className="mt-8 inline-flex h-12 items-center gap-2 rounded-full bg-brand px-6 text-sm font-bold text-white transition hover:bg-brand-deep"
-              >
-                {t("scheduleFull")}
-                <ArrowRight className="size-4" />
-              </Link>
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <Link
+                  href="/contato"
+                  className="inline-flex h-12 items-center gap-2 rounded-full bg-brand px-6 text-sm font-bold text-white transition hover:bg-brand-deep"
+                >
+                  {t("scheduleFull")}
+                  <ArrowRight className="size-4" />
+                </Link>
+                <a
+                  href={WHATSAPP_HREF}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-12 items-center gap-2.5 rounded-full bg-[#25D366] px-6 text-sm font-bold text-white shadow-[0_10px_24px_rgba(37,211,102,0.28)] transition hover:bg-[#1ebe5d]"
+                >
+                  <WhatsAppIcon className="size-4" />
+                  WhatsApp
+                </a>
+              </div>
             </Reveal>
           </div>
         </section>

@@ -115,6 +115,24 @@
         { "type": "Entrevista", "title": "La importancia de alinear expectativas y cuidado médico", "text": "Entrevista para Jornal Opção sobre cirugía íntima y seguimiento." }
       ]
     },
+    "instagram": {
+      "eyebrow": "En Instagram",
+      "title": "Contenidos y orientaciones en el día a día.",
+      "description": "Siga videos educativos, aclaraciones sobre procedimientos y la rutina de la clínica en el perfil oficial @drclaudioeduardo.",
+      "follow": "Seguir en Instagram",
+      "viewPost": "Ver en Instagram",
+      "verifiedRole": "Cirujano Plástico · CRM 14.706-SC | RQE 23.737",
+      "posts": [
+        { "tag": "Cirugía Íntima", "title": "Faloplastia: evaluación médica y planificación individualizada", "caption": "Conozca cómo funciona la consulta de evaluación y los criterios de seguridad quirúrgica." },
+        { "tag": "Afirmación de Género", "title": "Mastectomía masculinizadora y cuidado transdisciplinario", "caption": "Técnica bi-incisional con injerto de areolas, preparación preoperatoria y recuperación." },
+        { "tag": "Estética Facial", "title": "Rinoplastia estética y funcional", "caption": "Abordajes abierto y cerrado para armonizar la nariz y preservar la función respiratoria." },
+        { "tag": "Rejuvenecimiento", "title": "Lifting Facial: firmeza y contorno natural", "caption": "Reposicionamiento de músculos y tejidos profundos para un rejuvenecimiento duradero." },
+        { "tag": "Contorno Corporal", "title": "Liposucción segura y definición corporal", "caption": "Orientaciones de la SBCP sobre límites quirúrgicos, técnicas y posoperatorio." },
+        { "tag": "Cirugía Mamaria", "title": "Implantes Mamarios y Gluteoplastia", "caption": "Elección individualizada de volumen, plano anatómico y seguimiento posoperatorio." },
+        { "tag": "Salud Íntima", "title": "Cirugía íntima femenina con discreción y cuidado", "caption": "Atención especializada enfocada en la comodidad funcional y el bienestar." },
+        { "tag": "Consultorio", "title": "Atención presencial en Blumenau/SC y Telemedicina", "caption": "Conozca nuestra estructura en el Edificio Stein Tower y los hospitales asociados." }
+      ]
+    },
     "cta": {
       "eyebrow": "Blumenau · SC",
       "title": "La próxima etapa de la historia puede comenzar con una conversación.",

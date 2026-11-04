@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, MapPin } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Reveal } from "@/components/ui/Reveal";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppFloat";
 import { WHATSAPP_HREF } from "@/content/site";
 
 type CtaSectionProps = {
@@ -19,10 +20,11 @@ export function CtaSection({
   title,
   description,
   ctaLabel,
-  href = WHATSAPP_HREF,
+  href = "/contato",
   className = "",
 }: CtaSectionProps) {
   const t = useTranslations("home.cta");
+  const isExternal = href.startsWith("http");
 
   return (
     <section className={`px-4 pb-4 sm:px-6 bg-[#f2f7fb] sm:pb-6 ${className}`.trim()}>
@@ -48,15 +50,26 @@ export function CtaSection({
               {title ?? t("title")}
             </h2>
             <p className="mt-6 max-w-lg text-sm leading-7 text-white/72">{description ?? t("description")}</p>
-            <Link
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-9 inline-flex h-12 items-center gap-3 rounded-full bg-brand px-6 text-sm font-bold text-white transition hover:bg-brand-deep"
-            >
-              {ctaLabel ?? t("ctaLabel")}
-              <ArrowRight className="size-4" />
-            </Link>
+            <div className="mt-9 flex flex-wrap items-center gap-3">
+              <Link
+                href={href}
+                target={isExternal ? "_blank" : undefined}
+                rel={isExternal ? "noopener noreferrer" : undefined}
+                className="inline-flex h-12 items-center gap-3 rounded-full bg-brand px-6 text-sm font-bold text-white transition hover:bg-brand-deep"
+              >
+                {ctaLabel ?? t("ctaLabel")}
+                <ArrowRight className="size-4" />
+              </Link>
+              <a
+                href={WHATSAPP_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-12 items-center gap-2.5 rounded-full bg-[#25D366] px-6 text-sm font-bold text-white shadow-[0_10px_24px_rgba(37,211,102,0.28)] transition hover:bg-[#1ebe5d]"
+              >
+                <WhatsAppIcon className="size-4" />
+                WhatsApp
+              </a>
+            </div>
           </Reveal>
         </div>
       </div>

@@ -1,5 +1,8 @@
-export const WHATSAPP_HREF = "https://wa.me/5547996117198";
+export const WHATSAPP_NUMBER = "554796117198";
+export const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER}`;
 export const WHATSAPP_LABEL = "Entre em contato";
+export const INSTAGRAM_HANDLE = "@drclaudioeduardo";
+export const INSTAGRAM_HREF = "https://www.instagram.com/drclaudioeduardo";
 
 export const COLORS = {
   blue: "#0079b5",

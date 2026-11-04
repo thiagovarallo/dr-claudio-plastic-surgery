@@ -6,6 +6,7 @@ import { AnimatePresence, motion, useReducedMotion, useScroll, useTransform } fr
 import { useTranslations } from "next-intl";
 import { useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, Mail, MapPin, Phone, Video } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppFloat";
 import { clinicGallery, units } from "@/content/home";
 import { WHATSAPP_HREF } from "@/content/site";
 
@@ -200,13 +201,24 @@ export function Unidades() {
                 </a>
               </address>
 
-              <Link
-                href={WHATSAPP_HREF}
-                className="mt-8 inline-flex h-12 items-center gap-4 rounded-full bg-brand px-8 text-sm font-bold text-white shadow-[0_10px_24px_rgba(8,191,196,0.26)] transition hover:-translate-y-0.5 hover:bg-brand-deep"
-              >
-                {t(`items.${unitIndex}.contact`)}
-                <ArrowRight className="size-4" />
-              </Link>
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <Link
+                  href="/contato"
+                  className="inline-flex h-12 items-center gap-3 rounded-full bg-brand px-7 text-sm font-bold text-white shadow-[0_10px_24px_rgba(8,191,196,0.26)] transition hover:-translate-y-0.5 hover:bg-brand-deep"
+                >
+                  {t(`items.${unitIndex}.contact`)}
+                  <ArrowRight className="size-4" />
+                </Link>
+                <a
+                  href={WHATSAPP_HREF}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-12 items-center gap-2.5 rounded-full bg-[#25D366] px-6 text-sm font-bold text-white shadow-[0_10px_24px_rgba(37,211,102,0.28)] transition hover:-translate-y-0.5 hover:bg-[#1ebe5d]"
+                >
+                  <WhatsAppIcon className="size-4" />
+                  WhatsApp
+                </a>
+              </div>
             </motion.div>
           </AnimatePresence>
         </div>
