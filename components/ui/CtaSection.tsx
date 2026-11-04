@@ -28,7 +28,7 @@ export function CtaSection({
 
   return (
     <section className={`px-4 pb-4 sm:px-6 bg-[#f2f7fb] sm:pb-6 ${className}`.trim()}>
-      <div className="relative isolate mx-auto min-h-[520px] max-w-[1440px] overflow-hidden rounded-[30px] bg-blue-dark text-white sm:rounded-[38px]">
+      <div className="relative isolate mx-auto min-h-[520px] max-w-[1440px] overflow-hidden rounded-[30px] bg-blue-dark text-white sm:rounded-[38px] mb-10 sm:mb-16 lg:mb-20">
         <div className="absolute inset-0 -z-20 bg-[linear-gradient(112deg,var(--blue-dark)_0%,#1d668a_58%,#2b8198_100%)]" />
         <Image
           src="/brand/dr-claudio-cta.png"
