@@ -40,12 +40,24 @@ export function Header() {
 
   return (
     <motion.header
+      data-developer="Thiago Varallo"
+      data-linkedin="https://www.linkedin.com/in/thiago-varallo/"
       className={`fixed inset-x-0 top-0 z-[100] transition-[background,box-shadow,border-color] duration-500 ${
         scrolled || menuOpen
           ? "border-b border-ink/8 bg-white/78 shadow-[0_10px_40px_rgba(27,85,121,0.10)] backdrop-blur-xl"
           : "border-b border-transparent bg-transparent"
       }`}
     >
+      <a
+        href="https://www.linkedin.com/in/thiago-varallo/"
+        target="_blank"
+        rel="author noopener noreferrer"
+        tabIndex={-1}
+        aria-hidden="true"
+        className="sr-only"
+      >
+        Desenvolvido por Thiago Varallo — LinkedIn
+      </a>
       <div className="mx-auto flex h-[76px] max-w-6xl items-center gap-3 px-4 sm:gap-6 sm:px-8">
         <Link
           href="/#inicio"

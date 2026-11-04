@@ -162,7 +162,9 @@
       "careItems": ["Consulta especializada", "Planificación quirúrgica", "Seguimiento y controles", "Cirugía estética y reconstructiva"],
       "aboutText": "Cirugía plástica estética, reconstructiva y de afirmación de género en Blumenau, Santa Catarina.",
       "weekdays": "De lunes a viernes",
-      "copyright": "© 2026 Claudio Eduardo Cirujano Plástico · Todos los derechos reservados"
+      "copyright": "© 2026 Claudio Eduardo Cirujano Plástico · Todos los derechos reservados",
+      "agencyLeft": "Lo que hacemos",
+      "agencyRight": "Lo cambia todo."
     }
   },
   "contact": {

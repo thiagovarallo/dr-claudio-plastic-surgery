@@ -27,6 +27,13 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     metadataBase: new URL(BASE_URL),
+    authors: [
+      {
+        name: "Thiago Varallo",
+        url: "https://www.linkedin.com/in/thiago-varallo/",
+      },
+    ],
+    creator: "Thiago Varallo — https://www.linkedin.com/in/thiago-varallo/",
     title: {
       default: t("siteTitle"),
       template: "%s | Dr. Claudio Eduardo",

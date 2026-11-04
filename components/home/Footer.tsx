@@ -107,7 +107,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mx-auto mt-14 flex max-w-6xl flex-col gap-4 border-t border-white/20 px-5 pt-6 text-xs leading-5 text-white/70 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+        <div className="mx-auto mt-14 flex max-w-6xl flex-col gap-5 border-t border-white/20 px-5 pt-6 text-xs leading-5 text-white/70 sm:flex-row sm:items-center sm:justify-between sm:px-8">
           <span>{t("copyright")}</span>
           <Link href="/#inicio" className="relative h-7 w-36 shrink-0" aria-label={headerT("homeAria")}>
             <Image
@@ -115,9 +115,33 @@ export function Footer() {
               alt="Dr. Claudio Eduardo"
               fill
               sizes="144px"
-              className="object-contain object-right brightness-0 invert"
+              className="object-contain object-left brightness-0 invert sm:object-right"
             />
           </Link>
+        </div>
+
+        <div className="mx-auto mt-6 max-w-6xl border-t border-white/12 px-5 pt-6 sm:px-8">
+          <a
+            href="https://www.extrategica.com.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Extratégica Digital — O que fazemos muda tudo"
+            className="group mx-auto flex w-fit items-center justify-center gap-4 text-white/75 transition hover:text-white sm:gap-6"
+          >
+            <span className="text-xs font-semibold tracking-wide transition group-hover:text-white">
+              {t("agencyLeft")}
+            </span>
+            <Image
+              src="/brand/logo-extrategica.svg"
+              alt="Extratégica Digital"
+              width={92}
+              height={59}
+              className="h-9 w-auto object-contain opacity-95 transition duration-300 group-hover:scale-105 group-hover:opacity-100 sm:h-11"
+            />
+            <span className="text-xs font-semibold tracking-wide transition group-hover:text-white">
+              {t("agencyRight")}
+            </span>
+          </a>
         </div>
       </div>
     </footer>

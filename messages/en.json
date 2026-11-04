@@ -162,7 +162,9 @@
       "careItems": ["Specialist consultation", "Surgical planning", "Follow-up care", "Aesthetic and reconstructive surgery"],
       "aboutText": "Aesthetic, reconstructive and gender-affirming plastic surgery in Blumenau, Santa Catarina.",
       "weekdays": "Monday to Friday",
-      "copyright": "© 2026 Claudio Eduardo Plastic Surgeon · All rights reserved"
+      "copyright": "© 2026 Claudio Eduardo Plastic Surgeon · All rights reserved",
+      "agencyLeft": "What we do",
+      "agencyRight": "Changes everything."
     }
   },
   "contact": {
