@@ -22,6 +22,8 @@ const surgeryMeta: Record<string, { category: SurgeryCategory; number: string }>
   "Lifting facial": { category: "Estética", number: "08" },
   Lipoaspiração: { category: "Estética", number: "09" },
   Blefaroplastia: { category: "Estética", number: "10" },
+  Abdominoplastia: { category: "Estética", number: "11" },
+  Otoplastia: { category: "Estética", number: "12" },
 };
 
 export function CirurgiasIndexPage() {

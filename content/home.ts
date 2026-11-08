@@ -277,4 +277,16 @@ export const surgeries = [
     href: "/cirurgias/blefaroplastia",
     featured: false,
   },
+  {
+    title: "Abdominoplastia",
+    image: "/procedimentos/_destaque_abdominoplastia.jpg",
+    href: "/cirurgias/abdominoplastia",
+    featured: false,
+  },
+  {
+    title: "Otoplastia",
+    image: "/procedimentos/_destaque_otoplastia.jpg",
+    href: "/cirurgias/otoplastia",
+    featured: false,
+  },
 ] as const;

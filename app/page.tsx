@@ -51,7 +51,7 @@ const homeSchema = {
       "@id": `${BASE_URL}/#clinic`,
       name: "Clínica Dr. Claudio Eduardo",
       url: BASE_URL,
-      image: `${BASE_URL}/home/doutor-hero.png`,
+      image: `${BASE_URL}/brand/hero-contato-jaleco.png`,
       telephone: "+55-47-98902-4069",
       email: "contato@drclaudioeduardo.com.br",
       medicalSpecialty: "PlasticSurgery",
@@ -78,7 +78,7 @@ const homeSchema = {
       "@id": `${BASE_URL}/#physician`,
       name: "Dr. Claudio Eduardo",
       url: `${BASE_URL}/claudio-eduardo-cirurgiao-plastico`,
-      image: `${BASE_URL}/home/doutor-hero.png`,
+      image: `${BASE_URL}/brand/hero-contato-jaleco.png`,
       medicalSpecialty: "PlasticSurgery",
       sameAs: [
         "https://www.instagram.com/drclaudioeduardo",

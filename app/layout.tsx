@@ -51,7 +51,7 @@ export async function generateMetadata(): Promise<Metadata> {
       type: "website",
       images: [
         {
-          url: "/home/doutor-hero.png",
+          url: "/brand/hero-contato-jaleco.png",
           width: 1200,
           height: 630,
           alt: "Dr. Claudio Eduardo — Cirurgião Plástico em Blumenau/SC",

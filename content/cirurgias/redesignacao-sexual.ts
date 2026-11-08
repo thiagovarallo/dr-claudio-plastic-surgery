@@ -2,7 +2,7 @@ import type { CirurgiaContent } from "./types";
 
 const procedureImage = {
   src: "/procedimentos/_destaque_cirurgia_de_mudanca_de_sexo.jpg",
-  alt: "Imagem ilustrativa para cirurgia de redesignação sexual",
+  alt: "Cirurgia de redesignação sexual e afirmação de gênero em Blumenau",
   width: 1200,
   height: 800,
 };
@@ -12,82 +12,131 @@ export const redesignacaoSexual: CirurgiaContent = {
   category: "Afirmação de gênero",
   title: "Redesignação sexual MTF",
   subtitle:
-    "Cuidado cirúrgico especializado, informação clara e acompanhamento individual em cada etapa da afirmação de gênero.",
+    "Cirurgia de afirmação de gênero realizada com técnica de inversão peniana e enxerto escrotal, estética anatômica detalhada e preservação da sensibilidade e orgasmo.",
   heroImage: procedureImage,
   benefits: [
-    "Planejamento individual e acolhimento respeitoso",
-    "Procedimento realizado em ambiente hospitalar",
-    "Acompanhamento estruturado no pós-operatório",
+    "Estética vulvar detalhada: neoclitóris, óstio urinário, canal vaginal, pequenos e grandes lábios",
+    "Preservação da sensibilidade tátil e erógena com capacidade de orgasmo",
+    "Técnica padrão de inversão peniana com enxerto de pele da bolsa escrotal",
+    "Internação hospitalar segura de 4 dias sem necessidade de UTI",
   ],
   overview: {
-    heading: "Uma decisão construída com escuta e informação",
+    heading: "Evolução cirúrgica, refinamento estético e acolhimento integral",
     paragraphs: [
-      "A cirurgia de redesignação sexual MTF, também chamada de cirurgia de afirmação de gênero, busca construir estruturas genitais alinhadas à identidade e aos objetivos de cada paciente.",
-      "O planejamento considera aspectos funcionais, estéticos, condições clínicas e expectativas. A técnica é individualizada e explicada detalhadamente durante a avaliação.",
-      "A consulta é conduzida com respeito, privacidade e espaço para esclarecer dúvidas sobre preparo, internação, recuperação e acompanhamento a longo prazo.",
+      "A cirurgia de redesignação sexual ou de reafirmação de gênero é realizada no Brasil há mais de 50 anos. Claro que a técnica foi aperfeiçoada ao longo do tempo e hoje conseguimos uma estética bem similar à de uma vulva, com detalhamento de todas as suas estruturas: neoclitóris, óstio urinário, canal vaginal, pequenos e grandes lábios.",
+      "A técnica comumente utilizada é a da inversão peniana com enxerto de pele da bolsa escrotal. Outras técnicas existentes, tais como a intestinal (jejuno) ou peritoneal, são utilizadas somente como 2ª opção; em caso de complicações de cirurgias primárias ou em situações específicas.",
+      "A sensibilidade também é preservada, podendo a paciente chegar ao orgasmo de forma plena e gratificante.",
     ],
-    image: procedureImage,
+    image: {
+      src: "/brand/clinic/consultorio-02.png",
+      alt: "Planejamento médico para cirurgia de afirmação de gênero em Blumenau",
+      width: 1200,
+      height: 800,
+    },
   },
-  gallery: [],
+  gallery: [
+    {
+      src: "/brand/clinic/consultorio-04.png",
+      alt: "Consultório médico do Dr. Claudio Eduardo em Blumenau",
+      width: 1200,
+      height: 800,
+    },
+    {
+      src: "/brand/clinic/consultorio-06.png",
+      alt: "Ambiente clínico para avaliação pré e pós-operatória",
+      width: 1200,
+      height: 800,
+    },
+  ],
   sections: [
     {
-      id: "preparo",
-      heading: "Preparo para a cirurgia",
+      id: "criterios-e-tecnicas",
+      heading: "Critérios de indicação e técnicas cirúrgicas",
       paragraphs: [
-        "O processo começa com avaliação clínica completa e conversa sobre objetivos, histórico de saúde e rede de apoio. Documentação e acompanhamento multiprofissional podem ser necessários conforme a situação individual e as orientações médicas vigentes.",
-        "O preparo também inclui exames, orientação anestésica e organização do período de permanência na cidade quando a paciente vem de outra região.",
+        "A realização da cirurgia obedece a critérios rigorosos de segurança e planejamento multidisciplinar:",
       ],
       bullets: [
-        "Avaliação clínica e exames pré-operatórios",
-        "Orientação sobre documentação e acompanhamento necessário",
-        "Planejamento de suporte durante a recuperação",
+        "Idade mínima: esta cirurgia só é possível de ser realizada a partir dos 21 anos completos.",
+        "Acompanhamento prévio de pelo menos 1 ano por psicólogo, psiquiatra e endocrinologista.",
+        "Técnica padrão-ouro: inversão peniana associada a enxerto de pele da bolsa escrotal para garantir profundidade adequada do canal vaginal.",
+        "Técnicas secundárias: abordagens intestinais (jejuno) ou peritoneais são utilizadas somente como 2ª opção, em situações específicas ou revisão de cirurgias primárias.",
       ],
-      image: { ...procedureImage, alt: "Planejamento médico para cirurgia de afirmação de gênero" },
+      image: {
+        src: "/brand/clinic/consultorio-05.png",
+        alt: "Planejamento individualizado e consulta médica",
+        width: 1200,
+        height: 800,
+      },
     },
     {
-      id: "cirurgia",
-      heading: "Cirurgia e internação",
+      id: "procedimento-e-internacao",
+      heading: "Ambiente hospitalar, duração e logística de estadia",
       paragraphs: [
-        "O procedimento é realizado em hospital, sob anestesia geral, por equipe cirúrgica e anestésica. A duração e o tempo de internação são definidos pelo planejamento e pela evolução pós-operatória.",
-        "Durante a consulta, são explicadas as etapas da técnica, os cuidados imediatos e as particularidades que podem variar de uma paciente para outra.",
-      ],
-      image: { src: "/brand/clinic/treatment-room.jpg", alt: "Ambiente clínico para orientação pré-operatória", width: 1200, height: 800 },
-    },
-    {
-      id: "pos-operatorio",
-      heading: "Recuperação e seguimento",
-      paragraphs: [
-        "A recuperação exige acompanhamento próximo, cuidados locais e retorno progressivo às atividades. As orientações incluem higiene, medicações, manejo de curativos e, quando indicado, cuidados específicos para manutenção do canal vaginal.",
-        "O tempo para trabalho, exercícios e relações sexuais é individualizado e liberado somente conforme a evolução clínica.",
+        "Todo o procedimento é conduzido com máxima segurança, privacidade e acolhimento hospitalar:",
       ],
       bullets: [
-        "Acompanhamento pós-operatório programado",
-        "Orientações para cuidados locais e atividades",
-        "Canal direto com a equipe para dúvidas durante a recuperação",
+        "Realizada em ambiente hospitalar de alto padrão, sob anestesia geral, com duração ao redor de 6 horas.",
+        "Não necessita de UTI no pós-operatório.",
+        "A internação hospitalar é de 4 dias.",
+        "A paciente necessitará permanecer em nossa cidade por mais 11 dias após a alta, perfazendo o total de 15 dias a contar da data da cirurgia.",
       ],
-      image: { src: "/brand/clinic/reception.jpg", alt: "Ambiente de acolhimento para retornos médicos", width: 1200, height: 800 },
+      image: {
+        src: "/brand/clinic/treatment-room.jpg",
+        alt: "Estrutura hospitalar e clínica para o procedimento",
+        width: 1200,
+        height: 800,
+      },
+    },
+    {
+      id: "cuidados-dilatacoes-recuperacao",
+      heading: "Pós-operatório, dilatações e retorno às atividades",
+      paragraphs: [
+        "Os cuidados imediatos e as orientações para manutenção do canal neovaginal são detalhados minuciosamente pela equipe:",
+      ],
+      bullets: [
+        "A paciente fica com sonda vesical, drenos e tampão no canal da neo-vagina por 7 a 8 dias.",
+        "Após isto, iniciamos as dilatações vaginais, que deverão acontecer ao longo da vida para manter a amplitude e a profundidade vaginal.",
+        "O retorno às atividades profissionais poderá iniciar-se após 15 dias (a depender da ocupação exercida).",
+        "Quanto a atividades sexuais com penetração, aguarda-se 90 dias para a completa cicatrização e segurança dos tecidos.",
+      ],
+      image: {
+        src: "/brand/clinic/consultorio-01.png",
+        alt: "Recepção da clínica Dr. Claudio Eduardo em Blumenau",
+        width: 1200,
+        height: 800,
+      },
     },
   ],
   faq: [
     {
-      question: "Quem pode realizar a cirurgia?",
-      answer: "A elegibilidade é definida após avaliação médica individual. A equipe orienta sobre idade, condições clínicas, exames e os acompanhamentos necessários para cada caso.",
+      question: "Qual a idade mínima e os pré-requisitos para a cirurgia de redesignação sexual?",
+      answer:
+        "Esta cirurgia só é possível de ser realizada a partir dos 21 anos, com acompanhamento prévio de pelo menos 1 ano comprovado por psicólogo, psiquiatra e endocrinologista.",
     },
     {
-      question: "Quanto tempo dura a recuperação?",
-      answer: "O período varia conforme a técnica e a evolução de cada paciente. A equipe apresenta um plano de recuperação e libera atividades de forma gradual.",
+      question: "Como funciona a estética e a sensibilidade com a técnica de inversão peniana?",
+      answer:
+        "A cirurgia atinge uma estética muito próxima à da vulva, com detalhamento de neoclitóris, óstio urinário, canal vaginal, pequenos e grandes lábios. A sensibilidade também é preservada, podendo a paciente chegar ao orgasmo.",
     },
     {
-      question: "É necessário permanecer em Blumenau após a cirurgia?",
-      answer: "Para pacientes de outras cidades, é preciso planejar uma permanência compatível com a internação e os primeiros retornos. O prazo é definido na consulta.",
+      question: "Quanto tempo dura a cirurgia e qual é o tempo de internação?",
+      answer:
+        "Realizada em ambiente hospitalar, sob anestesia geral, a cirurgia tem duração ao redor de 6 horas. Não necessita de UTI no pós-operatório. A internação hospitalar é de 4 dias e a paciente necessitará permanecer em nossa cidade (Blumenau/SC) por mais 11 dias, perfazendo o total de 15 dias a contar da data da cirurgia.",
     },
     {
-      question: "Como são tratadas as expectativas sobre resultado?",
-      answer: "A consulta aborda as possibilidades, limites, riscos e cuidados do procedimento de maneira individual, com espaço para dúvidas e decisões informadas.",
+      question: "Por quanto tempo fico com sonda e como funcionam as dilatações vaginais?",
+      answer:
+        "A paciente fica com sonda vesical, drenos e tampão no canal da neo-vagina por 7 a 8 dias. Após este período e com a retirada do tampão, iniciam-se as dilatações vaginais com moldes anatômicos, que deverão acontecer ao longo da vida para preservar a profundidade e elasticidade do canal.",
+    },
+    {
+      question: "Quando posso retornar ao trabalho e às atividades sexuais?",
+      answer:
+        "O retorno às atividades profissionais pode iniciar-se após 15 dias (a depender da exigência física da ocupação). Quanto às atividades sexuais, aguarda-se 90 dias para cicatrização completa.",
     },
   ],
   seo: {
     title: "Redesignação Sexual MTF em Blumenau/SC | Dr. Claudio Eduardo",
-    description: "Informações sobre cirurgia de redesignação sexual MTF (afirmação de gênero), preparo e recuperação em Blumenau/SC com o Dr. Claudio Eduardo.",
+    description:
+      "Cirurgia de redesignação sexual MTF (afirmação de gênero) em Blumenau/SC com o Dr. Claudio Eduardo. Inversão peniana, preservação da sensibilidade e acompanhamento especializado.",
   },
 };

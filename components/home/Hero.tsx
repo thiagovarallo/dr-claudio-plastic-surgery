@@ -34,17 +34,14 @@ export function Hero() {
         style={{ y: imageY, scale: imageScale }}
         className="absolute inset-x-0 top-0 -z-20 h-[68svh] max-sm:[mask-image:linear-gradient(to_bottom,black_0%,black_44%,rgba(0,0,0,0.55)_72%,transparent_100%)] sm:inset-0 sm:h-full"
       >
-        <picture className="block size-full">
-          <source media="(max-width: 639px)" srcSet="/brand/hero-home-mobile.png" />
-          <Image
-            src="/brand/hero-home-desktop.png"
-            alt={t("imageAlt")}
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-[76%_16%] sm:object-[72%_18%] lg:object-[70%_14%]"
-          />
-        </picture>
+        <Image
+          src="/brand/hero-contato-jaleco.png"
+          alt={t("imageAlt")}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[70%_12%] sm:object-top"
+        />
       </motion.div>
 
       {/* Gradiente cinematográfico multi-stop: mescla imagem e BG sem qualquer linha divisória */}
