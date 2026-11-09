@@ -17,7 +17,7 @@ export async function GET() {
   const accessToken = process.env.INSTAGRAM_ACCESS_TOKEN;
   if (accessToken) {
     try {
-      const url = `https://graph.instagram.com/me/media?fields=id,shortcode,caption,media_type,media_url,thumbnail_url,permalink,timestamp&limit=12&access_token=${encodeURIComponent(accessToken)}`;
+      const url = `https://graph.instagram.com/me/media?fields=id,shortcode,caption,media_type,media_url,thumbnail_url,permalink,timestamp&limit=25&access_token=${encodeURIComponent(accessToken)}`;
       const res = await fetch(url, { next: { revalidate: 1800 } });
       if (res.ok) {
         const data = await res.json();
@@ -59,7 +59,7 @@ export async function GET() {
         const data = await res.json();
         const rawPosts = Array.isArray(data) ? data : data.posts;
         if (Array.isArray(rawPosts) && rawPosts.length > 0) {
-          const posts: InstagramPostItem[] = rawPosts.slice(0, 12).map((item: Record<string, unknown>) => {
+          const posts: InstagramPostItem[] = rawPosts.slice(0, 25).map((item: Record<string, unknown>) => {
             const caption = String(item.caption ?? item.prunedCaption ?? "");
             const mediaType = String(item.mediaType ?? "IMAGE") as InstagramPostItem["mediaType"];
             const isVideo = mediaType === "VIDEO";

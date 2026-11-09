@@ -160,7 +160,7 @@ export function InstagramFeed() {
 
         <div
           className="marquee-track flex w-max gap-5 px-2.5"
-          style={{ animationDuration: "46s" }}
+          style={{ animationDuration: `${Math.max(46, Math.round(baseTrack.length * 5.5))}s` }}
         >
           {loopItems.map((item, idx) => {
             const isDuplicate = idx >= baseTrack.length;
