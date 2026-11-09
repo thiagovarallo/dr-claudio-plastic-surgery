@@ -9,7 +9,7 @@ import { WhatsAppIcon } from "@/components/ui/WhatsAppFloat";
 import { surgeries } from "@/content/home";
 import { WHATSAPP_HREF } from "@/content/site";
 
-type SurgeryCategory = "Estética" | "Íntima" | "Afirmação de gênero";
+type SurgeryCategory = "Estética" | "Íntima" | "Afirmação de gênero" | "Reparadora";
 
 const surgeryMeta: Record<string, { category: SurgeryCategory; number: string }> = {
   "Aumento peniano": { category: "Íntima", number: "01" },
@@ -24,6 +24,7 @@ const surgeryMeta: Record<string, { category: SurgeryCategory; number: string }>
   Blefaroplastia: { category: "Estética", number: "10" },
   Abdominoplastia: { category: "Estética", number: "11" },
   Otoplastia: { category: "Estética", number: "12" },
+  "Corpo estranho no pênis": { category: "Reparadora", number: "13" },
 };
 
 export function CirurgiasIndexPage() {

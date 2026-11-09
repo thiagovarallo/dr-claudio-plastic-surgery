@@ -25,7 +25,20 @@ export async function generateMetadata(): Promise<Metadata> {
       title: t("contactOgTitle"),
       description: t("contactOgDescription"),
       url: `${BASE_URL}/contato`,
+      siteName: "Dr. Claudio Eduardo — Cirurgião Plástico",
       type: "website",
+      images: [
+        {
+          url: "/brand/stein-tower.jpg",
+          alt: "Clínica Dr. Claudio Eduardo — Edifício Stein Tower em Blumenau/SC",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("contactOgTitle"),
+      description: t("contactOgDescription"),
+      images: ["/brand/stein-tower.jpg"],
     },
   };
 }

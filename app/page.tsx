@@ -28,7 +28,22 @@ export async function generateMetadata(): Promise<Metadata> {
       title: t("siteTitle"),
       description: t("siteDescription"),
       url: BASE_URL,
+      siteName: "Dr. Claudio Eduardo — Cirurgião Plástico",
       type: "website",
+      images: [
+        {
+          url: "/brand/hero-contato-jaleco.png",
+          width: 1200,
+          height: 630,
+          alt: "Dr. Claudio Eduardo — Cirurgião Plástico em Blumenau/SC",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("siteTitle"),
+      description: t("siteDescription"),
+      images: ["/brand/hero-contato-jaleco.png"],
     },
   };
 }
@@ -52,7 +67,7 @@ const homeSchema = {
       name: "Clínica Dr. Claudio Eduardo",
       url: BASE_URL,
       image: `${BASE_URL}/brand/hero-contato-jaleco.png`,
-      telephone: "+55-47-98902-4069",
+      telephone: "+55-47-99611-7198",
       email: "contato@drclaudioeduardo.com.br",
       medicalSpecialty: "PlasticSurgery",
       address: {

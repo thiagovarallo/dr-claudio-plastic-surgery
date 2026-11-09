@@ -24,7 +24,7 @@ export async function generateMetadata({
   const locale = await getLocale();
   const seo = localizeContent(locale, cirurgia.seo);
   const cleanTitle = seo.title.replace(/\s*\|\s*Dr\. Claudio Eduardo$/, "");
-  const ogImage = cirurgia.heroImage?.src ?? cirurgia.overview.image?.src ?? "/home/doutor-hero.png";
+  const ogImage = cirurgia.heroImage?.src ?? cirurgia.overview.image?.src ?? "/brand/hero-contato-jaleco.png";
 
   return {
     title: cleanTitle,
@@ -36,6 +36,7 @@ export async function generateMetadata({
       title: seo.title,
       description: seo.description,
       url: `${BASE_URL}/cirurgias/${slug}`,
+      siteName: "Dr. Claudio Eduardo — Cirurgião Plástico",
       type: "article",
       images: [
         {
@@ -43,6 +44,12 @@ export async function generateMetadata({
           alt: cirurgia.heroImage?.alt ?? cirurgia.title,
         },
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: seo.title,
+      description: seo.description,
+      images: [ogImage],
     },
   };
 }
@@ -60,7 +67,7 @@ export default async function CirurgiaRoutePage({ params }: CirurgiaRouteProps) 
   const pageUrl = `${BASE_URL}/cirurgias/${slug}`;
   const ogImage = cirurgia.heroImage?.src
     ? `${BASE_URL}${cirurgia.heroImage.src}`
-    : `${BASE_URL}/home/doutor-hero.png`;
+    : `${BASE_URL}/brand/hero-contato-jaleco.png`;
 
   const surgerySchema = {
     "@context": "https://schema.org",

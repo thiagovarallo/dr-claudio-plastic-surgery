@@ -17,7 +17,22 @@ export async function generateMetadata(): Promise<Metadata> {
       title: `${t("surgeriesTitle")} | Dr. Claudio Eduardo`,
       description: t("surgeriesDescription"),
       url: `${BASE_URL}/cirurgias`,
+      siteName: "Dr. Claudio Eduardo — Cirurgião Plástico",
       type: "website",
+      images: [
+        {
+          url: "/brand/hero-contato-jaleco.png",
+          width: 1200,
+          height: 630,
+          alt: "Procedimentos e Cirurgias Plásticas — Dr. Claudio Eduardo",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${t("surgeriesTitle")} | Dr. Claudio Eduardo`,
+      description: t("surgeriesDescription"),
+      images: ["/brand/hero-contato-jaleco.png"],
     },
   };
 }

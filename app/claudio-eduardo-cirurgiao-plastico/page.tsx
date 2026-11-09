@@ -18,7 +18,20 @@ export async function generateMetadata(): Promise<Metadata> {
       title: `${t("historyTitle")} | Dr. Claudio Eduardo`,
       description: t("historyDescription"),
       url: `${BASE_URL}/claudio-eduardo-cirurgiao-plastico`,
+      siteName: "Dr. Claudio Eduardo — Cirurgião Plástico",
       type: "profile",
+      images: [
+        {
+          url: "/brand/hero-sobre.png",
+          alt: "Dr. Claudio Eduardo — Cirurgião Plástico em Blumenau/SC",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${t("historyTitle")} | Dr. Claudio Eduardo`,
+      description: t("historyDescription"),
+      images: ["/brand/hero-sobre.png"],
     },
   };
 }
@@ -48,7 +61,7 @@ const historySchema = {
       "@id": `${BASE_URL}/#physician`,
       name: "Dr. Claudio Eduardo",
       url: `${BASE_URL}/claudio-eduardo-cirurgiao-plastico`,
-      image: `${BASE_URL}/home/doutor-hero.png`,
+      image: `${BASE_URL}/brand/hero-sobre.png`,
       medicalSpecialty: "PlasticSurgery",
       description:
         "Cirurgião plástico em Blumenau/SC (CRM 14.706-SC | RQE 23.737), com 12 anos de formação médica e especializações em Cirurgia Geral, Cirurgia Plástica e Cirurgia Crânio-Maxilo-Facial (HC-FMUSP).",

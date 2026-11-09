@@ -39,6 +39,21 @@ export async function generateMetadata(): Promise<Metadata> {
       template: "%s | Dr. Claudio Eduardo",
     },
     description: t("siteDescription"),
+    keywords: [
+      "cirurgião plástico Blumenau",
+      "Dr. Claudio Eduardo",
+      "cirurgia plástica Blumenau SC",
+      "mamoplastia Blumenau",
+      "abdominoplastia Blumenau",
+      "lipoaspiração Blumenau",
+      "rinoplastia Blumenau",
+      "blefaroplastia Blumenau",
+      "otoplastia Blumenau",
+      "faloplastia aumento peniano",
+      "redesignação sexual",
+      "gluteoplastia Blumenau",
+      "ninfoplastia Blumenau",
+    ],
     icons: {
       icon: [
         { url: "/favicon.ico", sizes: "any" },
@@ -64,6 +79,12 @@ export async function generateMetadata(): Promise<Metadata> {
           alt: "Dr. Claudio Eduardo — Cirurgião Plástico em Blumenau/SC",
         },
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("siteTitle"),
+      description: t("siteDescription"),
+      images: ["/brand/hero-contato-jaleco.png"],
     },
     robots: {
       index: true,
