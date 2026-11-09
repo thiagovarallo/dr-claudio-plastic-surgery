@@ -289,4 +289,10 @@ export const surgeries = [
     href: "/cirurgias/otoplastia",
     featured: false,
   },
+  {
+    title: "Corpo estranho no pênis",
+    image: "/procedimentos/_destaque_corpo_estranho_penis.jpg",
+    href: "/cirurgias/corpo-estranho-no-penis",
+    featured: false,
+  },
 ] as const;

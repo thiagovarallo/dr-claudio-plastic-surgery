@@ -2,6 +2,7 @@ import { abdominoplastia } from "./abdominoplastia";
 import { aumentoPenianoFaloplastia } from "./aumento-peniano-faloplastia";
 import { blefaroplastia } from "./blefaroplastia";
 import { cirurgiaIntimaFeminina } from "./cirurgia-intima-feminina";
+import { corpoEstranhoNoPenis } from "./corpo-estranho-no-penis";
 import { gluteoplastia } from "./gluteoplastia";
 import { liftingFacial } from "./lifting-facial";
 import { lipoaspiracao } from "./lipoaspiracao";
@@ -25,6 +26,7 @@ const cirurgias: CirurgiaContent[] = [
   blefaroplastia,
   abdominoplastia,
   otoplastia,
+  corpoEstranhoNoPenis,
 ];
 
 export function getAllCirurgias(): CirurgiaContent[] {

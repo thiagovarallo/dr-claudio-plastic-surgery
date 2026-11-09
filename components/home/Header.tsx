@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { AnimatePresence, motion, useMotionValueEvent, useReducedMotion, useScroll } from "motion/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ChevronDown, Languages, Menu, X } from "lucide-react";
 import { locales, navigation, type LocaleCode } from "@/content/home";
 import { WHATSAPP_HREF } from "@/content/site";
@@ -29,6 +29,17 @@ export function Header() {
     setScrolled(value > 28);
   });
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
   const currentLocale = locales.find((item) => item.code === locale) ?? locales[0];
   const active = pathname.startsWith("/cirurgias")
     ? "/cirurgias"
@@ -43,9 +54,11 @@ export function Header() {
       data-developer="Thiago Varallo"
       data-linkedin="https://www.linkedin.com/in/thiago-varallo/"
       className={`fixed inset-x-0 top-0 z-[100] transition-[background,box-shadow,border-color] duration-500 ${
-        scrolled || menuOpen
-          ? "border-b border-ink/8 bg-white/78 shadow-[0_10px_40px_rgba(27,85,121,0.10)] backdrop-blur-xl"
-          : "border-b border-transparent bg-transparent"
+        menuOpen
+          ? "border-b border-white/10 bg-navy-deep shadow-[0_10px_40px_rgba(22,50,71,0.3)]"
+          : scrolled
+            ? "border-b border-ink/8 bg-white/78 shadow-[0_10px_40px_rgba(27,85,121,0.10)] backdrop-blur-xl"
+            : "border-b border-transparent bg-transparent"
       }`}
     >
       <a
@@ -72,9 +85,11 @@ export function Header() {
             priority
             className="object-contain object-left transition-[filter] duration-500"
             style={{
-              filter: scrolled
-                    ? "none"
-                : "brightness(0) invert(1)",
+              filter: menuOpen
+                ? "brightness(0) invert(1)"
+                : scrolled
+                  ? "none"
+                  : "brightness(0) invert(1)",
             }}
           />
         </Link>
@@ -122,9 +137,11 @@ export function Header() {
               aria-expanded={langOpen}
               onClick={() => setLangOpen((open) => !open)}
               className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-2 text-[11px] font-bold tracking-[0.18em] transition ${
-                scrolled
-                  ? "border-ink/12 text-ink hover:border-brand/40"
-                  : "border-white/25 text-white hover:border-white/50"
+                menuOpen
+                  ? "border-white/25 text-white hover:border-white/50"
+                  : scrolled
+                    ? "border-ink/12 text-ink hover:border-brand/40"
+                    : "border-white/25 text-white hover:border-white/50"
               }`}
             >
               <Languages className="size-3.5" />
@@ -178,7 +195,11 @@ export function Header() {
           <button
             type="button"
             className={`grid size-10 place-items-center rounded-full border lg:hidden ${
-              scrolled ? "border-ink/12 text-ink" : "border-white/30 text-white"
+              menuOpen
+                ? "border-white/30 text-white"
+                : scrolled
+                  ? "border-ink/12 text-ink"
+                  : "border-white/30 text-white"
             }`}
             aria-expanded={menuOpen}
             aria-label={menuOpen ? t("closeMenu") : t("openMenu")}
