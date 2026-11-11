@@ -72,6 +72,10 @@ const historySchema = {
         },
         {
           "@type": "Hospital",
+          name: "Hospital do Servidor Público Municipal de São Paulo",
+        },
+        {
+          "@type": "Hospital",
           name: "Hospital do Estado de São Paulo Brigadeiro",
         },
         {

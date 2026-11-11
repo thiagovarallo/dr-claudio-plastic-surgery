@@ -53,7 +53,7 @@
       },
       {
         "value": "12 anos",
-        "hint": "De formação e pós-graduações"
+        "hint": "De formação na área médica, 3 especializações"
       }
     ],
     "differentials": {
@@ -66,7 +66,7 @@
         {
           "eyebrow": "Cirurgias",
           "title": "Planejamento seguro",
-          "text": "Cada procedimento é planejado conforme anatomia, objetivos e histórico de saúde."
+          "text": "Cada procedimento é planejado conforme seu perfil, objetivos e planejamento."
         }
       ],
       "more": "Saiba +"
@@ -89,14 +89,14 @@
         {
           "year": "1998",
           "label": "Residência em Cirurgia Geral",
-          "place": "Formação hospitalar",
+          "place": "Hospital do Servidor Público Municipal de São Paulo",
           "text": "Consolidação da base cirúrgica antes da especialização em cirurgia plástica."
         },
         {
           "year": "2001",
           "label": "Residência em Cirurgia Plástica",
           "place": "Hospital do Estado de São Paulo Brigadeiro",
-          "text": "Três anos de formação específica, com representação dos residentes em 2000 e 2001."
+          "text": "3 anos de formação especializada em Cirurgia Plástica, com representação dos residentes em 2000 e 2001."
         },
         {
           "year": "2004",

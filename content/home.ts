@@ -19,7 +19,7 @@ export const credibility = [
   { value: "CRM 14.706-SC", hint: "Conselho Regional de Medicina" },
   { value: "RQE 23.737", hint: "Especialista em Cirurgia Plástica" },
   { value: "SBCP", hint: "Sociedade Brasileira de Cirurgia Plástica" },
-  { value: "12 anos", hint: "De formação e pós-graduações" },
+  { value: "12 anos", hint: "De formação na área médica, 3 especializações" },
 ] as const;
 
 export const diferenciais = [
@@ -31,7 +31,7 @@ export const diferenciais = [
   {
     eyebrow: "Cirurgias",
     title: "Planejamento seguro",
-    text: "Cada procedimento é planejado conforme anatomia, objetivos e histórico de saúde.",
+    text: "Cada procedimento é planejado conforme seu perfil, objetivos e planejamento.",
   },
 ] as const;
 
@@ -72,7 +72,7 @@ export const history = {
     {
       year: "1998",
       label: "Residência em Cirurgia Geral",
-      place: "Formação hospitalar",
+      place: "Hospital do Servidor Público Municipal de São Paulo",
       text: "Consolidação da base cirúrgica antes da especialização em cirurgia plástica.",
       tone: "dark",
     },
@@ -80,7 +80,7 @@ export const history = {
       year: "2001",
       label: "Residência em Cirurgia Plástica",
       place: "Hospital do Estado de São Paulo Brigadeiro",
-      text: "Três anos de formação específica, com representação dos residentes em 2000 e 2001.",
+      text: "3 anos de formação especializada em Cirurgia Plástica, com representação dos residentes em 2000 e 2001.",
       tone: "brand",
     },
     {
@@ -136,13 +136,13 @@ export const hospitals = [
     id: "unimed-blumenau",
     name: "Hospital Unimed",
     city: "Blumenau",
-    address: "Rua Ingo Hering, 20",
-    complement: "Centro · Blumenau/SC",
+    address: "Rua Amazonas, 301",
+    complement: "Garcia · Blumenau/SC",
     email: "contato@drclaudioeduardo.com.br",
     emailHref: "mailto:contato@drclaudioeduardo.com.br",
-    phone: "(47) 3037-8500",
-    phoneHref: "tel:+554730378500",
-    image: "https://www.drclaudioeduardo.com.br/uploads/conteudo/foto-hospital-unimed-blumenau.jpg",
+    phone: "(47) 3036-6000",
+    phoneHref: "tel:+554730366000",
+    image: "/brand/hospital-unimed-blumenau.jpg",
     alt: "Fachada do Hospital Unimed Blumenau",
   },
   {
