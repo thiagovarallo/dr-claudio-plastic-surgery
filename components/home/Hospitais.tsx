@@ -103,7 +103,7 @@ export function Hospitais() {
           <div
             role="tablist"
             aria-label={t("choose")}
-            className="mt-5 grid max-w-md grid-cols-1 gap-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3"
+            className="mt-5 grid max-w-md grid-cols-2 gap-2 sm:grid-cols-2 xl:grid-cols-2"
           >
             {hospitals.map((hospital, index) => (
               <button
