@@ -70,7 +70,7 @@ export const history = {
       tone: "dark",
     },
     {
-      year: "1997-98",
+      year: "1997-1998",
       label: "Residência em Cirurgia Geral",
       place: "Hospital do Servidor Público Municipal de São Paulo",
       text: "Consolidação da base cirúrgica antes da especialização em cirurgia plástica.",
