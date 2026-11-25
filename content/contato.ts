@@ -14,22 +14,6 @@ export const contactLocations = [
     ],
     whatsappHref: "https://wa.me/554796117198",
   },
-  {
-    id: "centro-clinico-santa-catarina",
-    eyebrow: "Consultório",
-    name: "Centro Clínico Santa Catarina",
-    building: "Edifício Stein Tower",
-    address: "R. Floriano Peixoto, 222",
-    complement: "8º andar, Sala 801 · Centro, Blumenau/SC",
-    postalCode: "",
-    email: "contato@drclaudioeduardo.com.br",
-    emailHref: "mailto:contato@drclaudioeduardo.com.br",
-    phones: [
-      { label: "Telefone", value: "(47) 3322-4389", href: "tel:+554733224389" },
-      { label: "Telefone", value: "(47) 3035-4350", href: "tel:+554730354350" },
-    ],
-    whatsappHref: null,
-  },
 ] as const;
 
 export const contactMap = {

@@ -76,7 +76,6 @@ export function Hospitais() {
   });
   const titleX = useTransform(scrollYProgress, [0, 1], reduced ? ["0%", "0%"] : ["-4%", "6%"]);
   const activeHospital = hospitals[hospitalIndex];
-  const secondaryHospital = hospitals[(hospitalIndex + 1) % hospitals.length];
 
   return (
     <section
@@ -88,12 +87,12 @@ export function Hospitais() {
       <motion.h2
         id="hospitais-title"
         style={{ x: titleX }}
-        className="pointer-events-none absolute left-5 top-0 whitespace-nowrap text-[clamp(4rem,8vw,8.8rem)] font-extrabold uppercase leading-none tracking-[-0.055em] text-white sm:left-8 lg:left-6 xl:left-12"
+        className="pointer-events-none absolute inset-x-0 top-0 mx-auto max-w-[1600px] whitespace-nowrap px-5 text-[clamp(4rem,8vw,8.8rem)] font-extrabold uppercase leading-none tracking-[-0.055em] text-white sm:px-8 lg:px-0"
       >
         {t("title")}
       </motion.h2>
 
-      <div className="relative z-10 mx-auto grid max-w-[1905px] gap-4 px-5 pt-20 sm:px-8 sm:pt-24 lg:h-full lg:grid-cols-[30%_41%_29%] lg:gap-0 lg:px-0 lg:pt-18.5">
+      <div className="relative z-10 mx-auto grid max-w-[1600px] gap-4 px-5 pt-20 sm:px-8 sm:pt-24 lg:h-full lg:grid-cols-[45%_55%] lg:gap-0 lg:px-0 lg:pt-18.5">
         <div className="self-center pb-7 sm:pb-9 lg:px-6 lg:pb-0 xl:px-12">
           <div className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.42em] text-brand-deep">
             <Building2 className="size-4" />
@@ -141,7 +140,7 @@ export function Hospitais() {
               exit={reduced ? undefined : { opacity: 0, x: 12 }}
               transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
             >
-              <h3 className="mt-6 text-[clamp(2.35rem,3.4vw,3.9rem)] font-extrabold uppercase leading-[0.86] tracking-[-0.06em] text-ink">
+              <h3 className="mt-6 text-[clamp(2rem,2.8vw,3rem)] font-extrabold uppercase leading-[0.94] tracking-[-0.05em] text-ink">
                 {t(`items.${hospitalIndex}`)}
               </h3>
 
@@ -172,25 +171,9 @@ export function Hospitais() {
           displayName={t(`items.${hospitalIndex}`)}
           imageAlt={t("imageAlt")}
           depth={10}
-          sizes="(max-width: 1023px) 100vw, 41vw"
-          className="h-77.5 rounded-[26px] sm:h-105 lg:mx-5 lg:h-125 lg:rounded-[30px] xl:h-132.5"
+          sizes="(max-width: 1023px) 100vw, 58vw"
+          className="h-77.5 rounded-[26px] sm:h-105 lg:ml-6 lg:h-112 lg:rounded-[30px] xl:h-120"
         />
-
-        <button
-          type="button"
-          onClick={() => setHospitalIndex((hospitalIndex + 1) % hospitals.length)}
-          aria-label={`${t("next")} ${t(`items.${(hospitalIndex + 1) % hospitals.length}`)}`}
-          className="text-left"
-        >
-          <HospitalPhoto
-            hospital={secondaryHospital}
-            displayName={t(`items.${(hospitalIndex + 1) % hospitals.length}`)}
-            imageAlt={t("imageAlt")}
-            depth={6}
-            sizes="(max-width: 1023px) 100vw, 29vw"
-            className="h-65 rounded-[26px] sm:h-90 lg:h-125 lg:rounded-l-[30px] lg:rounded-r-none xl:h-132.5"
-          />
-        </button>
       </div>
     </section>
   );

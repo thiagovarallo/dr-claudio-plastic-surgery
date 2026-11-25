@@ -343,7 +343,7 @@
     },
     "offices": {
       "eyebrow": "Where to find us",
-      "title": "Our offices",
+      "title": "Office",
       "map": "View on map"
     },
     "map": {
@@ -363,10 +363,6 @@
       {
         "eyebrow": "Main care location",
         "name": "Dr. Claudio Eduardo Clinic"
-      },
-      {
-        "eyebrow": "Office",
-        "name": "Centro Clínico Santa Catarina"
       }
     ],
     "form": {

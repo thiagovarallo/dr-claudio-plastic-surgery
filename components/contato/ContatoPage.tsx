@@ -144,61 +144,59 @@ export function ContatoPage() {
             </h2>
           </Reveal>
 
-          <div className="mt-8 grid gap-4 lg:grid-cols-2">
-            {contactLocations.map((location, index) => (
-              <Reveal key={location.id} delay={index * 0.08}>
-                <article className="h-full rounded-[28px] border border-blue/15 bg-white p-7 shadow-[0_20px_50px_-10px_rgba(27,85,121,0.15),0_8px_20px_-6px_rgba(0,121,181,0.08)] transition duration-500 hover:-translate-y-1 hover:border-brand/35 hover:shadow-[0_26px_65px_-10px_rgba(27,85,121,0.22)] sm:p-9">
-                  <div className="flex items-start justify-between gap-5">
-                    <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.35em] text-brand-deep">{locationsT(`${index}.eyebrow`)}</p>
-                      <h3 className="mt-4 max-w-sm font-display text-4xl font-medium leading-[0.92] text-ink sm:text-5xl">
-                        {locationsT(`${index}.name`)}
-                      </h3>
-                    </div>
-                    <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-brand/10 text-brand-deep">
-                      <MapPin className="size-5" />
-                    </span>
+          {contactLocations.slice(0, 1).map((location) => (
+            <Reveal key={location.id} className="mt-8">
+              <article className="grid gap-8 rounded-[28px] border border-blue/15 bg-white p-7 shadow-[0_20px_50px_-10px_rgba(27,85,121,0.15),0_8px_20px_-6px_rgba(0,121,181,0.08)] transition duration-500 hover:border-brand/35 hover:shadow-[0_26px_65px_-10px_rgba(27,85,121,0.22)] sm:p-9 lg:grid-cols-[1fr_1.1fr_0.9fr] lg:items-center lg:gap-10">
+                <div className="flex items-start gap-5">
+                  <span className="grid size-14 shrink-0 place-items-center rounded-2xl bg-brand/10 text-brand-deep">
+                    <MapPin className="size-6" />
+                  </span>
+                  <div>
+                    <p className="text-[10px] font-bold uppercase tracking-[0.35em] text-brand-deep">{locationsT("0.eyebrow")}</p>
+                    <h3 className="mt-3 font-display text-3xl font-medium leading-[0.98] text-ink sm:text-4xl">
+                      {locationsT("0.name")}
+                    </h3>
                   </div>
+                </div>
 
-                  <address className="mt-9 space-y-4 not-italic text-sm leading-6 text-slate-600">
-                    <p>
-                      <strong className="font-extrabold text-ink">{contactT("building")}</strong>
+                <address className="border-y border-blue/10 py-6 not-italic text-sm leading-6 text-slate-600 lg:border-x lg:border-y-0 lg:px-8 lg:py-2">
+                  <strong className="font-extrabold text-ink">{contactT("building")}</strong>
+                  <br />
+                  {location.address}
+                  <br />
+                  {contactT("floorAddress")}
+                  {location.postalCode ? (
+                    <>
                       <br />
-                      {location.address}
-                      <br />
-                      {contactT("floorAddress")}
-                      {location.postalCode ? (
-                        <>
-                          <br />
-                          {location.postalCode}
-                        </>
-                      ) : null}
-                    </p>
-                    <a href={location.emailHref} className="flex items-start gap-3 transition hover:text-brand-deep">
-                      <Mail className="mt-1 size-4 shrink-0 text-brand" />
-                      <span className="break-all">{location.email}</span>
+                      {location.postalCode}
+                    </>
+                  ) : null}
+                </address>
+
+                <div className="flex flex-col items-start gap-4">
+                  <a href={location.emailHref} className="flex items-start gap-3 text-sm text-slate-600 transition hover:text-brand-deep">
+                    <Mail className="mt-0.5 size-4 shrink-0 text-brand" />
+                    <span className="break-all">{location.email}</span>
+                  </a>
+                  {location.phones.map((phone) => (
+                    <a key={phone.href} href={phone.href} className="flex items-start gap-3 text-sm text-slate-600 transition hover:text-brand-deep">
+                      <Phone className="mt-0.5 size-4 shrink-0 text-brand" />
+                      <span>{phone.value}{phone.label === "WhatsApp" ? " · WhatsApp" : ""}</span>
                     </a>
-                    {location.phones.map((phone) => (
-                      <a key={phone.href} href={phone.href} className="flex items-start gap-3 transition hover:text-brand-deep">
-                        <Phone className="mt-1 size-4 shrink-0 text-brand" />
-                        <span>{phone.value}{phone.label === "WhatsApp" ? " · WhatsApp" : ""}</span>
-                      </a>
-                    ))}
-                  </address>
-
+                  ))}
                   <a
                     href={contactMap.directionsHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-8 inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-[0.14em] text-brand-deep transition hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
+                    className="mt-1 inline-flex min-h-11 items-center gap-2 rounded-full bg-brand px-5 text-xs font-extrabold uppercase tracking-[0.12em] text-white transition hover:bg-brand-deep focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
                   >
                     {officesT("map")}
                     <ExternalLink className="size-4" />
                   </a>
-                </article>
-              </Reveal>
-            ))}
-          </div>
+                </div>
+              </article>
+            </Reveal>
+          ))}
         </div>
       </section>
 
