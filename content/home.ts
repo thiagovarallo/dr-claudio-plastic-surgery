@@ -91,7 +91,7 @@ export const history = {
       tone: "dark",
     },
     {
-      year: "Desde 2008",
+      year: "Hoje",
       label: "Atendimento em Blumenau",
       place: "Consultório privado e hospitais da região",
       text: "Cirurgias estéticas, reparadoras e de afirmação de gênero em Santa Catarina",
@@ -150,7 +150,7 @@ export const hospitals = [
     name: "Hospital Unimed Unidade Centro",
     city: "Blumenau",
     address: "Rua Ingo Hering, 20",
-    complement: "Centro · Blumenau/SC",
+    complement: "4º e 5º andares · Centro · Blumenau/SC",
     email: "contato@drclaudioeduardo.com.br",
     emailHref: "mailto:contato@drclaudioeduardo.com.br",
     phone: "(47) 3037-8500",
