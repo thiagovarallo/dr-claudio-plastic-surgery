@@ -32,7 +32,7 @@
     "hero": {
       "eyebrow": "Cirurgia plástica · Blumenau",
       "title": "Cuidado cirúrgico com precisão e discrição",
-      "description": "Dr. Claudio Eduardo, CRM 14.706-SC e RQE 23.737. Atuação em procedimentos estéticos, reparadores e cirurgias de afirmação de gênero.",
+      "description": "Dr. Claudio Eduardo, CRM  14.706-SC; RQE 23.737. Atuação na especialidade de Cirurgia Plástica, nos procedimentos estéticos, reparadores e cirurgias de afirmação de gênero.",
       "imageAlt": "Dr. Claudio Eduardo em seu consultório",
       "schedule": "Agendar avaliação",
       "surgeries": "Ver cirurgias",
@@ -52,8 +52,8 @@
         "hint": "Sociedade Brasileira de Cirurgia Plástica"
       },
       {
-        "value": "12 anos",
-        "hint": "De formação na área médica, 3 especializações"
+        "value": "> 30 anos",
+        "hint": "De atuação como médico, 3 especializações"
       }
     ],
     "differentials": {
