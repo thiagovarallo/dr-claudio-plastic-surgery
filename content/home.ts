@@ -91,7 +91,7 @@ export const history = {
       tone: "dark",
     },
     {
-      year: "Hoje",
+      year: "Desde 2008",
       label: "Atendimento em Blumenau",
       place: "Consultório privado e hospitais da região",
       text: "Cirurgia estética, reparadora e de afirmação de gênero em Santa Catarina.",

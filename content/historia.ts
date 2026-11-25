@@ -29,13 +29,13 @@ export const historiaPage = {
       title: "Cirurgia Plástica",
       place: "Hospital do Estado de São Paulo Brigadeiro",
       period: "Residência · 1999—2001",
-      text: "Três anos de especialização em cirurgia estética e reparadora, com atuação como representante dos residentes.",
+      text: "Três anos de especialização em cirurgia plástica estética e reparadora.",
     },
     {
       number: "04",
       title: "Crânio-Maxilo-Facial",
       place: "Hospital das Clínicas · Universidade de São Paulo",
-      period: "Especialização",
+      period: "Especialização · 2002",
       text: "Aprofundamento no tratamento cirúrgico das estruturas da face e de deformidades craniofaciais.",
     },
   ],
@@ -48,7 +48,7 @@ export const historiaPage = {
     {
       year: "1996",
       title: "Graduação e mudança para São Paulo",
-      text: "Após concluir Medicina em Vassouras, seguiu para São Paulo em busca de qualificação e permaneceu na cidade ao longo de dez anos.",
+      text: "Após concluir Medicina em Vassouras/RJ, seguiu para São Paulo em busca de qualificação e permaneceu na cidade ao longo de dez anos. Mais tarde, atuou como cirurgião plástico no Hospital Brigadeiro, São Paulo/SP.",
     },
     {
       year: "1997—2001",
@@ -57,16 +57,16 @@ export const historiaPage = {
     },
     {
       year: "1999—2007",
-      title: "Experiência hospitalar em Mauá",
+      title: "Experiência hospitalar em Mauá/SP",
       text: "Atuação como cirurgião geral no pronto-socorro do Hospital de Clínicas Radamés Nardini e, mais tarde, também como cirurgião plástico.",
     },
     {
       year: "2005—2008",
       title: "Cirurgia craniofacial e reconstrução",
-      text: "Responsável pelo tratamento de deformidades craniofaciais e fissuras labiopalatinas no Hospital Universitário da Universidade Severino Sombra.",
+      text: "Responsável pelo tratamento de deformidades craniofaciais e fissuras labiopalatinas no Hospital Universitário Severino Sombra, Vassouras/RJ.",
     },
     {
-      year: "Hoje",
+      year: "Desde 2008",
       title: "Cuidado especializado em Blumenau",
       text: "Atendimento em consultório privado e atuação nos hospitais da região, unindo cirurgia estética, reparadora e procedimentos do segmento genital.",
     },
