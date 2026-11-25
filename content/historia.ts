@@ -53,7 +53,7 @@ export const historiaPage = {
     {
       year: "1997—2001",
       title: "Duas residências, uma base sólida",
-      text: "A residência em Cirurgia Geral foi seguida pela formação específica em Cirurgia Plástica no Hospital Brigadeiro.",
+      text: "A residência em Cirurgia Geral foi seguida pela formação específica em Cirurgia Plástica no Hospital Brigadeiro, São Paulo/SP.",
     },
     {
       year: "1999—2007",
@@ -67,7 +67,7 @@ export const historiaPage = {
     },
     {
       year: "Desde 2008",
-      title: "Cuidado especializado em Blumenau",
+      title: "Cuidado especializado em Blumenau/SC",
       text: "Atendimento em consultório privado e atuação nos hospitais da região, unindo cirurgia estética, reparadora e procedimentos do segmento genital.",
     },
   ],
