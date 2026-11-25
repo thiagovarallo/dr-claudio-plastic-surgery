@@ -52,7 +52,7 @@ function HospitalPhoto({
               fill
               sizes={sizes}
               className="object-cover transition duration-700 group-hover:scale-105"
-              style={{ objectPosition: hospital.id === "santo-antonio" ? "38% center" : "center" }}
+              style={{ objectPosition: "center" }}
             />
             <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-navy-deep/75 to-transparent" />
             <p className="absolute inset-x-6 bottom-6 text-xs font-bold uppercase tracking-[0.16em] text-white">

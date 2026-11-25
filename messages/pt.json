@@ -75,7 +75,7 @@
       "eyebrow": "Conheça",
       "title": "Nossa história",
       "lead": "Uma trajetória construída com formação sólida e especialização cirúrgica.",
-      "text": "Formado em Medicina em 1996, especializou-se em Cirurgia Geral, Cirurgia Plástica e Cirurgia Crânio-Maxilo-Facial no Hospital das Clínicas da USP, somando 12 anos entre graduação e pós-graduações.",
+      "text": "Formado em medicina no ano de 1996, especializou-se em Cirurgia Geral, Cirurgia Plástica e Cirurgia Crânio-Maxilo-Facial, somando-se 12 anos entre graduação e pós-graduações.",
       "cta": "Conhecer a trajetória",
       "marco": "Marco",
       "scrollHint": "Role para percorrer a trajetória",
@@ -93,10 +93,10 @@
           "text": "Consolidação da base cirúrgica antes da especialização em cirurgia plástica."
         },
         {
-          "year": "2001",
+          "year": "1999-2001",
           "label": "Residência em Cirurgia Plástica",
           "place": "Hospital do Estado de São Paulo Brigadeiro",
-          "text": "3 anos de formação especializada em Cirurgia Plástica, com representação dos residentes em 2000 e 2001."
+          "text": "3 anos de formação especializada em Cirurgia Plástica."
         },
         {
           "year": "2004",
@@ -108,7 +108,7 @@
           "year": "Desde 2008",
           "label": "Atendimento em Blumenau",
           "place": "Consultório privado e hospitais da região",
-          "text": "Cirurgia estética, reparadora e de afirmação de gênero em Santa Catarina."
+          "text": "Cirurgias estéticas, reparadoras e de afirmação de gênero em Santa Catarina"
         }
       ]
     },
@@ -176,6 +176,9 @@
         "Estética",
         "Estética",
         "Estética",
+        "Estética",
+        "Estética",
+        "Estética",
         "Reparadora"
       ],
       "alt": "Imagem ilustrativa de",
@@ -185,6 +188,7 @@
         "Redesignação sexual",
         "Mastectomia masculinizadora",
         "Prótese de mama",
+        "Mamoplastia",
         "Gluteoplastia",
         "Rinoplastia",
         "Lifting facial",
@@ -192,6 +196,8 @@
         "Blefaroplastia",
         "Abdominoplastia",
         "Otoplastia",
+        "Peeling de fenol",
+        "Prótese de panturrilha",
         "Corpo estranho no pênis"
       ]
     },
@@ -417,6 +423,7 @@
       "Cirurgia de afirmação de gênero com indicação responsável e acompanhamento especializado.",
       "Cirurgia indicada para homens transgêneros, realizada com técnica bi-incisional e enxerto de aréolas para o controle da disforia de gênero.",
       "Aumento mamário estético ou reparador, definido após avaliação de anatomia e expectativas.",
+      "Mamoplastia redutora para redução do volume ou mastopexia para corrigir flacidez e caimento das mamas.",
       "Introdução de próteses de silicone no músculo glúteo maior, com indicação e técnica individualizadas.",
       "Cirurgia que remodela a estrutura do nariz para fins estéticos ou funcionais, como correção de desvio de septo.",
       "Reposicionamento de músculos e tecidos profundos do rosto para reduzir flacidez, rugas e redefinir o contorno facial.",
@@ -424,6 +431,8 @@
       "Cirurgia que remove o excesso de pele, músculo ou gordura das pálpebras para rejuvenescer o olhar e melhorar o campo visual.",
       "Cirurgia plástica para remoção do excesso de pele e gordura abdominal, com reparo da diástase muscular e restauração do contorno corporal.",
       "Cirurgia plástica para correção de orelhas em abano e assimetrias, reposicionando as orelhas com naturalidade e cicatrizes invisíveis.",
+      "Procedimento dermatológico profundo para renovação intensa da pele, tratamento de rugas severas e estímulo potente de colágeno.",
+      "Implantes de silicone para ganho de volume, definição e correção de assimetrias nas panturrilhas com cicatriz discreta.",
       "Avaliação e tratamento cirúrgico especializado para complicações decorrentes de PMMA, silicone industrial ou substâncias ilícitas no pênis."
     ]
   },

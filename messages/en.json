@@ -32,7 +32,7 @@
     "hero": {
       "eyebrow": "Plastic surgery · Blumenau",
       "title": "Surgical care with precision and discretion",
-      "description": "Dr. Claudio Eduardo, CRM 14.706-SC and RQE 23.737. Focused on aesthetic, reconstructive and gender-affirming procedures.",
+      "description": "Dr. Claudio Eduardo, CRM 14.706-SC; RQE 23.737. Practices in the specialty of Plastic Surgery, including aesthetic, reconstructive and gender-affirming procedures.",
       "imageAlt": "Dr. Claudio Eduardo in his clinic",
       "schedule": "Book an evaluation",
       "surgeries": "View surgeries",
@@ -52,8 +52,8 @@
         "hint": "Brazilian Society of Plastic Surgery"
       },
       {
-        "value": "12 years",
-        "hint": "Of medical education, 3 specializations"
+        "value": "> 30 years",
+        "hint": "Practicing as a physician, 3 specialties"
       }
     ],
     "differentials": {
@@ -75,7 +75,7 @@
       "eyebrow": "Discover",
       "title": "Our story",
       "lead": "A journey built on solid training and surgical specialization.",
-      "text": "After graduating in Medicine in 1996, he specialized in General Surgery, Plastic Surgery and Cranio-Maxillofacial Surgery at Hospital das Clínicas, University of São Paulo, completing 12 years of undergraduate and postgraduate training.",
+      "text": "After graduating in medicine in 1996, he specialized in General Surgery, Plastic Surgery and Cranio-Maxillofacial Surgery, completing 12 years of undergraduate and postgraduate training.",
       "cta": "Explore the journey",
       "marco": "Milestone",
       "scrollHint": "Scroll to follow the journey",
@@ -87,16 +87,16 @@
           "text": "The beginning of a 12-year journey through medical school and surgical specialization."
         },
         {
-          "year": "1998",
+          "year": "1997-98",
           "label": "General Surgery residency",
           "place": "Hospital do Servidor Público Municipal de São Paulo",
           "text": "A strong surgical foundation before specializing in plastic surgery."
         },
         {
-          "year": "2001",
+          "year": "1999-2001",
           "label": "Plastic Surgery residency",
           "place": "Hospital do Estado de São Paulo Brigadeiro",
-          "text": "3 years of specialized training in Plastic Surgery, including representation of the residents in 2000 and 2001."
+          "text": "3 years of specialized training in Plastic Surgery."
         },
         {
           "year": "2004",
@@ -108,7 +108,7 @@
           "year": "Since 2008",
           "label": "Practice in Blumenau",
           "place": "Private practice and regional hospitals",
-          "text": "Aesthetic, reconstructive and gender-affirming surgery in Santa Catarina."
+          "text": "Aesthetic, reconstructive and gender-affirming surgeries in Santa Catarina"
         }
       ]
     },
@@ -176,6 +176,9 @@
         "Aesthetic",
         "Aesthetic",
         "Aesthetic",
+        "Aesthetic",
+        "Aesthetic",
+        "Aesthetic",
         "Reconstructive"
       ],
       "alt": "Illustrative image of",
@@ -185,6 +188,7 @@
         "Gender confirmation surgery",
         "Masculinizing mastectomy",
         "Breast implants",
+        "Breast surgery",
         "Gluteoplasty",
         "Rhinoplasty",
         "Facelift",
@@ -192,6 +196,8 @@
         "Blepharoplasty",
         "Abdominoplasty",
         "Otoplasty",
+        "Phenol peel",
+        "Calf implants",
         "Foreign body in penis"
       ]
     },
@@ -417,6 +423,7 @@
       "Gender-affirming surgery with responsible indication and specialized follow-up.",
       "Surgery indicated for transgender men, performed with a bi-incisional technique and areola graft to help manage gender dysphoria.",
       "Aesthetic or reconstructive breast augmentation defined after assessing anatomy and expectations.",
+      "Breast reduction to decrease volume or mastopexy to address sagging and breast position.",
       "Silicone implants placed in the gluteus maximus muscle with individualized indication and technique.",
       "Surgery that reshapes the nasal structure for aesthetic or functional purposes, such as correcting a deviated septum.",
       "Repositioning of muscles and deep facial tissues to reduce sagging, wrinkles and redefine facial contour.",
@@ -424,6 +431,8 @@
       "Surgery that removes excess skin, muscle or fat from the eyelids to rejuvenate the eyes and improve the visual field.",
       "Plastic surgery to remove excess abdominal skin and fat, repairing muscle diastasis and restoring body contour.",
       "Plastic surgery to correct prominent ears and asymmetries, repositioning ears naturally with invisible incisions.",
+      "Deep dermatological procedure for intense skin renewal, treatment of severe wrinkles, and potent collagen stimulation.",
+      "Silicone implants to increase volume, enhance contour, and correct calf asymmetries with discreet scarring.",
       "Specialized evaluation and surgical treatment for complications resulting from PMMA, industrial silicone or illicit substances in the penis."
     ]
   },

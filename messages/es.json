@@ -32,7 +32,7 @@
     "hero": {
       "eyebrow": "Cirugía plástica · Blumenau",
       "title": "Cuidado quirúrgico con precisión y discreción",
-      "description": "Dr. Claudio Eduardo, CRM 14.706-SC y RQE 23.737. Actuación en procedimientos estéticos, reconstructivos y de afirmación de género.",
+      "description": "Dr. Claudio Eduardo, CRM 14.706-SC; RQE 23.737. Actúa en la especialidad de Cirugía Plástica, con procedimientos estéticos, reconstructivos y cirugías de afirmación de género.",
       "imageAlt": "Dr. Claudio Eduardo en su consultorio",
       "schedule": "Agendar evaluación",
       "surgeries": "Ver cirugías",
@@ -52,8 +52,8 @@
         "hint": "Sociedad Brasileña de Cirugía Plástica"
       },
       {
-        "value": "12 años",
-        "hint": "De formación médica, 3 especializaciones"
+        "value": "> 30 años",
+        "hint": "De ejercicio como médico, 3 especializaciones"
       }
     ],
     "differentials": {
@@ -75,7 +75,7 @@
       "eyebrow": "Conozca",
       "title": "Nuestra historia",
       "lead": "Una trayectoria construida con formación sólida y especialización quirúrgica.",
-      "text": "Formado en Medicina en 1996, se especializó en Cirugía General, Cirugía Plástica y Cirugía Cráneo-Maxilofacial en el Hospital das Clínicas de la USP, sumando 12 años entre la carrera y los posgrados.",
+      "text": "Formado en medicina en 1996, se especializó en Cirugía General, Cirugía Plástica y Cirugía Cráneo-Maxilofacial, completando 12 años entre la carrera y los posgrados.",
       "cta": "Conocer la trayectoria",
       "marco": "Hito",
       "scrollHint": "Desplácese para recorrer la trayectoria",
@@ -87,16 +87,16 @@
           "text": "El inicio de una trayectoria de 12 años entre la carrera y las especializaciones."
         },
         {
-          "year": "1998",
+          "year": "1997-98",
           "label": "Residencia en Cirugía General",
           "place": "Hospital do Servidor Público Municipal de São Paulo",
           "text": "Consolidación de la base quirúrgica antes de la especialización en cirugía plástica."
         },
         {
-          "year": "2001",
+          "year": "1999-2001",
           "label": "Residencia en Cirugía Plástica",
           "place": "Hospital do Estado de São Paulo Brigadeiro",
-          "text": "3 años de formación especializada en Cirugía Plástica, con representación de los residentes en 2000 y 2001."
+          "text": "3 años de formación especializada en Cirugía Plástica."
         },
         {
           "year": "2004",
@@ -108,7 +108,7 @@
           "year": "Hoy",
           "label": "Atención en Blumenau",
           "place": "Consultorio privado y hospitales de la región",
-          "text": "Cirugía estética, reconstructiva y de afirmación de género en Santa Catarina."
+          "text": "Cirugías estéticas, reconstructivas y de afirmación de género en Santa Catarina"
         }
       ]
     },
@@ -176,6 +176,9 @@
         "Estética",
         "Estética",
         "Estética",
+        "Estética",
+        "Estética",
+        "Estética",
         "Reparadora"
       ],
       "alt": "Imagen ilustrativa de",
@@ -185,6 +188,7 @@
         "Cirugía de afirmación de género",
         "Mastectomía masculinizadora",
         "Implantes mamarios",
+        "Mamoplastia",
         "Gluteoplastia",
         "Rinoplastia",
         "Lifting facial",
@@ -192,6 +196,8 @@
         "Blefaroplastia",
         "Abdominoplastia",
         "Otoplastia",
+        "Peeling de fenol",
+        "Prótesis de pantorrilla",
         "Cuerpo extraño en el pene"
       ]
     },
@@ -417,6 +423,7 @@
       "Cirugía de afirmación de género con indicación responsable y seguimiento especializado.",
       "Cirugía indicada para hombres transgénero, realizada con técnica bi-incisional e injerto de areolas para el control de la disforia de género.",
       "Aumento mamario estético o reconstructivo definido tras evaluar la anatomía y las expectativas.",
+      "Reducción mamaria para disminuir el volumen o mastopexia para corregir la flacidez y la posición de las mamas.",
       "Implantes de silicona en el músculo glúteo mayor, con indicación y técnica individualizadas.",
       "Cirugía que remodela la estructura de la nariz con fines estéticos o funcionales, como la corrección del tabique desviado.",
       "Reposicionamiento de músculos y tejidos profundos del rostro para reducir la flacidez, las arrugas y redefinir el contorno facial.",
@@ -424,6 +431,8 @@
       "Cirugía que elimina el exceso de piel, músculo o grasa de los párpados para rejuvenecer la mirada y mejorar el campo visual.",
       "Cirugía plástica para eliminar el exceso de piel y grasa abdominal, con reparación de la diástasis muscular y restauración del contorno corporal.",
       "Cirugía plástica para corregir orejas prominentes (en asa) y asimetrías, reposicionándolas de forma natural con cicatrices invisibles.",
+      "Procedimiento dermatológico profundo para una renovación intensa de la piel, tratamiento de arrugas severas y potente estímulo de colágeno.",
+      "Implantes de silicona para ganar volumen, definición y corregir asimetrías en las pantorrillas con una cicatriz discreta.",
       "Evaluación y tratamiento quirúrgico especializado para complicaciones derivadas de PMMA, silicona industrial o sustancias ilícitas en el pene."
     ]
   },

@@ -19,7 +19,7 @@ export const credibility = [
   { value: "CRM 14.706-SC", hint: "Conselho Regional de Medicina" },
   { value: "RQE 23.737", hint: "Especialista em Cirurgia Plástica" },
   { value: "SBCP", hint: "Sociedade Brasileira de Cirurgia Plástica" },
-  { value: "12 anos", hint: "De formação na área médica, 3 especializações" },
+  { value: "> 30 anos", hint: "De atuação como médico, 3 especializações" },
 ] as const;
 
 export const diferenciais = [
@@ -58,7 +58,7 @@ export const patientJourney = [
 
 export const history = {
   lead: "Uma trajetória construída com formação sólida e especialização cirúrgica.",
-  text: "Formado em Medicina em 1996, especializou-se em Cirurgia Geral, Cirurgia Plástica e Cirurgia Crânio-Maxilo-Facial no Hospital das Clínicas da USP, somando 12 anos entre graduação e pós-graduações.",
+  text: "Formado em medicina no ano de 1996, especializou-se em Cirurgia Geral, Cirurgia Plástica e Cirurgia Crânio-Maxilo-Facial, somando-se 12 anos entre graduação e pós-graduações.",
   highlight:
     "12 anos dedicados à formação em cirurgia geral, plástica e crânio-maxilo-facial.",
   nodes: [
@@ -70,17 +70,17 @@ export const history = {
       tone: "dark",
     },
     {
-      year: "1998",
+      year: "1997-98",
       label: "Residência em Cirurgia Geral",
       place: "Hospital do Servidor Público Municipal de São Paulo",
       text: "Consolidação da base cirúrgica antes da especialização em cirurgia plástica.",
       tone: "dark",
     },
     {
-      year: "2001",
+      year: "1999-2001",
       label: "Residência em Cirurgia Plástica",
       place: "Hospital do Estado de São Paulo Brigadeiro",
-      text: "3 anos de formação especializada em Cirurgia Plástica, com representação dos residentes em 2000 e 2001.",
+      text: "3 anos de formação especializada em Cirurgia Plástica.",
       tone: "brand",
     },
     {
@@ -94,7 +94,7 @@ export const history = {
       year: "Desde 2008",
       label: "Atendimento em Blumenau",
       place: "Consultório privado e hospitais da região",
-      text: "Cirurgia estética, reparadora e de afirmação de gênero em Santa Catarina.",
+      text: "Cirurgias estéticas, reparadoras e de afirmação de gênero em Santa Catarina",
       tone: "dark",
     },
   ],
@@ -142,7 +142,7 @@ export const hospitals = [
     emailHref: "mailto:contato@drclaudioeduardo.com.br",
     phone: "(47) 3036-6000",
     phoneHref: "tel:+554730366000",
-    image: "/brand/hospital-unimed-blumenau.jpg",
+    image: "/brand/hospital-unimed-blumenau.webp",
     alt: "Fachada do Hospital Unimed Blumenau",
   },
   {
@@ -168,8 +168,8 @@ export const hospitals = [
     emailHref: "mailto:contato@drclaudioeduardo.com.br",
     phone: "(47) 3231-4000",
     phoneHref: "tel:+554732314000",
-    image: "https://www.drclaudioeduardo.com.br/uploads/conteudo/foto-hospital-santo-antonio.jpg",
-    alt: "Fachada do Hospital Santo Antônio em Blumenau",
+    image: "/brand/hospital-santo-antonio.webp",
+    alt: "Vista aérea do Hospital Santo Antônio em Blumenau",
   },
   {
     id: "santa-isabel",
@@ -261,6 +261,12 @@ export const surgeries = [
     featured: false,
   },
   {
+    title: "Mamoplastia",
+    image: "/procedimentos/_destaque_mamoplastia.jpg",
+    href: "/cirurgias/mamoplastia",
+    featured: false,
+  },
+  {
     title: "Gluteoplastia",
     image: "/procedimentos/_destaque_gluteoplastia.jpg",
     href: "/cirurgias/gluteoplastia",
@@ -300,6 +306,18 @@ export const surgeries = [
     title: "Otoplastia",
     image: "/procedimentos/_destaque_otoplastia.jpg",
     href: "/cirurgias/otoplastia",
+    featured: false,
+  },
+  {
+    title: "Peeling de fenol",
+    image: "/procedimentos/_destaque_peeling_de_fenol.jpg",
+    href: "/cirurgias/peeling-de-fenol",
+    featured: false,
+  },
+  {
+    title: "Prótese de panturrilha",
+    image: "/procedimentos/_destaque_protese_de_panturrilha.jpg",
+    href: "/cirurgias/protese-de-panturrilha",
     featured: false,
   },
   {

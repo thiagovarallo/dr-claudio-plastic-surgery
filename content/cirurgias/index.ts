@@ -6,9 +6,12 @@ import { corpoEstranhoNoPenis } from "./corpo-estranho-no-penis";
 import { gluteoplastia } from "./gluteoplastia";
 import { liftingFacial } from "./lifting-facial";
 import { lipoaspiracao } from "./lipoaspiracao";
+import { mamoplastia } from "./mamoplastia";
 import { mastectomiaMasculinizadora } from "./mastectomia-masculinizadora";
 import { otoplastia } from "./otoplastia";
+import { peelingDeFenol } from "./peeling-de-fenol";
 import { proteseDeMama } from "./protese-de-mama";
+import { proteseDePanturrilha } from "./protese-de-panturrilha";
 import { redesignacaoSexual } from "./redesignacao-sexual";
 import { rinoplastia } from "./rinoplastia";
 import type { CirurgiaContent } from "./types";
@@ -19,6 +22,7 @@ const cirurgias: CirurgiaContent[] = [
   redesignacaoSexual,
   mastectomiaMasculinizadora,
   proteseDeMama,
+  mamoplastia,
   gluteoplastia,
   rinoplastia,
   liftingFacial,
@@ -26,6 +30,8 @@ const cirurgias: CirurgiaContent[] = [
   blefaroplastia,
   abdominoplastia,
   otoplastia,
+  peelingDeFenol,
+  proteseDePanturrilha,
   corpoEstranhoNoPenis,
 ];
 
