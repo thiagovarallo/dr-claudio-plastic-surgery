@@ -99,13 +99,13 @@
           "text": "3 anos de formação especializada em Cirurgia Plástica."
         },
         {
-          "year": "2004",
+          "year": "2002",
           "label": "Crânio-Maxilo-Facial",
           "place": "Hospital das Clínicas · USP",
           "text": "Especialização em cirurgia crânio-maxilo-facial no principal centro de formação do país."
         },
         {
-          "year": "Hoje",
+          "year": "Desde 2008",
           "label": "Atendimento em Blumenau",
           "place": "Consultório privado e hospitais da região",
           "text": "Cirurgias estéticas, reparadoras e de afirmação de gênero em Santa Catarina"
@@ -153,7 +153,7 @@
       "choose": "Escolha um hospital",
       "next": "Ver informações de",
       "items": [
-        "Hospital Unimed",
+        "Hospital Unimed Blumenau",
         "Hospital Unimed Unidade Centro",
         "Hospital Santo Antônio",
         "Hospital Santa Isabel"

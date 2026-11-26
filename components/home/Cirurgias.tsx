@@ -76,7 +76,7 @@ export function Cirurgias() {
                       alt={`${t("alt")} ${t(`items.${index}`).toLowerCase()}`}
                       fill
                       sizes={imageSizes}
-                      className="object-cover transition duration-700 ease-out group-hover:scale-105"
+                      className="object-cover"
                     />
                     <div className="absolute inset-0 bg-[linear-gradient(0deg,color-mix(in_srgb,var(--blue-dark)_92%,transparent)_0%,color-mix(in_srgb,var(--blue-dark)_25%,transparent)_40%,transparent_68%)]" />
 

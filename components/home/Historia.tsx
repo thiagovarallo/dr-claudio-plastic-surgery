@@ -455,9 +455,6 @@ export function Historia() {
                     {t("title")}
                   </h2>
 
-                  <p className="mt-2 max-w-xs text-xs font-semibold text-slate-500">
-                    {tr("Formação e especialização cirúrgica no HC-FMUSP")}
-                  </p>
                 </div>
               </div>
 

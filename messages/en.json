@@ -99,13 +99,13 @@
           "text": "3 years of specialized training in Plastic Surgery."
         },
         {
-          "year": "2004",
+          "year": "2002",
           "label": "Cranio-Maxillofacial Surgery",
           "place": "Hospital das Clínicas · USP",
           "text": "Specialization in cranio-maxillofacial surgery at one of Brazil's leading training centers."
         },
         {
-          "year": "Today",
+          "year": "Since 2008",
           "label": "Practice in Blumenau",
           "place": "Private practice and regional hospitals",
           "text": "Aesthetic, reconstructive and gender-affirming surgeries in Santa Catarina"
@@ -153,7 +153,7 @@
       "choose": "Choose a hospital",
       "next": "View information for",
       "items": [
-        "Hospital Unimed",
+        "Hospital Unimed Blumenau",
         "Hospital Unimed Centro Unit",
         "Hospital Santo Antônio",
         "Hospital Santa Isabel"

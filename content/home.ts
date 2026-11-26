@@ -134,7 +134,7 @@ export const unit = units[0];
 export const hospitals = [
   {
     id: "unimed-blumenau",
-    name: "Hospital Unimed",
+    name: "Hospital Unimed Blumenau",
     city: "Blumenau",
     address: "Rua Amazonas, 301",
     complement: "Garcia · Blumenau/SC",
@@ -155,7 +155,7 @@ export const hospitals = [
     emailHref: "mailto:contato@drclaudioeduardo.com.br",
     phone: "(47) 3037-8500",
     phoneHref: "tel:+554730378500",
-    image: "/brand/hospital-unimed-centro.jpg",
+    image: "/brand/hospital-unimed-centro-fachada.jpg",
     alt: "Fachada do Hospital Unimed Unidade Centro em Blumenau",
   },
   {
@@ -232,7 +232,7 @@ export const clinicGallery = [
 export const surgeries = [
   {
     title: "Aumento peniano",
-    image: "/procedimentos/_destaque_penis.jpg",
+    image: "/procedimentos/aumento-peniano-ilustracao.jpg",
     href: "/cirurgias/aumento-peniano-faloplastia",
     featured: true,
   },

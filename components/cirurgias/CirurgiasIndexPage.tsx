@@ -130,7 +130,7 @@ export function CirurgiasIndexPage() {
                         alt={`${surgeryT("alt")} ${title.toLowerCase()}`}
                         fill
                         sizes={featured ? "(min-width: 1024px) 560px, 100vw" : "(min-width: 1024px) 370px, 100vw"}
-                        className="object-cover transition duration-700 ease-out group-hover:scale-105"
+                        className="object-cover"
                       />
                       <div className="absolute inset-0 -z-0 bg-[linear-gradient(180deg,transparent_0%,transparent_42%,color-mix(in_srgb,var(--blue-dark)_94%,transparent)_100%)]" />
 

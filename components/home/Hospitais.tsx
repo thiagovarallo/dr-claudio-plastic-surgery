@@ -12,53 +12,39 @@ function HospitalPhoto({
   displayName,
   imageAlt,
   className,
-  depth,
   sizes,
 }: {
   hospital: (typeof hospitals)[number];
   displayName: string;
   imageAlt: string;
   className: string;
-  depth: number;
   sizes: string;
 }) {
-  const ref = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-  const y = useTransform(
-    scrollYProgress,
-    [0, 1],
-    reduced ? ["0%", "0%"] : [`${depth}%`, `${-depth}%`],
-  );
 
   return (
-    <div ref={ref} className={`group relative overflow-hidden bg-slate-200 ${className}`}>
+    <div className={`relative overflow-hidden bg-slate-200 ${className}`}>
       <AnimatePresence mode="popLayout" initial={false}>
         <motion.div
           key={hospital.id}
-          initial={reduced ? false : { opacity: 0, scale: 1.04 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={reduced ? undefined : { opacity: 0, scale: 0.98 }}
+          initial={reduced ? false : { opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={reduced ? undefined : { opacity: 0 }}
           transition={{ type: "spring", stiffness: 130, damping: 24 }}
           className="absolute inset-0"
         >
-          <motion.div style={{ y }} className="absolute -inset-y-12 inset-x-0">
-            <Image
-              src={hospital.image}
-              alt={`${imageAlt} ${displayName}`}
-              fill
-              sizes={sizes}
-              className="object-cover transition duration-700 group-hover:scale-105"
-              style={{ objectPosition: "center" }}
-            />
-            <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-navy-deep/75 to-transparent" />
-            <p className="absolute inset-x-6 bottom-6 text-xs font-bold uppercase tracking-[0.16em] text-white">
-              {displayName} · {hospital.city}
-            </p>
-          </motion.div>
+          <Image
+            src={hospital.image}
+            alt={`${imageAlt} ${displayName}`}
+            fill
+            sizes={sizes}
+            className="object-cover"
+            style={{ objectPosition: "center" }}
+          />
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-navy-deep/75 to-transparent" />
+          <p className="absolute inset-x-6 bottom-6 text-xs font-bold uppercase tracking-[0.16em] text-white">
+            {displayName} · {hospital.city}
+          </p>
         </motion.div>
       </AnimatePresence>
     </div>
@@ -82,7 +68,7 @@ export function Hospitais() {
       id="hospitais"
       ref={sectionRef}
       aria-labelledby="hospitais-title"
-      className="relative overflow-hidden bg-surface-soft pb-16 pt-12 sm:pb-20 sm:pt-16 lg:h-152.5 lg:py-0"
+      className={`relative overflow-hidden bg-surface-soft pb-16 pt-12 sm:pb-20 sm:pt-16 lg:py-0 ${activeHospital.id === "unimed-centro" ? "lg:min-h-[660px]" : "lg:h-152.5"}`}
     >
       <motion.h2
         id="hospitais-title"
@@ -123,7 +109,7 @@ export function Hospitais() {
                   0{index + 1}
                 </span>
                 <span className="mt-1 block text-[11px] font-extrabold leading-4">
-                  {t(`items.${index}`).replace("Hospital ", "")}
+                  {t(`items.${index}`)}
                 </span>
               </button>
             ))}
@@ -170,9 +156,8 @@ export function Hospitais() {
           hospital={activeHospital}
           displayName={t(`items.${hospitalIndex}`)}
           imageAlt={t("imageAlt")}
-          depth={10}
           sizes="(max-width: 1023px) 100vw, 58vw"
-          className="h-77.5 rounded-[26px] sm:h-105 lg:ml-6 lg:h-112 lg:rounded-[30px] xl:h-120"
+          className={`${activeHospital.id === "santo-antonio" ? "aspect-[2/1] h-auto" : activeHospital.id === "unimed-centro" ? "aspect-[3/2] h-auto" : "h-77.5 sm:h-105 lg:h-112 xl:h-120"} rounded-[26px] lg:ml-6 lg:rounded-[30px]`}
         />
       </div>
     </section>
